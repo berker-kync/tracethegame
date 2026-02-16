@@ -1,3 +1,17 @@
+# Godot
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# Mono (only if you use C#)
+.mono/
+data_*/
+
+# OS / Editor noise
 .DS_Store
 **/.DS_Store
-.godot/
+Thumbs.db
+
+# Logs
+*.log
