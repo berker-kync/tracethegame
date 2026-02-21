@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bu3p0dknx1krk"]
+
+[ext_resource type="Texture2D" uid="uid://c5sd47v0ewqfo" path="res://assets/arrow.png" id="1_umosx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5ahi"]
+size = Vector2(23, 18)
+
+[node name="Arrow" type="Area2D" unique_id=2107792888]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=762576330]
+texture_filter = 1
+texture = ExtResource("1_umosx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1053921213]
+position = Vector2(-3.5, 0)
+shape = SubResource("RectangleShape2D_l5ahi")

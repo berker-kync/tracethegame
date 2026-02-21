@@ -2,9 +2,19 @@
 
 [ext_resource type="Texture2D" uid="uid://bd4hfu1kbwtl3" path="res://assets/journal1.png" id="1_1dqkq"]
 
-[node name="Node2D" type="Node2D" unique_id=846630528]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dy38c"]
+size = Vector2(15.33269, 26.49599)
+
+[node name="page" type="Node2D" unique_id=846630528]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=671137279]
 position = Vector2(28.500002, 73)
 scale = Vector2(0.890625, 2.28125)
 texture = ExtResource("1_1dqkq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2083370307]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1693255669]
+position = Vector2(28.247744, 72.91754)
+scale = Vector2(3.7504518, 5.516492)
+shape = SubResource("RectangleShape2D_dy38c")
