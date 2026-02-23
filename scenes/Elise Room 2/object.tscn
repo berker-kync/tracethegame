@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://j00d3omadqc1"]
+
+[ext_resource type="Script" uid="uid://dpfx5mb21kukr" path="res://scenes/Elise Room 2/scripts/object.gd" id="1_4qhc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_250yl"]
+size = Vector2(26, 27.5)
+
+[node name="Object" type="Area2D" unique_id=119189076]
+script = ExtResource("1_4qhc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1421792628]
+position = Vector2(0, -5.25)
+shape = SubResource("RectangleShape2D_250yl")
