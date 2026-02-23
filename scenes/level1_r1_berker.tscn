@@ -13922,7 +13922,7 @@ texture = ExtResource("2_nkksy")
 sources/0 = SubResource("TileSetAtlasSource_kwi5x")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aty36"]
-size = Vector2(32.864876, 51.047615)
+size = Vector2(32.864876, 16.761904)
 
 [node name="level1_r1_berker" type="Node2D" unique_id=2054374585]
 
@@ -13959,6 +13959,7 @@ position = Vector2(20, 12)
 motion_mode = 1
 
 [node name="Collision" type="StaticBody2D" parent="." unique_id=1607046681]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1257357387]
 polygon = PackedVector2Array(-160, -48, -160, 334, 194, 338, 192, 495, 511, 495, 510, 334, 569, 334, 571, 245, 635, 246, 638, 193, 604, 193, 604, 165, 504, 164, 502, 141, 458, 142, 458, 108, 434, 107, 434, 61, 460, 60, 460, 31, 412, 30, 411, 42, 352, 45, 356, 141, 274, 144, 272, 156, 144, 157, 141, 115, 61, 114, 57, 76, 144, 76, 139, 33, 96, 31, 94, 12, 50, 13, 49, -31, 111, -25, 111, -48, -60, -48, -59, -112, 198, -112, 714, -104, 729, 561, -207, 556, -202, -129, -101, -129, -103, -48, -156, -51)
@@ -13986,7 +13987,7 @@ region_rect = Rect2(31.45937, 0, 32.492023, 48)
 script = ExtResource("5_jk1cf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door/DoorTrigger" unique_id=537168506]
-position = Vector2(-0.43242645, 0)
+position = Vector2(-0.43242645, -17.142857)
 scale = Vector2(0.9999999, 1)
 shape = SubResource("RectangleShape2D_aty36")
 
