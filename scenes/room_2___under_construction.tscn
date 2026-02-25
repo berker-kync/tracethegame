@@ -1190,4 +1190,5 @@ tile_set = SubResource("TileSet_ti07s")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1166911305]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=717494786]
+visible = false
 polygon = PackedVector2Array(-48, -32, -48, 65, 113, 65, 113, -64, -93, -63, -90, -127, 151, -125, 149, 106, -100, 103, -95, -55, -51, -56)
