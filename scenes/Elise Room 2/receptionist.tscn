@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://djuin1dgigaqt"]
+
+[ext_resource type="Texture2D" uid="uid://bdpq4myvl1clg" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_anim_16x16.png" id="1_ojiom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojiom"]
+atlas = ExtResource("1_ojiom")
+region = Rect2(192, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvcrq"]
+atlas = ExtResource("1_ojiom")
+region = Rect2(208, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03u48"]
+atlas = ExtResource("1_ojiom")
+region = Rect2(224, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc3mo"]
+atlas = ExtResource("1_ojiom")
+region = Rect2(240, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qht57"]
+atlas = ExtResource("1_ojiom")
+region = Rect2(256, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enrbu"]
+atlas = ExtResource("1_ojiom")
+region = Rect2(272, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vck3u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojiom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvcrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03u48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc3mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qht57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enrbu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Receptionist" type="Node2D" unique_id=1879564364]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=720314871]
+sprite_frames = SubResource("SpriteFrames_vck3u")
+animation = &"idle"
+autoplay = "idle"
