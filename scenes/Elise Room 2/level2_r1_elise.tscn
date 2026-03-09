@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cqdjn0j7om0c6" path="res://scenes/Elise Room 2/player.tscn" id="1_l1aga"]
 [ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="2_1jqln"]
+[ext_resource type="Script" uid="uid://bmewndglqwd3p" path="res://scenes/Elise Room 2/area_2d.gd" id="3_ey0o8"]
+[ext_resource type="Texture2D" uid="uid://s6bmv4ox24cy" path="res://assets/HotelAssets_NEW/suitcase.png" id="4_8038x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
 texture = ExtResource("2_1jqln")
@@ -1081,6 +1083,30 @@ texture = ExtResource("2_1jqln")
 [sub_resource type="TileSet" id="TileSet_8038x"]
 sources/0 = SubResource("TileSetAtlasSource_ey0o8")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4a4li"]
+size = Vector2(200, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jqln"]
+size = Vector2(4, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey0o8"]
+size = Vector2(4, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8038x"]
+size = Vector2(68, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej50k"]
+size = Vector2(4, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpdfh"]
+size = Vector2(135, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt3ye"]
+size = Vector2(21, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v1p1l"]
+radius = 16.124516
+
 [node name="GameDemo" type="Node2D" unique_id=1836168088]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1360395371]
@@ -1106,3 +1132,53 @@ z_index = 1
 tile_set = SubResource("TileSet_8038x")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65529, 1638400, 2, -65530, 1114112, 4, 6, 1048576, 5, 7, 1114112, 5, 4, 1310720, 1, -65532, 1310720, 0, 262143, 1048576, 7, 196608, 1114112, 7, 196607, 1048576, 6, 131072, 1114112, 6, 262140, 65536, 0, 262141, 65536, 0, 262142, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 196611, 65536, 0, 196612, 589824, 5, 196613, 589824, 5, 196614, 589824, 5, 196615, 589824, 5, -3, 917504, 0, 65533, 917504, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=663483879]
+
+[node name="BottomWall" type="CollisionShape2D" parent="Area2D" unique_id=525821473]
+position = Vector2(32, 62.5)
+shape = SubResource("RectangleShape2D_4a4li")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Area2D" unique_id=1101831812]
+position = Vector2(-66, 14)
+shape = SubResource("RectangleShape2D_1jqln")
+
+[node name="RightWallLower" type="CollisionShape2D" parent="Area2D" unique_id=707895031]
+position = Vector2(130, 30)
+shape = SubResource("RectangleShape2D_ey0o8")
+
+[node name="UpperWallRight" type="CollisionShape2D" parent="Area2D" unique_id=888420261]
+position = Vector2(98, -2.5)
+shape = SubResource("RectangleShape2D_8038x")
+
+[node name="RightWallUpper" type="CollisionShape2D" parent="Area2D" unique_id=819112697]
+position = Vector2(66, -19)
+shape = SubResource("RectangleShape2D_ej50k")
+
+[node name="UpperWall" type="CollisionShape2D" parent="Area2D" unique_id=316064754]
+position = Vector2(-0.5, -35)
+shape = SubResource("RectangleShape2D_hpdfh")
+
+[node name="suitcase" type="CollisionShape2D" parent="Area2D" unique_id=1992135640]
+position = Vector2(-42.5, 39.5)
+shape = SubResource("RectangleShape2D_nt3ye")
+
+[node name="Suitcase" type="Node2D" parent="." unique_id=726509332]
+z_index = 5
+
+[node name="Area2D" type="Area2D" parent="Suitcase" unique_id=950206175]
+collision_layer = 2
+script = ExtResource("3_ey0o8")
+
+[node name="sphereTrigger" type="CollisionShape2D" parent="Suitcase/Area2D" unique_id=1452563843]
+position = Vector2(-42, 40)
+shape = SubResource("CircleShape2D_v1p1l")
+
+[node name="Highlighted" type="Sprite2D" parent="Suitcase/Area2D" unique_id=93645860]
+visible = false
+position = Vector2(-42, 40)
+texture = ExtResource("4_8038x")
+
+[connection signal="area_entered" from="Suitcase/Area2D" to="Suitcase/Area2D" method="_on_area_entered"]
+[connection signal="body_entered" from="Suitcase/Area2D" to="Suitcase/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Suitcase/Area2D" to="Suitcase/Area2D" method="_on_body_exited"]
