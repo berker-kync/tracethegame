@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d08ldxq46wr7d"]
 
+[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://scenes/Elise Room 2/main.gd" id="1_63f0u"]
 [ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://scripts/game_manager.gd" id="1_ypla7"]
-[ext_resource type="PackedScene" uid="uid://b732ktucff3rd" path="res://scenes/MainCamera.tscn" id="2_63f0u"]
-[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/Elise Room 2/player.tscn" id="3_jat7x"]
+[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="3_jat7x"]
 [ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="5_t8k86"]
 [ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
 [ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
-[ext_resource type="Script" uid="uid://d22hyl75rljbi" path="res://scenes/level_transition_1.gd" id="8_63f0u"]
+[ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="8_63f0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
 texture = ExtResource("4_037ag")
@@ -1138,27 +1138,6 @@ texture = ExtResource("4_037ag")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ey0o8")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4a4li"]
-size = Vector2(200, 7)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jqln"]
-size = Vector2(4, 98)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey0o8"]
-size = Vector2(4, 68)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8038x"]
-size = Vector2(68, 3)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej50k"]
-size = Vector2(4, 36)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpdfh"]
-size = Vector2(135, 4)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt3ye"]
-size = Vector2(21, 15)
-
 [sub_resource type="Animation" id="Animation_63f0u"]
 resource_name = "Fade_in"
 length = 0.43333334
@@ -1214,11 +1193,10 @@ _data = {
 }
 
 [node name="GameDemo" type="Node2D" unique_id=1836168088]
+script = ExtResource("1_63f0u")
 
 [node name="Game Manager" type="Node" parent="." unique_id=118374429]
 script = ExtResource("1_ypla7")
-
-[node name="Camera2D" parent="." unique_id=317974890 instance=ExtResource("2_63f0u")]
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("3_jat7x")]
 z_index = 2
@@ -1240,36 +1218,6 @@ z_index = 2
 tile_set = SubResource("TileSet_8038x")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65530, 1114112, 4, 6, 1048576, 5, 7, 1114112, 5, 262140, 65536, 0, 262141, 65536, 0, 262142, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 196611, 65536, 0, 196612, 589824, 5, 196613, 589824, 5, 196614, 589824, 5, 196615, 589824, 5, 196607, 1048576, 6, 131072, 1114112, 6, 196608, 1114112, 7, 262143, 1048576, 7)
-
-[node name="collision" type="Area2D" parent="." unique_id=663483879]
-
-[node name="BottomWall" type="CollisionShape2D" parent="collision" unique_id=525821473]
-position = Vector2(32, 62.5)
-shape = SubResource("RectangleShape2D_4a4li")
-
-[node name="LeftWall" type="CollisionShape2D" parent="collision" unique_id=1101831812]
-position = Vector2(-66, 14)
-shape = SubResource("RectangleShape2D_1jqln")
-
-[node name="RightWallLower" type="CollisionShape2D" parent="collision" unique_id=707895031]
-position = Vector2(130, 30)
-shape = SubResource("RectangleShape2D_ey0o8")
-
-[node name="UpperWallRight" type="CollisionShape2D" parent="collision" unique_id=888420261]
-position = Vector2(98, -2.5)
-shape = SubResource("RectangleShape2D_8038x")
-
-[node name="RightWallUpper" type="CollisionShape2D" parent="collision" unique_id=819112697]
-position = Vector2(66, -19)
-shape = SubResource("RectangleShape2D_ej50k")
-
-[node name="UpperWall" type="CollisionShape2D" parent="collision" unique_id=316064754]
-position = Vector2(-0.5, -35)
-shape = SubResource("RectangleShape2D_hpdfh")
-
-[node name="suitcase" type="CollisionShape2D" parent="collision" unique_id=1992135640]
-position = Vector2(-42.5, 39.5)
-shape = SubResource("RectangleShape2D_nt3ye")
 
 [node name="Suitcase" type="Node2D" parent="." unique_id=1003055794]
 z_index = 1
@@ -1302,7 +1250,11 @@ offset_bottom = -62.000008
 scale = Vector2(8.479798, 5.9961843)
 color = Color(0, 0, 0, 0)
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1646162324]
+zoom = Vector2(4, 4)
+
 [connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_exited"]
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
+[connection signal="animation_finished" from="Transition" to="Door/ProximityBox" method="_on_transition_animation_finished"]

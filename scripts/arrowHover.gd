@@ -1,6 +1,5 @@
 extends Area2D
 
-@onready var arrow: Area2D = $"."
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _mouse_enter() -> void:

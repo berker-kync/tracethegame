@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://bd5ah6ssr0k17"]
 
-[ext_resource type="PackedScene" uid="uid://b1qyus6t1mfkw" path="res://scenes/Lobby/playerLob.tscn" id="1_ied14"]
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="2_dlsvv"]
 [ext_resource type="Texture2D" uid="uid://c5plwq4sosaf6" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="3_gfy1d"]
 [ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_3al0f"]
 [ext_resource type="PackedScene" uid="uid://658wvgab6kci" path="res://scenes/Lobby/elevator.tscn" id="5_rrb0l"]
 [ext_resource type="PackedScene" uid="uid://djuin1dgigaqt" path="res://scenes/Lobby/receptionist.tscn" id="6_dlsvv"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="7_3al0f"]
+[ext_resource type="Script" uid="uid://d22hyl75rljbi" path="res://scenes/level_transition_1.gd" id="7_ihyci"]
 [ext_resource type="Script" uid="uid://3aksxpsfaruu" path="res://scenes/receptionist_trigger.gd" id="8_rrb0l"]
+[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="9_rrb0l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlsvv"]
 texture = ExtResource("2_dlsvv")
@@ -2604,10 +2605,61 @@ texture = ExtResource("4_3al0f")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gyiue")
 
-[node name="HotelLobby" type="Node2D" unique_id=612155497]
+[sub_resource type="Animation" id="Animation_63f0u"]
+resource_name = "Fade_in"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
 
-[node name="Player" parent="." unique_id=1926654213 instance=ExtResource("1_ied14")]
-z_index = 1
+[sub_resource type="Animation" id="Animation_jat7x"]
+resource_name = "Fade_out"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_037ag"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bfwvt"]
+_data = {
+&"Fade_in": SubResource("Animation_63f0u"),
+&"Fade_out": SubResource("Animation_jat7x"),
+&"RESET": SubResource("Animation_037ag")
+}
+
+[node name="HotelLobby" type="Node2D" unique_id=612155497]
 
 [node name="Floor_Wall1" type="TileMap" parent="." unique_id=194139031]
 tile_set = SubResource("TileSet_gfy1d")
@@ -2638,6 +2690,10 @@ layer_0/tile_data = PackedInt32Array(-196610, 720896, 1, -262146, 720896, 0)
 [node name="Elevator" parent="." unique_id=413689097 instance=ExtResource("5_rrb0l")]
 position = Vector2(0, -137)
 
+[node name="ProximityBox" parent="Elevator" unique_id=1801853796 instance=ExtResource("7_3al0f")]
+position = Vector2(0, 3)
+script = ExtResource("7_ihyci")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=80797593]
 position = Vector2(0, -48)
 zoom = Vector2(3, 3)
@@ -2646,13 +2702,33 @@ zoom = Vector2(3, 3)
 position = Vector2(57, -78)
 
 [node name="textbox" type="Node2D" parent="." unique_id=2048071325]
+visible = false
 z_index = 1
 position = Vector2(21, -71)
 
-[node name="ProximityBox" parent="textbox" unique_id=1801853796 instance=ExtResource("7_3al0f")]
+[node name="ProximityBox" parent="textbox" unique_id=1385493322 instance=ExtResource("7_3al0f")]
 script = ExtResource("8_rrb0l")
 
 [node name="Sprite2D" type="Sprite2D" parent="textbox" unique_id=372294075]
 
+[node name="Transition" type="AnimationPlayer" parent="." unique_id=1784987119]
+libraries/ = SubResource("AnimationLibrary_bfwvt")
+autoplay = &"Fade_in"
+
+[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=804748717]
+z_index = 15
+offset_left = -202.0
+offset_top = -163.0
+offset_right = -162.0
+offset_bottom = -123.0
+scale = Vector2(10.199798, 5.9961843)
+color = Color(0, 0, 0, 0)
+
+[node name="Player" parent="." unique_id=1926654213 instance=ExtResource("9_rrb0l")]
+position = Vector2(0, 29.999998)
+
+[connection signal="body_entered" from="Elevator/ProximityBox" to="Elevator/ProximityBox" method="_on_body_entered"]
+[connection signal="body_exited" from="Elevator/ProximityBox" to="Elevator/ProximityBox" method="_on_body_exited"]
 [connection signal="body_entered" from="textbox/ProximityBox" to="textbox/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="textbox/ProximityBox" to="textbox/ProximityBox" method="_on_body_exited"]
+[connection signal="animation_finished" from="Transition" to="Elevator/ProximityBox" method="_on_transition_animation_finished"]

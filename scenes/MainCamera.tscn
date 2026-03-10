@@ -94,3 +94,6 @@ texture = ExtResource("2_idqih")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Journal" unique_id=2137476288]
 libraries/ = SubResource("AnimationLibrary_2i1vf")
+
+[connection signal="mouse_entered" from="Journal" to="Journal" method="_mouse_enter"]
+[connection signal="mouse_exited" from="Journal" to="Journal" method="_mouse_exit"]
