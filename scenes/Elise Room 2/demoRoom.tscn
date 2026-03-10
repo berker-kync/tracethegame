@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://d08ldxq46wr7d"]
 
-[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/Elise Room 2/player.tscn" id="1_oxa52"]
-[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="2_l8rac"]
-[ext_resource type="PackedScene" uid="uid://b7ilk4vck5iff" path="res://scenes/proximity_trigger.tscn" id="4_8038x"]
-[ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="4_unn5x"]
+[ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://scripts/game_manager.gd" id="1_ypla7"]
+[ext_resource type="PackedScene" uid="uid://b732ktucff3rd" path="res://scenes/MainCamera.tscn" id="2_63f0u"]
+[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/Elise Room 2/player.tscn" id="3_jat7x"]
+[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="5_t8k86"]
+[ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
+[ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
+[ext_resource type="Script" uid="uid://d22hyl75rljbi" path="res://scenes/level_transition_1.gd" id="8_63f0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
-texture = ExtResource("2_l8rac")
+texture = ExtResource("4_037ag")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -389,7 +393,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_4a4li")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jqln"]
-texture = ExtResource("2_l8rac")
+texture = ExtResource("4_037ag")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -759,7 +763,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1jqln")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ey0o8"]
-texture = ExtResource("2_l8rac")
+texture = ExtResource("4_037ag")
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.2655296, 8, 4.4396324, 8, 8, -8, 8)
@@ -1155,13 +1159,68 @@ size = Vector2(135, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nt3ye"]
 size = Vector2(21, 15)
 
+[sub_resource type="Animation" id="Animation_63f0u"]
+resource_name = "Fade_in"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jat7x"]
+resource_name = "Fade_out"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_037ag"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t8k86"]
+_data = {
+&"Fade_in": SubResource("Animation_63f0u"),
+&"Fade_out": SubResource("Animation_jat7x"),
+&"RESET": SubResource("Animation_037ag")
+}
+
 [node name="GameDemo" type="Node2D" unique_id=1836168088]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1360395371]
-zoom = Vector2(4, 4)
-drag_vertical_offset = 0.25
+[node name="Game Manager" type="Node" parent="." unique_id=118374429]
+script = ExtResource("1_ypla7")
 
-[node name="Player" parent="." unique_id=1926654213 instance=ExtResource("1_oxa52")]
+[node name="Camera2D" parent="." unique_id=317974890 instance=ExtResource("2_63f0u")]
+
+[node name="Player" parent="." unique_id=1926654213 instance=ExtResource("3_jat7x")]
 z_index = 2
 position = Vector2(0, 60)
 
@@ -1182,43 +1241,68 @@ tile_set = SubResource("TileSet_8038x")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65530, 1114112, 4, 6, 1048576, 5, 7, 1114112, 5, 262140, 65536, 0, 262141, 65536, 0, 262142, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 196611, 65536, 0, 196612, 589824, 5, 196613, 589824, 5, 196614, 589824, 5, 196615, 589824, 5, 196607, 1048576, 6, 131072, 1114112, 6, 196608, 1114112, 7, 262143, 1048576, 7)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=663483879]
-visible = false
+[node name="collision" type="Area2D" parent="." unique_id=663483879]
 
-[node name="BottomWall" type="CollisionShape2D" parent="Area2D" unique_id=525821473]
+[node name="BottomWall" type="CollisionShape2D" parent="collision" unique_id=525821473]
 position = Vector2(32, 62.5)
 shape = SubResource("RectangleShape2D_4a4li")
 
-[node name="LeftWall" type="CollisionShape2D" parent="Area2D" unique_id=1101831812]
+[node name="LeftWall" type="CollisionShape2D" parent="collision" unique_id=1101831812]
 position = Vector2(-66, 14)
 shape = SubResource("RectangleShape2D_1jqln")
 
-[node name="RightWallLower" type="CollisionShape2D" parent="Area2D" unique_id=707895031]
+[node name="RightWallLower" type="CollisionShape2D" parent="collision" unique_id=707895031]
 position = Vector2(130, 30)
 shape = SubResource("RectangleShape2D_ey0o8")
 
-[node name="UpperWallRight" type="CollisionShape2D" parent="Area2D" unique_id=888420261]
+[node name="UpperWallRight" type="CollisionShape2D" parent="collision" unique_id=888420261]
 position = Vector2(98, -2.5)
 shape = SubResource("RectangleShape2D_8038x")
 
-[node name="RightWallUpper" type="CollisionShape2D" parent="Area2D" unique_id=819112697]
+[node name="RightWallUpper" type="CollisionShape2D" parent="collision" unique_id=819112697]
 position = Vector2(66, -19)
 shape = SubResource("RectangleShape2D_ej50k")
 
-[node name="UpperWall" type="CollisionShape2D" parent="Area2D" unique_id=316064754]
+[node name="UpperWall" type="CollisionShape2D" parent="collision" unique_id=316064754]
 position = Vector2(-0.5, -35)
 shape = SubResource("RectangleShape2D_hpdfh")
 
-[node name="suitcase" type="CollisionShape2D" parent="Area2D" unique_id=1992135640]
+[node name="suitcase" type="CollisionShape2D" parent="collision" unique_id=1992135640]
 position = Vector2(-42.5, 39.5)
 shape = SubResource("RectangleShape2D_nt3ye")
 
-[node name="SuitcaseTest" type="Node2D" parent="." unique_id=1003055794]
-z_index = 5
+[node name="Suitcase" type="Node2D" parent="." unique_id=1003055794]
+z_index = 1
+position = Vector2(-42.5, 39.5)
 
-[node name="Highlighted" type="Sprite2D" parent="SuitcaseTest" unique_id=365382204]
+[node name="ProximityTrigger" parent="Suitcase" unique_id=2116753924 instance=ExtResource("5_t8k86")]
+script = ExtResource("6_18kgy")
+
+[node name="highlighted" type="Sprite2D" parent="Suitcase" unique_id=1400705703]
 visible = false
-position = Vector2(-42, 40)
-texture = ExtResource("4_unn5x")
+position = Vector2(0.5, 0)
+texture = ExtResource("7_owxka")
 
-[node name="ProximityTrigger" parent="SuitcaseTest" unique_id=2116753924 instance=ExtResource("4_8038x")]
+[node name="Door" type="Node2D" parent="." unique_id=763871868]
+position = Vector2(0, 63)
+
+[node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("5_t8k86")]
+script = ExtResource("8_63f0u")
+
+[node name="Transition" type="AnimationPlayer" parent="." unique_id=2032135501]
+libraries/ = SubResource("AnimationLibrary_t8k86")
+autoplay = &"Fade_in"
+
+[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=108836160]
+z_index = 15
+offset_left = -176.0
+offset_top = -102.00001
+offset_right = -136.0
+offset_bottom = -62.000008
+scale = Vector2(8.479798, 5.9961843)
+color = Color(0, 0, 0, 0)
+
+[connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_exited"]
+[connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
+[connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]

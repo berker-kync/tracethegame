@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dqtgfgnxa7o41"]
 
-[ext_resource type="Texture2D" uid="uid://cpwf2d2021v3t" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="1_ixygg"]
+[ext_resource type="Texture2D" uid="uid://ofc248hylhv6" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="1_ixygg"]
 [ext_resource type="PackedScene" uid="uid://bu3p0dknx1krk" path="res://scenes/arrow.tscn" id="1_sdrrl"]
 [ext_resource type="Script" uid="uid://dkjmnyb5fsnkq" path="res://scripts/arrowHover.gd" id="2_e38b3"]
-[ext_resource type="Texture2D" uid="uid://bd4hfu1kbwtl3" path="res://assets/journal1.png" id="3_jmxw3"]
+[ext_resource type="Texture2D" uid="uid://bd4hfu1kbwtl3" path="res://assets/custom/journal1.png" id="3_jmxw3"]
 [ext_resource type="PackedScene" uid="uid://duoffxi5oxyti" path="res://scenes/player.tscn" id="5_e38b3"]
 
 [sub_resource type="Animation" id="Animation_sdrrl"]

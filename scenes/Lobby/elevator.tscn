@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://658wvgab6kci"]
 
 [ext_resource type="Texture2D" uid="uid://bdtd1q2mj2bde" path="res://HotelAssets_NEW/Sprite Sheets/Elevator/elevator-Sheet.png" id="1_4be5b"]
-[ext_resource type="Script" uid="uid://dc1hthssjxek5" path="res://animated_sprite_2d.gd" id="2_vtdg7"]
+[ext_resource type="Script" uid="uid://dc1hthssjxek5" path="res://scripts/animated_sprite_2d.gd" id="2_vtdg7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ln2w"]
 atlas = ExtResource("1_4be5b")
