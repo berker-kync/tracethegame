@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_3al0f"]
 [ext_resource type="PackedScene" uid="uid://658wvgab6kci" path="res://scenes/Lobby/elevator.tscn" id="5_rrb0l"]
 [ext_resource type="PackedScene" uid="uid://djuin1dgigaqt" path="res://scenes/Lobby/receptionist.tscn" id="6_dlsvv"]
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="7_3al0f"]
+[ext_resource type="Script" uid="uid://3aksxpsfaruu" path="res://scenes/receptionist_trigger.gd" id="8_rrb0l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlsvv"]
 texture = ExtResource("2_dlsvv")
@@ -2642,3 +2644,15 @@ zoom = Vector2(3, 3)
 
 [node name="Receptionist" parent="." unique_id=1879564364 instance=ExtResource("6_dlsvv")]
 position = Vector2(57, -78)
+
+[node name="textbox" type="Node2D" parent="." unique_id=2048071325]
+z_index = 1
+position = Vector2(21, -71)
+
+[node name="ProximityBox" parent="textbox" unique_id=1801853796 instance=ExtResource("7_3al0f")]
+script = ExtResource("8_rrb0l")
+
+[node name="Sprite2D" type="Sprite2D" parent="textbox" unique_id=372294075]
+
+[connection signal="body_entered" from="textbox/ProximityBox" to="textbox/ProximityBox" method="_on_body_entered"]
+[connection signal="body_exited" from="textbox/ProximityBox" to="textbox/ProximityBox" method="_on_body_exited"]
