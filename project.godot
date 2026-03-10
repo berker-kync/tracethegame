@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TraceTheGame"
-run/main_scene="uid://bbekqfheprqnr"
+run/main_scene="uid://d08ldxq46wr7d"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
