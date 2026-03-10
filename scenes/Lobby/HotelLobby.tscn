@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="2_dlsvv"]
 [ext_resource type="Texture2D" uid="uid://c5plwq4sosaf6" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="3_gfy1d"]
 [ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_3al0f"]
-[ext_resource type="PackedScene" uid="uid://658wvgab6kci" path="res://scenes/Elise Room 2/elevator.tscn" id="5_rrb0l"]
-[ext_resource type="PackedScene" uid="uid://djuin1dgigaqt" path="res://scenes/Elise Room 2/receptionist.tscn" id="6_dlsvv"]
+[ext_resource type="PackedScene" uid="uid://658wvgab6kci" path="res://scenes/Lobby/elevator.tscn" id="5_rrb0l"]
+[ext_resource type="PackedScene" uid="uid://djuin1dgigaqt" path="res://scenes/Lobby/receptionist.tscn" id="6_dlsvv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlsvv"]
 texture = ExtResource("2_dlsvv")
