@@ -1251,6 +1251,7 @@ scale = Vector2(8.479798, 5.9961843)
 color = Color(0, 0, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1646162324]
+position = Vector2(16, 2)
 zoom = Vector2(4, 4)
 
 [connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]

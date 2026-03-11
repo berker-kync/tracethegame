@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="7_3al0f"]
 [ext_resource type="Script" uid="uid://d22hyl75rljbi" path="res://scenes/level_transition_1.gd" id="7_ihyci"]
 [ext_resource type="Script" uid="uid://3aksxpsfaruu" path="res://scenes/receptionist_trigger.gd" id="8_rrb0l"]
+[ext_resource type="Texture2D" uid="uid://2g80siwecvx7" path="res://assets/bubble_text.png" id="9_ihyci"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="9_rrb0l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlsvv"]
@@ -2702,14 +2703,23 @@ zoom = Vector2(3, 3)
 position = Vector2(57, -78)
 
 [node name="textbox" type="Node2D" parent="." unique_id=2048071325]
-visible = false
 z_index = 1
 position = Vector2(21, -71)
 
 [node name="ProximityBox" parent="textbox" unique_id=1385493322 instance=ExtResource("7_3al0f")]
 script = ExtResource("8_rrb0l")
 
-[node name="Sprite2D" type="Sprite2D" parent="textbox" unique_id=372294075]
+[node name="textBox" type="Sprite2D" parent="textbox" unique_id=372294075]
+position = Vector2(-35.000015, -34)
+scale = Vector2(0.33414635, 0.3852459)
+texture = ExtResource("9_ihyci")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="textbox/textBox" unique_id=1847137845]
+offset_left = -182.5547
+offset_top = -77.872345
+offset_right = 188.5402
+offset_bottom = 40.0
+text = "Hello Player! Welcome to trace!"
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=1784987119]
 libraries/ = SubResource("AnimationLibrary_bfwvt")
@@ -2717,10 +2727,10 @@ autoplay = &"Fade_in"
 
 [node name="ColorRect" type="ColorRect" parent="Transition" unique_id=804748717]
 z_index = 15
-offset_left = -202.0
-offset_top = -163.0
-offset_right = -162.0
-offset_bottom = -123.0
+offset_left = -204.0
+offset_top = -168.0
+offset_right = -164.0
+offset_bottom = -128.0
 scale = Vector2(10.199798, 5.9961843)
 color = Color(0, 0, 0, 0)
 
