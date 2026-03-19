@@ -1,13 +1,7 @@
-[gd_scene format=3 uid="uid://d08ldxq46wr7d"]
+[gd_scene format=3 uid="uid://bbekqfheprqnr"]
 
-[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://scenes/Elise Room 2/main.gd" id="1_63f0u"]
-[ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://scripts/game_manager.gd" id="1_ypla7"]
-[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="3_jat7x"]
-[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
-[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="5_t8k86"]
-[ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
-[ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
-[ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="8_63f0u"]
+[ext_resource type="PackedScene" uid="uid://cqdjn0j7om0c6" path="res://scenes/Elise Room 2/player.tscn" id="1_l1aga"]
+[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="2_1jqln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
 texture = ExtResource("4_037ag")
@@ -1138,60 +1132,6 @@ texture = ExtResource("4_037ag")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ey0o8")
 
-[sub_resource type="Animation" id="Animation_63f0u"]
-resource_name = "Fade_in"
-length = 0.43333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_jat7x"]
-resource_name = "Fade_out"
-length = 0.43333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_037ag"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_t8k86"]
-_data = {
-&"Fade_in": SubResource("Animation_63f0u"),
-&"Fade_out": SubResource("Animation_jat7x"),
-&"RESET": SubResource("Animation_037ag")
-}
-
 [node name="GameDemo" type="Node2D" unique_id=1836168088]
 script = ExtResource("1_63f0u")
 
@@ -1217,45 +1157,4 @@ layer_0/tile_data = PackedInt32Array(-131068, 131072, 1, -131074, 196608, 7, -13
 z_index = 2
 tile_set = SubResource("TileSet_8038x")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65530, 1114112, 4, 6, 1048576, 5, 7, 1114112, 5, 262140, 65536, 0, 262141, 65536, 0, 262142, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 196611, 65536, 0, 196612, 589824, 5, 196613, 589824, 5, 196614, 589824, 5, 196615, 589824, 5, 196607, 1048576, 6, 131072, 1114112, 6, 196608, 1114112, 7, 262143, 1048576, 7)
-
-[node name="Suitcase" type="Node2D" parent="." unique_id=1003055794]
-z_index = 1
-position = Vector2(-42.5, 39.5)
-
-[node name="ProximityTrigger" parent="Suitcase" unique_id=2116753924 instance=ExtResource("5_t8k86")]
-script = ExtResource("6_18kgy")
-
-[node name="highlighted" type="Sprite2D" parent="Suitcase" unique_id=1400705703]
-visible = false
-position = Vector2(0.5, 0)
-texture = ExtResource("7_owxka")
-
-[node name="Door" type="Node2D" parent="." unique_id=763871868]
-position = Vector2(0, 63)
-
-[node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("5_t8k86")]
-script = ExtResource("8_63f0u")
-
-[node name="Transition" type="AnimationPlayer" parent="." unique_id=2032135501]
-libraries/ = SubResource("AnimationLibrary_t8k86")
-autoplay = &"Fade_in"
-
-[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=108836160]
-z_index = 15
-offset_left = -176.0
-offset_top = -102.00001
-offset_right = -136.0
-offset_bottom = -62.000008
-scale = Vector2(8.479798, 5.9961843)
-color = Color(0, 0, 0, 0)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1646162324]
-position = Vector2(16, 2)
-zoom = Vector2(4, 4)
-
-[connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]
-[connection signal="body_exited" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_exited"]
-[connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
-[connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
-[connection signal="animation_finished" from="Transition" to="Door/ProximityBox" method="_on_transition_animation_finished"]
+layer_0/tile_data = PackedInt32Array(-65529, 1638400, 2, -65530, 1114112, 4, 6, 1048576, 5, 7, 1114112, 5, 4, 1310720, 1, -65532, 1310720, 0, 262143, 1048576, 7, 196608, 1114112, 7, 196607, 1048576, 6, 131072, 1114112, 6, 262140, 65536, 0, 262141, 65536, 0, 262142, 65536, 0, 196609, 65536, 0, 196610, 65536, 0, 196611, 65536, 0, 196612, 589824, 5, 196613, 589824, 5, 196614, 589824, 5, 196615, 589824, 5, -3, 917504, 0, 65533, 917504, 1)
