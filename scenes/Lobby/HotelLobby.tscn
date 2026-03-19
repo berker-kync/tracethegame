@@ -2719,7 +2719,7 @@ offset_left = -182.5547
 offset_top = -77.872345
 offset_right = 188.5402
 offset_bottom = 40.0
-text = "Hello Player! Welcome to trace!"
+text = "Hello Player! Welcome to Trace Hotel! Use E or Enter to interact. Please make your way towards to the elevator and interact to enter the first room. See if there is anything to interact with in there. Good Luck! "
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=1784987119]
 libraries/ = SubResource("AnimationLibrary_bfwvt")
