@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://c2slcciavn46i"]
+
+[ext_resource type="Script" uid="uid://b8sevfe7wxm6f" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+
+[sub_resource type="Theme" id="Theme_ekxnf"]
+
+[node name="MainMenu" type="Node2D" unique_id=1283482954]
+script = ExtResource("1_l6cm7")
+
+[node name="Label" type="Label" parent="." unique_id=1272108093]
+offset_right = 1153.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 175
+text = "TRACE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1721557529]
+offset_left = 2.0
+offset_top = 283.0
+offset_right = 1153.0
+offset_bottom = 603.0
+theme = SubResource("Theme_ekxnf")
+
+[node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=101339334]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Play" type="Button" parent="CenterContainer/MainButtons" unique_id=702088970]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="CenterContainer/MainButtons" unique_id=921826957]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS"
+
+[node name="Credits" type="Button" parent="CenterContainer/MainButtons" unique_id=1289874801]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+
+[node name="Quit" type="Button" parent="CenterContainer/MainButtons" unique_id=331341037]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "QUIT"
+
+[node name="Settings" type="VBoxContainer" parent="CenterContainer" unique_id=1207651279]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Back" type="Button" parent="CenterContainer/Settings" unique_id=348397752]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[node name="Credits" type="VBoxContainer" parent="CenterContainer" unique_id=1480061646]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CenterContainer/Credits" unique_id=676740941]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "A Game by Elise Handley and Cal Atkins"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Back" type="Button" parent="CenterContainer/Credits" unique_id=54164063]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+
+[connection signal="pressed" from="CenterContainer/MainButtons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Quit" to="." method="_on_quit_pressed"]
