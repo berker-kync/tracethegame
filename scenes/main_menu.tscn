@@ -23,7 +23,6 @@ offset_bottom = 603.0
 theme = SubResource("Theme_ekxnf")
 
 [node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=101339334]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 10
 
@@ -48,6 +47,7 @@ theme_override_font_sizes/font_size = 50
 text = "QUIT"
 
 [node name="Settings" type="VBoxContainer" parent="CenterContainer" unique_id=1207651279]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 16
 
@@ -78,3 +78,5 @@ text = "BACK"
 [connection signal="pressed" from="CenterContainer/MainButtons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CenterContainer/Settings/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/Credits/Back" to="." method="_on_back_pressed"]
