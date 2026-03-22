@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://j00d3omadqc1"]
+[gd_scene format=3 uid="uid://neh2nc2esj7l"]
 
-[ext_resource type="Script" uid="uid://dpfx5mb21kukr" path="res://scenes/Elise Room 2/scripts/object.gd" id="1_4qhc8"]
+[ext_resource type="Script" uid="uid://dsg4kqqdlim0w" path="res://scenes/Elise Room 2/scripts/object.gd" id="1_0b45e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_250yl"]
 size = Vector2(26, 27.5)
 
 [node name="Object" type="Area2D" unique_id=119189076]
-script = ExtResource("1_4qhc8")
+script = ExtResource("1_0b45e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1421792628]
 position = Vector2(0, -5.25)
