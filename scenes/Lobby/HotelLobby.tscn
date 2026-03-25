@@ -2695,10 +2695,6 @@ position = Vector2(0, -137)
 position = Vector2(0, 3)
 script = ExtResource("7_ihyci")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=80797593]
-position = Vector2(0, -48)
-zoom = Vector2(3, 3)
-
 [node name="Receptionist" parent="." unique_id=1879564364 instance=ExtResource("6_dlsvv")]
 position = Vector2(57, -78)
 
