@@ -1,14 +1,14 @@
 extends Area2D
 #@onready var highlighted: Sprite2D = $highlighted
 #@onready var game_manager: Node = $"Game Manager"
-@onready var transition: AnimationPlayer = $"../../Transition"
+@onready var level_transition: AnimationPlayer = $"../../LevelTransition"
 var proximity = false
 var lobby = load("res://scenes/Lobby/HotelLobby.tscn")
 
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
 		print("interacted") 
-		transition.play("Fade_out")
+		level_transition.play("Fade_out")
 		#level transition
 
 

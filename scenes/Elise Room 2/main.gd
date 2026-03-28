@@ -1,6 +1,8 @@
 extends Node2D
 
-@onready var transition: AnimationPlayer = $Transition
+@onready var level_transition: AnimationPlayer = $LevelTransition
+
+
 
 func _ready() -> void:
-	transition.play("Fade_in")
+	level_transition.play("Fade_in")

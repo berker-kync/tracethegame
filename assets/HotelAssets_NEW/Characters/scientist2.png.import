@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjjbbh18agkah"
-path="res://.godot/imported/scientist2.png-1e3f2f17418a3fcfa6b9b9f50e3baa38.ctex"
+path="res://.godot/imported/scientist2.png-fa9cee5df47979409338bde0b11a2ab9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/HotelAssets_NEW/Characters/scientist2.png"
-dest_files=["res://.godot/imported/scientist2.png-1e3f2f17418a3fcfa6b9b9f50e3baa38.ctex"]
+source_file="res://Assets/HotelAssets_NEW/Characters/scientist2.png"
+dest_files=["res://.godot/imported/scientist2.png-fa9cee5df47979409338bde0b11a2ab9.ctex"]
 
 [params]
 

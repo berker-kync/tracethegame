@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b63qurp68nsmm"]
 
-[ext_resource type="Theme" uid="uid://y8k2d4m1jrlr" path="res://themes/letter_tile.theme" id="1_pbye1"]
-[ext_resource type="Script" uid="uid://dt72qox5110qq" path="res://scripts/letter_tile.gd" id="2_1gko5"]
+[ext_resource type="Theme" uid="uid://y8k2d4m1jrlr" path="res://Themes/letter_tile.theme" id="1_pbye1"]
+[ext_resource type="Script" uid="uid://dt72qox5110qq" path="res://Scripts/letter_tile.gd" id="2_1gko5"]
 
 [node name="LetterTile" type="Panel" unique_id=787927358]
 custom_minimum_size = Vector2(40, 40)
@@ -12,6 +12,6 @@ script = ExtResource("2_1gko5")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-text = "1"
+text = "A"
 horizontal_alignment = 1
 vertical_alignment = 1

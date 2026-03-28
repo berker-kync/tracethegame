@@ -1,13 +1,17 @@
 extends Node
+@onready var journal: Control = $"../Journal"
+@onready var journal_animator: AnimationPlayer = $"../JournalAnimator"
 
-var proximity = false
+@onready var journalActive = false
 
-func in_proximity():
-	proximity = true
-	print("true")
-func out_proximity():
-	proximity = false
-	print("false")
-
-func get_proximity():
-	return proximity
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Journal"):
+		if journalActive == true: 
+			journal_animator.play("RESET")
+			journal.visible = false
+			journalActive = false
+		else:
+			journal_animator.play("Pause")
+			journal.visible = true
+			journalActive = true
+		

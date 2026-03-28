@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://d08ldxq46wr7d"]
 
-[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://scenes/Elise Room 2/main.gd" id="1_63f0u"]
-[ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://scripts/game_manager.gd" id="1_ypla7"]
-[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="3_jat7x"]
-[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
-[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="5_t8k86"]
-[ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
-[ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
-[ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="8_63f0u"]
+[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://Scenes/Elise Room 2/main.gd" id="1_63f0u"]
+[ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://Scripts/game_manager.gd" id="1_ypla7"]
+[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://Scenes/player.tscn" id="3_jat7x"]
+[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://Assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://Scenes/proximity_trigger.tscn" id="5_t8k86"]
+[ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://Scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
+[ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://Assets/custom/suitcase.png" id="7_owxka"]
+[ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://Scenes/lobbyTransition.gd" id="8_63f0u"]
+[ext_resource type="PackedScene" uid="uid://bvyrlne47qdtg" path="res://Scenes/Elise Room 2/Journal.tscn" id="9_0qj8v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
 texture = ExtResource("4_037ag")
@@ -1144,7 +1145,7 @@ length = 0.43333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/path = NodePath("LevelTransition/ColorRectBlack:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1160,7 +1161,7 @@ length = 0.43333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/path = NodePath("LevelTransition/ColorRectBlack:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1170,12 +1171,16 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_te3gb"]
+resource_name = "Pause"
+length = 0.4
+
 [sub_resource type="Animation" id="Animation_037ag"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/path = NodePath("LevelTransition/ColorRectBlack:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1189,7 +1194,44 @@ tracks/0/keys = {
 _data = {
 &"Fade_in": SubResource("Animation_63f0u"),
 &"Fade_out": SubResource("Animation_jat7x"),
+&"Pause": SubResource("Animation_te3gb"),
 &"RESET": SubResource("Animation_037ag")
+}
+
+[sub_resource type="Animation" id="Animation_0qj8v"]
+resource_name = "Pause"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JournalAnimator/ColorRectGrey:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.54901963)]
+}
+
+[sub_resource type="Animation" id="Animation_fqtpe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JournalAnimator/ColorRectGrey:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x6ixm"]
+_data = {
+&"Pause": SubResource("Animation_0qj8v"),
+&"RESET": SubResource("Animation_fqtpe")
 }
 
 [node name="GameDemo" type="Node2D" unique_id=1836168088]
@@ -1237,25 +1279,46 @@ position = Vector2(0, 63)
 [node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("5_t8k86")]
 script = ExtResource("8_63f0u")
 
-[node name="Transition" type="AnimationPlayer" parent="." unique_id=2032135501]
+[node name="LevelTransition" type="AnimationPlayer" parent="." unique_id=2032135501]
 libraries/ = SubResource("AnimationLibrary_t8k86")
 autoplay = &"Fade_in"
 
-[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=108836160]
+[node name="ColorRectBlack" type="ColorRect" parent="LevelTransition" unique_id=108836160]
+visible = false
 z_index = 15
-offset_left = -176.0
-offset_top = -102.00001
-offset_right = -136.0
-offset_bottom = -62.000008
-scale = Vector2(8.479798, 5.9961843)
+offset_left = -130.0
+offset_top = -80.00001
+offset_right = -90.0
+offset_bottom = -40.000008
+scale = Vector2(7.306642, 4.150565)
 color = Color(0, 0, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1646162324]
 position = Vector2(16, 2)
 zoom = Vector2(4, 4)
 
+[node name="Journal" parent="." unique_id=139289820 instance=ExtResource("9_0qj8v")]
+visible = false
+offset_left = -44.0
+offset_top = -75.0
+offset_right = -44.0
+offset_bottom = -75.0
+scale = Vector2(0.545916, 0.67182547)
+
+[node name="JournalAnimator" type="AnimationPlayer" parent="." unique_id=583007207]
+libraries/ = SubResource("AnimationLibrary_x6ixm")
+
+[node name="ColorRectGrey" type="ColorRect" parent="JournalAnimator" unique_id=756776926]
+z_index = 98
+offset_left = -130.0
+offset_top = -80.0
+offset_right = -90.0
+offset_bottom = -40.0
+scale = Vector2(7.2941546, 4.224568)
+color = Color(0, 0, 0, 0)
+
 [connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_exited"]
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
-[connection signal="animation_finished" from="Transition" to="Door/ProximityBox" method="_on_transition_animation_finished"]
+[connection signal="animation_finished" from="LevelTransition" to="Door/ProximityBox" method="_on_transition_animation_finished"]
