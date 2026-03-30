@@ -1,8 +1,8 @@
 extends Area2D
 
-@onready var transition: AnimationPlayer = $"../../Transition2"
+@onready var transition: AnimationPlayer = $"../../Transition3"
 var proximity = false
-var Lobby = load("res://scenes/Lobby/HotelLobby.tscn")
+var room102 = load("res://scenes/room_102.tscn")
 
 func _ready() -> void:
 	# Ensure the animation_finished signal is connected
@@ -23,4 +23,4 @@ func _on_body_exited(_body: Node2D) -> void:
 
 func _on_transition_animation_finished(anim_name: StringName) -> void:
 	if anim_name != "Fade_in":
-		get_tree().change_scene_to_packed(Lobby)
+		get_tree().change_scene_to_packed(room102)

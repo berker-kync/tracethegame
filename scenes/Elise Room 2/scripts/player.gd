@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D 
 
-const SPEED = 100.0
+const SPEED = 45.0
 func _physics_process(_delta: float) -> void:
 	
 	var direction := Vector2(
