@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfstvl3ltypua"
-path="res://.godot/imported/timeMachineShadow.png-c4607055ce03f74e187dc68f990540e3.ctex"
+path="res://.godot/imported/timeMachineShadow.png-9c924bebb29e4375ad750f986fac14d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hotel-Labratory-Sprites/Sprite Sheets/Time Machine/timeMachineShadow.png"
-dest_files=["res://.godot/imported/timeMachineShadow.png-c4607055ce03f74e187dc68f990540e3.ctex"]
+source_file="res://assets/Hotel-Labratory-Sprites/Sprite Sheets/Time Machine/timeMachineShadow.png"
+dest_files=["res://.godot/imported/timeMachineShadow.png-9c924bebb29e4375ad750f986fac14d0.ctex"]
 
 [params]
 

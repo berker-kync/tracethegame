@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://d08ldxq46wr7d"]
 
-[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://Scenes/Elise Room 2/main.gd" id="1_63f0u"]
-[ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://Scripts/game_manager.gd" id="1_ypla7"]
-[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://Scenes/player.tscn" id="3_jat7x"]
-[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://Assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
-[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://Scenes/proximity_trigger.tscn" id="5_t8k86"]
-[ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://Scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
-[ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://Assets/custom/suitcase.png" id="7_owxka"]
-[ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://Scenes/lobbyTransition.gd" id="8_63f0u"]
-[ext_resource type="PackedScene" uid="uid://bvyrlne47qdtg" path="res://Scenes/Elise Room 2/Journal.tscn" id="9_0qj8v"]
+[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://scenes/Elise Room 2/main.gd" id="1_63f0u"]
+[ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://scripts/game_manager.gd" id="1_ypla7"]
+[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="3_jat7x"]
+[ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="5_t8k86"]
+[ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
+[ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
+[ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="8_63f0u"]
+[ext_resource type="PackedScene" uid="uid://bvyrlne47qdtg" path="res://scenes/Elise Room 2/Journal.tscn" id="9_0qj8v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
 texture = ExtResource("4_037ag")
@@ -1284,7 +1284,6 @@ libraries/ = SubResource("AnimationLibrary_t8k86")
 autoplay = &"Fade_in"
 
 [node name="ColorRectBlack" type="ColorRect" parent="LevelTransition" unique_id=108836160]
-visible = false
 z_index = 15
 offset_left = -130.0
 offset_top = -80.00001

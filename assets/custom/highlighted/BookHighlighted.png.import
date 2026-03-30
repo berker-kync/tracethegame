@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvgdan0s873dl"
-path="res://.godot/imported/Alex_sit_16x16.png-c48ef07477054d202cc9fc15e7bca18a.ctex"
+uid="uid://bsxjdmkc7enph"
+path="res://.godot/imported/BookHighlighted.png-a666d0df46eec31c1c7301547428853c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Modern tiles_Free/Characters_free/Alex_sit_16x16.png"
-dest_files=["res://.godot/imported/Alex_sit_16x16.png-c48ef07477054d202cc9fc15e7bca18a.ctex"]
+source_file="res://assets/custom/highlighted/BookHighlighted.png"
+dest_files=["res://.godot/imported/BookHighlighted.png-a666d0df46eec31c1c7301547428853c.ctex"]
 
 [params]
 
