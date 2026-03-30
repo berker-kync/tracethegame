@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_2041i"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_rgy80"]
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_m5tsb"]
+[ext_resource type="Script" uid="uid://civccgpwl7uu8" path="res://scenes/room102exit.gd" id="4_m5tsb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgy80"]
 texture = ExtResource("1_2041i")
@@ -556,6 +558,7 @@ texture = ExtResource("1_2041i")
 25:6/0 = 0
 26:6/0 = 0
 29:6/0 = 0
+29:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 1.1316719, -8, 0.9575691)
 0:7/0 = 0
 2:7/0 = 0
 3:7/0 = 0
@@ -577,6 +580,7 @@ texture = ExtResource("1_2041i")
 23:7/0 = 0
 25:7/0 = 0
 26:7/0 = 0
+26:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.3503933, 0.26115608, 2.6986008, 1.1316719, 1.6539803, 8, -2.524496, 8)
 27:7/0 = 0
 29:7/0 = 0
 30:7/0 = 0
@@ -939,6 +943,7 @@ texture = ExtResource("1_2041i")
 23:7/0 = 0
 25:7/0 = 0
 26:7/0 = 0
+26:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.828083, 1.1316719, 2.0021877, 1.1316719, 2.3503933, 8, -2.0021877, 8)
 27:7/0 = 0
 29:7/0 = 0
 30:7/0 = 0
@@ -1129,7 +1134,67 @@ texture = ExtResource("1_2041i")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_boroa")
 
+[sub_resource type="Animation" id="Animation_63f0u"]
+resource_name = "Fade_in"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jat7x"]
+resource_name = "Fade_out"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_037ag"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rgy80"]
+_data = {
+&"Fade_in": SubResource("Animation_63f0u"),
+&"Fade_out": SubResource("Animation_jat7x"),
+&"RESET": SubResource("Animation_037ag")
+}
+
 [node name="Room102" type="Node2D" unique_id=1972692697]
+
+[node name="Door" type="Node2D" parent="." unique_id=966456411]
+
+[node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("3_m5tsb")]
+position = Vector2(0, -12)
+script = ExtResource("4_m5tsb")
 
 [node name="Floor_sideWalls_backWalls" type="TileMap" parent="." unique_id=1152262633]
 tile_set = SubResource("TileSet_aruyb")
@@ -1139,16 +1204,33 @@ layer_0/tile_data = PackedInt32Array(-1, 65536, 2, -65536, 65536, 2, -65538, 655
 [node name="bottomWalls_mainFurniture" type="TileMap" parent="." unique_id=735899275]
 tile_set = SubResource("TileSet_fifsi")
 format = 2
-layer_0/tile_data = PackedInt32Array(-458746, 589824, 5, -131062, 589824, 5, -131063, 589824, 5, -131064, 589824, 5, -131065, 589824, 5, -131066, 589824, 5, -131068, 65536, 4, -131069, 65536, 4, -131071, 65536, 4, -65538, 65536, 4, -65539, 65536, 4, -65540, 65536, 4, -65541, 65536, 4, -65542, 65536, 4, -458748, 983040, 0, -131078, 851968, 1, -196614, 851968, 0, -131077, 917504, 1, -196613, 917504, 0, -393221, 1310720, 1, -458757, 1310720, 0, -458755, 196608, 7, -524287, 1638400, 1, -327670, 393216, 7, -393206, 393216, 6, -393209, 458752, 6, -327673, 458752, 7, -196598, 458752, 8, -196599, 393216, 8, -262143, 1638400, 4, -262142, 1703936, 4, -196607, 1638400, 5, -196606, 1703936, 5, -131070, 65536, 0, -393217, 983040, 3, -327681, 983040, 4, -131075, 720896, 3, -131074, 786432, 3, -196603, 1900544, 5, -131067, 65536, 0)
+layer_0/tile_data = PackedInt32Array(-458746, 589824, 5, -131062, 589824, 5, -131063, 589824, 5, -131064, 589824, 5, -131065, 589824, 5, -131066, 589824, 5, -131068, 65536, 4, -131069, 65536, 4, -131071, 65536, 4, -65538, 65536, 4, -65539, 65536, 4, -65540, 65536, 4, -65541, 65536, 4, -65542, 65536, 4, -458748, 983040, 0, -131078, 851968, 1, -196614, 851968, 0, -131077, 917504, 1, -196613, 917504, 0, -393221, 1310720, 1, -458757, 1310720, 0, -458755, 196608, 7, -524287, 1638400, 1, -327670, 393216, 7, -393206, 393216, 6, -393209, 458752, 6, -327673, 458752, 7, -196598, 458752, 8, -196599, 393216, 8, -262143, 1638400, 4, -262142, 1703936, 4, -196607, 1638400, 5, -196606, 1703936, 5, -131070, 65536, 0, -393217, 983040, 3, -327681, 983040, 4, -131075, 720896, 3, -131074, 786432, 3, -196603, 1900544, 5, -131067, 65536, 0, -393211, 720896, 1, -458747, 720896, 0)
 
 [node name="door_furniture2" type="TileMap" parent="." unique_id=2136356911]
 z_index = 1
 tile_set = SubResource("TileSet_46i0o")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262135, 1048576, 2, -262134, 1048576, 2, -196599, 1048576, 5, -196598, 1114112, 5, -262142, 1703936, 7, -393211, 720896, 1, -458747, 720896, 0, -196603, 65536, 14, -262143, 65536, 13, -131067, 1900544, 6)
+layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262135, 1048576, 2, -262134, 1048576, 2, -196599, 1048576, 5, -196598, 1114112, 5, -262142, 1703936, 7, -196603, 65536, 14, -262143, 65536, 13, -131067, 1900544, 6)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_rgy80")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1368071891]
 position = Vector2(38, -79)
 zoom = Vector2(4, 4)
+
+[node name="Transition" type="AnimationPlayer" parent="." unique_id=1816972964]
+libraries/ = SubResource("AnimationLibrary_rgy80")
+autoplay = &"Fade_in"
+
+[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=546292877]
+z_index = 15
+offset_left = -204.0
+offset_top = -168.0
+offset_right = -164.0
+offset_bottom = -128.0
+scale = Vector2(10.199798, 5.9961843)
+color = Color(0, 0, 0, 0)
+
+[connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
+[connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
+[connection signal="animation_finished" from="Transition" to="Door/ProximityBox" method="_on_transition_animation_finished"]

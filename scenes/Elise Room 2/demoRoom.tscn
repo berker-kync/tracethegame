@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="5_t8k86"]
 [ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
 [ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
-[ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="8_63f0u"]
+[ext_resource type="Script" uid="uid://uwkhkhgscj7t" path="res://scenes/101exit.gd" id="8_63f0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
 texture = ExtResource("4_037ag")
@@ -1242,6 +1242,7 @@ libraries/ = SubResource("AnimationLibrary_t8k86")
 autoplay = &"Fade_in"
 
 [node name="ColorRect" type="ColorRect" parent="Transition" unique_id=108836160]
+visible = false
 z_index = 15
 offset_left = -176.0
 offset_top = -102.00001

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="4_piv23"]
 [ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="5_gchdn"]
 [ext_resource type="Script" uid="uid://ckdilr4swfiu5" path="res://scenes/room101Transition.gd" id="6_prp58"]
+[ext_resource type="Script" uid="uid://cjjcwto6mxy7x" path="res://scenes/proximity_trigger.gd" id="7_gchdn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_akx2w"]
 texture = ExtResource("1_dpel1")
@@ -1126,8 +1127,40 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_piv23"]
+resource_name = "Fade_in_2"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_jat7x"]
 resource_name = "Fade_out"
+length = 0.43333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gchdn"]
+resource_name = "Fade_out_2"
 length = 0.43333334
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1160,7 +1193,9 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_piv23"]
 _data = {
 &"Fade_in": SubResource("Animation_63f0u"),
+&"Fade_in_2": SubResource("Animation_piv23"),
 &"Fade_out": SubResource("Animation_jat7x"),
+&"Fade_out_2": SubResource("Animation_gchdn"),
 &"RESET": SubResource("Animation_037ag")
 }
 
@@ -1187,6 +1222,7 @@ layer_0/tile_data = PackedInt32Array(196607, 1048576, 7, 131072, 1114112, 7, 131
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_akx2w")]
 z_index = 1
+position = Vector2(0, -65)
 
 [node name="Elevator" parent="." unique_id=413689097 instance=ExtResource("3_ykaqa")]
 position = Vector2(0, -88)
@@ -1210,19 +1246,46 @@ position = Vector2(96, -40)
 
 [node name="ProximityBox" parent="room102Door" unique_id=1017905668 instance=ExtResource("4_piv23")]
 position = Vector2(0, 1)
-script = null
+script = ExtResource("7_gchdn")
 
-[node name="Transition" type="AnimationPlayer" parent="." unique_id=60418547]
+[node name="Transition" type="AnimationPlayer" parent="." unique_id=1220554994]
 libraries/ = SubResource("AnimationLibrary_piv23")
 autoplay = &"Fade_in"
 
-[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=2073185052]
+[node name="ColorRect" type="ColorRect" parent="Transition" unique_id=1811615729]
 z_index = 15
-offset_left = -176.0
-offset_top = -102.00001
-offset_right = -136.0
-offset_bottom = -62.000008
-scale = Vector2(8.479798, 5.9961843)
+offset_left = -204.0
+offset_top = -168.0
+offset_right = -164.0
+offset_bottom = -128.0
+scale = Vector2(10.199798, 5.9961843)
+color = Color(0, 0, 0, 0)
+
+[node name="Transition2" type="AnimationPlayer" parent="." unique_id=286205003]
+libraries/ = SubResource("AnimationLibrary_piv23")
+autoplay = &"Fade_in"
+
+[node name="ColorRect" type="ColorRect" parent="Transition2" unique_id=177544917]
+z_index = 15
+offset_left = -204.0
+offset_top = -168.0
+offset_right = -164.0
+offset_bottom = -128.0
+scale = Vector2(10.199798, 5.9961843)
+color = Color(0, 0, 0, 0)
+
+[node name="Transition3" type="AnimationPlayer" parent="." unique_id=1236334805]
+libraries/ = SubResource("AnimationLibrary_piv23")
+autoplay = &"Fade_in"
+
+[node name="ColorRect" type="ColorRect" parent="Transition3" unique_id=1767340386]
+visible = false
+z_index = 15
+offset_left = -204.0
+offset_top = -168.0
+offset_right = -164.0
+offset_bottom = -128.0
+scale = Vector2(10.199798, 5.9961843)
 color = Color(0, 0, 0, 0)
 
 [connection signal="body_entered" from="elevatorDoor/ProximityBox" to="elevatorDoor/ProximityBox" method="_on_body_entered"]
