@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d08ldxq46wr7d"]
 
 [ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://scenes/Elise Room 2/main.gd" id="1_63f0u"]
-[ext_resource type="Script" uid="uid://q3dyp107o7xb" path="res://scripts/game_manager.gd" id="1_ypla7"]
+[ext_resource type="PackedScene" uid="uid://c11hy008cw1go" path="res://scenes/Elise Room 2/journal_manager.tscn" id="2_037ag"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="3_jat7x"]
 [ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="4_037ag"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="5_t8k86"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
 [ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="8_63f0u"]
 [ext_resource type="PackedScene" uid="uid://bvyrlne47qdtg" path="res://scenes/Elise Room 2/Journal.tscn" id="9_0qj8v"]
+[ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="10_t8k86"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
 texture = ExtResource("4_037ag")
@@ -1198,47 +1199,10 @@ _data = {
 &"RESET": SubResource("Animation_037ag")
 }
 
-[sub_resource type="Animation" id="Animation_0qj8v"]
-resource_name = "Pause"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("JournalAnimator/ColorRectGrey:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.54901963)]
-}
-
-[sub_resource type="Animation" id="Animation_fqtpe"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("JournalAnimator/ColorRectGrey:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_x6ixm"]
-_data = {
-&"Pause": SubResource("Animation_0qj8v"),
-&"RESET": SubResource("Animation_fqtpe")
-}
-
 [node name="GameDemo" type="Node2D" unique_id=1836168088]
 script = ExtResource("1_63f0u")
 
-[node name="Game Manager" type="Node" parent="." unique_id=118374429]
-script = ExtResource("1_ypla7")
+[node name="Journal Manager" parent="." unique_id=2009897970 instance=ExtResource("2_037ag")]
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("3_jat7x")]
 z_index = 2
@@ -1304,17 +1268,7 @@ offset_right = -44.0
 offset_bottom = -75.0
 scale = Vector2(0.545916, 0.67182547)
 
-[node name="JournalAnimator" type="AnimationPlayer" parent="." unique_id=583007207]
-libraries/ = SubResource("AnimationLibrary_x6ixm")
-
-[node name="ColorRectGrey" type="ColorRect" parent="JournalAnimator" unique_id=756776926]
-z_index = 98
-offset_left = -130.0
-offset_top = -80.0
-offset_right = -90.0
-offset_bottom = -40.0
-scale = Vector2(7.2941546, 4.224568)
-color = Color(0, 0, 0, 0)
+[node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("10_t8k86")]
 
 [connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_exited"]

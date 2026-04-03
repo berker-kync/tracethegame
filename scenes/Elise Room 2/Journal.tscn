@@ -3,10 +3,6 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d23wy"]
 bg_color = Color(0.82397383, 0.84871614, 0.85588104, 1)
 
-[sub_resource type="Theme" id="Theme_45wgi"]
-
-[sub_resource type="Theme" id="Theme_bhmx7"]
-
 [node name="Control" type="Control" unique_id=139289820]
 z_index = 99
 layout_mode = 3
@@ -22,24 +18,23 @@ offset_right = 218.0
 offset_bottom = 244.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d23wy")
 
-[node name="Label" type="Label" parent="Panel" unique_id=1399800960]
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1955731841]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 8.0
-offset_right = 210.0
-offset_bottom = 47.0
-theme = SubResource("Theme_45wgi")
-theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Journal Header"
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 216.0
+offset_bottom = 63.0
+current_tab = 0
 
-[node name="Label2" type="Label" parent="Panel" unique_id=411460906]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 52.0
-offset_right = 144.0
-offset_bottom = 75.0
-theme = SubResource("Theme_bhmx7")
-theme_override_colors/font_color = Color(0.23031491, 0.23031494, 0.23031494, 1)
-theme_override_font_sizes/font_size = 12
-text = "Journal Text goes here"
+[node name="TabBar" type="TabBar" parent="TabContainer" unique_id=199351096]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/tab_separation = 27
+current_tab = 0
+scrolling_enabled = false
+tab_count = 4
+tab_0/title = "1"
+tab_1/title = "2"
+tab_2/title = "3"
+tab_3/title = "4"
+metadata/_tab_index = 0

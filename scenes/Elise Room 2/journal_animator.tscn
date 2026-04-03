@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cewg8n0kqkm4h"]
+
+[sub_resource type="Animation" id="Animation_0qj8v"]
+resource_name = "Pause"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JournalAnimator/ColorRectGrey:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.54901963)]
+}
+
+[sub_resource type="Animation" id="Animation_fqtpe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JournalAnimator/ColorRectGrey:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x6ixm"]
+_data = {
+&"Pause": SubResource("Animation_0qj8v"),
+&"RESET": SubResource("Animation_fqtpe")
+}
+
+[node name="JournalAnimator" type="AnimationPlayer" unique_id=1799699890]
+libraries/ = SubResource("AnimationLibrary_x6ixm")
+
+[node name="ColorRectGrey" type="ColorRect" parent="." unique_id=501642006]
+z_index = 98
+offset_left = -130.0
+offset_top = -80.0
+offset_right = -90.0
+offset_bottom = -40.0
+scale = Vector2(7.2941546, 4.224568)
+color = Color(0, 0, 0, 0)
