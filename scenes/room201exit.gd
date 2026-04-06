@@ -3,7 +3,7 @@ extends Area2D
 #@onready var game_manager: Node = $"Game Manager"
 @onready var transition: AnimationPlayer = $"../../Transition"
 var proximity = false
-var elevator = load("res://scenes/ElevatorTransitionScene.gd")
+var hall = load("res://scenes/hallway_2.tscn")
 
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
@@ -24,7 +24,6 @@ func _on_body_exited(_body: Node2D) -> void:
 	proximity = false
 	print("exited")
 
-
 func _on_transition_animation_finished(anim_name: StringName) -> void:
 	if anim_name != "Fade_in":
-		get_tree().change_scene_to_packed(elevator)
+		get_tree().change_scene_to_packed(hall)
