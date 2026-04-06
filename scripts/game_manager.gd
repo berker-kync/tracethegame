@@ -1,6 +1,7 @@
 extends Node
-@onready var journal: Control = $"../Journal"
+@onready var journal: TabContainer = $"../Journal"
 @onready var journal_animator: AnimationPlayer = $"../JournalAnimator"
+
 
 @onready var journalActive = false
 

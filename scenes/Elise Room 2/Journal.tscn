@@ -1,40 +1,230 @@
-[gd_scene format=3 uid="uid://bvyrlne47qdtg"]
+[gd_scene format=3 uid="uid://d4f24npwnmsep"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d23wy"]
-bg_color = Color(0.82397383, 0.84871614, 0.85588104, 1)
+[sub_resource type="Theme" id="Theme_qbr07"]
 
-[node name="Control" type="Control" unique_id=139289820]
-z_index = 99
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lael"]
+bg_color = Color(0.93134737, 0.9110636, 0.8435192, 1)
 
-[node name="Panel" type="Panel" parent="." unique_id=526988617]
-layout_mode = 0
-offset_right = 218.0
-offset_bottom = 244.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_d23wy")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omu8a"]
+bg_color = Color(0.88871396, 0.89269656, 0.87108135, 1)
 
-[node name="TabContainer" type="TabContainer" parent="." unique_id=1955731841]
-layout_mode = 0
+[sub_resource type="Theme" id="Theme_6ee85"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjvlh"]
+bg_color = Color(0.89145625, 0.89145625, 0.8914562, 1)
+
+[node name="Journal" type="TabContainer" unique_id=334019793]
 offset_left = 2.0
 offset_top = 1.0
-offset_right = 216.0
-offset_bottom = 63.0
+offset_right = 239.0
+offset_bottom = 243.0
+mouse_filter = 0
+theme = SubResource("Theme_qbr07")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
+theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_omu8a")
 current_tab = 0
 
-[node name="TabBar" type="TabBar" parent="TabContainer" unique_id=199351096]
+[node name="tab1" type="TabBar" parent="." unique_id=705700752]
 layout_mode = 2
-theme_override_constants/h_separation = 6
-theme_override_constants/tab_separation = 27
-current_tab = 0
-scrolling_enabled = false
-tab_count = 4
-tab_0/title = "1"
-tab_1/title = "2"
-tab_2/title = "3"
-tab_3/title = "4"
+theme = SubResource("Theme_6ee85")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_yjvlh")
 metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="tab1" unique_id=899146127]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
+
+[node name="Who" type="OptionButton" parent="tab1" unique_id=2081754878]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+
+[node name="Job" type="OptionButton" parent="tab1" unique_id=412202537]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+
+[node name="Purpose" type="OptionButton" parent="tab1" unique_id=939006634]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+
+[node name="tab2" type="TabBar" parent="." unique_id=1487145056]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="tab2" unique_id=1299629375]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
+
+[node name="Who" type="OptionButton" parent="tab2" unique_id=788118459]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+
+[node name="Job" type="OptionButton" parent="tab2" unique_id=1025178000]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+
+[node name="Purpose" type="OptionButton" parent="tab2" unique_id=1708028198]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+
+[node name="tab3" type="TabBar" parent="." unique_id=58732885]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="tab3" unique_id=570051697]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
+
+[node name="Who" type="OptionButton" parent="tab3" unique_id=1921329126]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+
+[node name="Job" type="OptionButton" parent="tab3" unique_id=1758561578]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+
+[node name="Purpose" type="OptionButton" parent="tab3" unique_id=19714810]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+
+[node name="tab4" type="TabBar" parent="." unique_id=1213271918]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="tab4" unique_id=1966940846]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
+
+[node name="Who" type="OptionButton" parent="tab4" unique_id=1142507069]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+
+[node name="Job" type="OptionButton" parent="tab4" unique_id=1184993575]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+
+[node name="Purpose" type="OptionButton" parent="tab4" unique_id=2044804454]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0

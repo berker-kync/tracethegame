@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="6_18kgy"]
 [ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="7_owxka"]
 [ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="8_63f0u"]
-[ext_resource type="PackedScene" uid="uid://bvyrlne47qdtg" path="res://scenes/Elise Room 2/Journal.tscn" id="9_0qj8v"]
+[ext_resource type="PackedScene" uid="uid://d4f24npwnmsep" path="res://scenes/Elise Room 2/Journal.tscn" id="10_037ag"]
 [ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="10_t8k86"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a4li"]
@@ -1260,15 +1260,16 @@ color = Color(0, 0, 0, 0)
 position = Vector2(16, 2)
 zoom = Vector2(4, 4)
 
-[node name="Journal" parent="." unique_id=139289820 instance=ExtResource("9_0qj8v")]
-visible = false
-offset_left = -44.0
-offset_top = -75.0
-offset_right = -44.0
-offset_bottom = -75.0
-scale = Vector2(0.545916, 0.67182547)
-
 [node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("10_t8k86")]
+
+[node name="Journal" parent="." unique_id=334019793 instance=ExtResource("10_037ag")]
+visible = false
+z_index = 999
+offset_left = -56.000004
+offset_top = -77.0
+offset_right = 181.0
+offset_bottom = 165.0
+scale = Vector2(0.5873148, 0.6653026)
 
 [connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_exited"]
