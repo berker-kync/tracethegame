@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c6refs8f5tqk1"]
+
+[ext_resource type="Script" uid="uid://dbmmt7woihjpm" path="res://scenes/tutorial_text.gd" id="1_mufi8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyeok"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="textbox" type="CanvasLayer" unique_id=1827124815]
+script = ExtResource("1_mufi8")
+
+[node name="TextboxContainer" type="MarginContainer" parent="." unique_id=34353373]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -235.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 10
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="TextboxContainer" unique_id=1571967831]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jyeok")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer" unique_id=54769470]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer" unique_id=1304190492]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jyeok")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextboxContainer/MarginContainer" unique_id=1131546041]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=323744690]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 51
+text = "*"
+
+[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1848579167]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 51
+text = "Welcome to the TRACE hotel! We are so glad you chose to come here."
+autowrap_mode = 3
+
+[node name="End" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1256527574]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 51
+text = "v"
