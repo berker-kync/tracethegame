@@ -1,6 +1,7 @@
 extends Area2D
 #@onready var highlighted: Sprite2D = $highlighted
 #@onready var game_manager: Node = $"Game Manager"
+
 @onready var transition: AnimationPlayer = $"../../Transition"
 var proximity = false
 var hall = load("res://scenes/hallway_1.tscn")

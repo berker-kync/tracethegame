@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://658wvgab6kci" path="res://scenes/Lobby/elevator.tscn" id="3_e8v6b"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="4_hgere"]
 [ext_resource type="Script" uid="uid://beg6fp4ngyj1q" path="res://scenes/elevatorSceneLoad.gd" id="5_1cbqy"]
+[ext_resource type="Script" uid="uid://y2cm1pkbsgah" path="res://scenes/room201enter.gd" id="6_e8v6b"]
+[ext_resource type="Script" uid="uid://u0ly7628tdgn" path="res://scenes/room202enter.gd" id="7_hgere"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3k3o"]
 texture = ExtResource("1_2wsvm")
@@ -1237,14 +1239,14 @@ position = Vector2(-96, -40)
 
 [node name="ProximityBox" parent="room201Door" unique_id=1121015891 instance=ExtResource("4_hgere")]
 position = Vector2(-1, 0)
-script = null
+script = ExtResource("6_e8v6b")
 
 [node name="room202Door" type="Node2D" parent="." unique_id=497308073]
 position = Vector2(96, -40)
 
 [node name="ProximityBox" parent="room202Door" unique_id=840424317 instance=ExtResource("4_hgere")]
 position = Vector2(0, 1)
-script = null
+script = ExtResource("7_hgere")
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=1565425014]
 libraries/ = SubResource("AnimationLibrary_5genw")

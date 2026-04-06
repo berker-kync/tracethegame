@@ -1237,6 +1237,7 @@ position = Vector2(-96, -40)
 [node name="ProximityBox" parent="room101Door" unique_id=68287870 instance=ExtResource("4_piv23")]
 position = Vector2(-1, 0)
 script = ExtResource("6_prp58")
+elevatorSpawnMarker = ""
 
 [node name="room102Door" type="Node2D" parent="." unique_id=834888911]
 position = Vector2(96, -40)
@@ -1284,6 +1285,15 @@ offset_right = -164.0
 offset_bottom = -128.0
 scale = Vector2(10.199798, 5.9961843)
 color = Color(0, 0, 0, 0)
+
+[node name="exitElevatorMarker" type="Marker2D" parent="." unique_id=2045299055]
+position = Vector2(0, -77)
+
+[node name="exit101Marker2" type="Marker2D" parent="." unique_id=430846409]
+position = Vector2(-96, -29)
+
+[node name="exit102Marker3" type="Marker2D" parent="." unique_id=964652896]
+position = Vector2(97, -30)
 
 [connection signal="body_entered" from="elevatorDoor/ProximityBox" to="elevatorDoor/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="elevatorDoor/ProximityBox" to="elevatorDoor/ProximityBox" method="_on_body_exited"]

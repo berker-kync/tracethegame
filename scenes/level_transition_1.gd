@@ -3,10 +3,10 @@ extends Area2D
 #@onready var game_manager: Node = $"Game Manager"
 @onready var transition: AnimationPlayer = $"../../Transition"
 var proximity = false
-var elevator = load("res://scenes/ElevatorTransitionScene.gd")
+var elevator = load("res://scenes/elevator_transition_scene.tscn")
 
 func _process(delta: float) -> void:
-	if proximity == true && Input.is_action_just_pressed("interact"):
+	if proximity == true && Input.is_action_just_pressed("ui_accept"):
 		print("interacted") 
 		transition.play("Fade_out")
 		#level transition

@@ -1,10 +1,8 @@
 extends Area2D
 
 @onready var transition: AnimationPlayer = $"../../Transition"
-
-@export var elevatorSpawnMarker: String
 var proximity = false
-var demoRoom = load("res://scenes/Elise Room 2/demoRoom.tscn")
+var room201 = load("res://scenes/room_201.tscn")
 
 func _ready() -> void:
 	# Ensure the animation_finished signal is connected
@@ -17,7 +15,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(_body: Node2D) -> void:
 	proximity = true
-	#Global.entry_point = "FromHallway1"
 	print('entered')
 
 func _on_body_exited(_body: Node2D) -> void:
@@ -26,4 +23,4 @@ func _on_body_exited(_body: Node2D) -> void:
 
 func _on_transition_animation_finished(anim_name: StringName) -> void:
 	if anim_name != "Fade_in":
-		get_tree().change_scene_to_packed(demoRoom)
+		get_tree().change_scene_to_packed(room201)

@@ -8,6 +8,11 @@ func _ready() -> void:
 	# Ensure the animation_finished signal is connected
 	if not transition.is_connected("animation_finished", Callable(self, "_on_transition_animation_finished")):
 		transition.connect("animation_finished", Callable(self, "_on_transition_animation_finished"))
+	
+	await get_tree().process_frame
+	
+	#if Global.last_world_position != Vector2(0, 0):
+	#	$"../../backWall_sideWall_floor/Player".global_position = Global.last_world_position
 
 func _process(delta: float) -> void:
 	if proximity and Input.is_action_just_pressed("interact"):
