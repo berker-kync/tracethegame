@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://djuin1dgigaqt" path="res://scenes/Lobby/receptionist.tscn" id="6_dlsvv"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="7_3al0f"]
 [ext_resource type="Script" uid="uid://d22hyl75rljbi" path="res://scenes/level_transition_1.gd" id="7_ihyci"]
+[ext_resource type="AudioStream" uid="uid://b700edgey48m4" path="res://scenes/sounds/41747591_elevator-bell-ding-01.mp3" id="7_sm6um"]
 [ext_resource type="Script" uid="uid://3aksxpsfaruu" path="res://scenes/receptionist_trigger.gd" id="8_rrb0l"]
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="9_ihyci"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="9_rrb0l"]
+[ext_resource type="AudioStream" uid="uid://bp2xp3cdlgc4s" path="res://scenes/music/Hotel.mp3" id="11_bfwvt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlsvv"]
 texture = ExtResource("2_dlsvv")
@@ -2695,6 +2697,9 @@ position = Vector2(0, -137)
 position = Vector2(0, 3)
 script = ExtResource("7_ihyci")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Elevator" unique_id=1878651913]
+stream = ExtResource("7_sm6um")
+
 [node name="Receptionist" parent="." unique_id=1879564364 instance=ExtResource("6_dlsvv")]
 position = Vector2(57, -78)
 
@@ -2723,6 +2728,12 @@ color = Color(0, 0, 0, 0)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("9_rrb0l")]
 position = Vector2(0, 29.999998)
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1679577878]
+stream = ExtResource("11_bfwvt")
+volume_db = -0.12
+autoplay = true
+parameters/looping = false
 
 [connection signal="body_entered" from="Elevator/ProximityBox" to="Elevator/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Elevator/ProximityBox" to="Elevator/ProximityBox" method="_on_body_exited"]

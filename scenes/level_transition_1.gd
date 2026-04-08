@@ -4,10 +4,12 @@ extends Area2D
 @onready var transition: AnimationPlayer = $"../../Transition"
 var proximity = false
 var elevator = load("res://scenes/elevator_transition_scene.tscn")
+@onready var audio_stream_player: AudioStreamPlayer = $"../AudioStreamPlayer"
 
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("ui_accept"):
 		print("interacted") 
+		audio_stream_player.play()
 		transition.play("Fade_out")
 		#level transition
 
