@@ -4,7 +4,7 @@ extends Area2D
 
 @export var elevatorSpawnMarker: String
 var proximity = false
-var demoRoom = load("res://scenes/Elise Room 2/demoRoom.tscn")
+var demoRoom = load("res://scenes/room101_v1.tscn")
 
 func _ready() -> void:
 	# Ensure the animation_finished signal is connected

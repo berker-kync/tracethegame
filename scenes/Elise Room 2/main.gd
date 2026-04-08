@@ -1,8 +1,7 @@
 extends Node2D
 
 @onready var level_transition: AnimationPlayer = $LevelTransition
-
-
+@onready var camera_2d: Camera2D = $Camera2D
 
 func _ready() -> void:
-	level_transition.play("Fade_in")
+	camera_2d.make_current()

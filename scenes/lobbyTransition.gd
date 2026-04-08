@@ -1,6 +1,7 @@
 extends Area2D
 
-@onready var transition: AnimationPlayer = $"../../Transition2"
+@onready var transition: AnimationPlayer = $"../../LevelTransition"
+
 var proximity = false
 var Elevator = load("res://scenes/elevator_transition_scene.tscn")
 

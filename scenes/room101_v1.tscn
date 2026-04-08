@@ -2437,15 +2437,15 @@ visible = false
 position = Vector2(0.5, 0)
 texture = ExtResource("9_nuv48")
 
+[node name="SuitcaseNumberManager" type="Node" parent="Suitcase" unique_id=1807062047]
+
 [node name="SuitcaseLock" parent="Suitcase" unique_id=1964508557 instance=ExtResource("10_5k8q0")]
 visible = false
-offset_left = -94.50001
-offset_top = -119.50001
+offset_left = -94.5
+offset_top = -119.5
 offset_right = 510.5
 offset_bottom = 234.5
-scale = Vector2(0.4924247, 0.4939896)
-
-[node name="SuitcaseNumberManager" type="Node" parent="Suitcase" unique_id=1807062047]
+scale = Vector2(0.4910167, 0.47750637)
 
 [node name="Door" type="Node2D" parent="." unique_id=763871868]
 position = Vector2(0, 63)
