@@ -48,9 +48,15 @@ offset_right = 144.0
 offset_bottom = 35.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
+popup/item_1/text = "John Smithy"
+popup/item_1/id = 1
+popup/item_2/text = "John Doe"
+popup/item_2/id = 2
+popup/item_3/text = "Jane Doe"
+popup/item_3/id = 3
 
 [node name="Job" type="OptionButton" parent="tab1" unique_id=412202537]
 layout_mode = 0
@@ -60,9 +66,15 @@ offset_right = 144.0
 offset_bottom = 80.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
+popup/item_1/text = "Business Person"
+popup/item_1/id = 1
+popup/item_2/text = "Influencer"
+popup/item_2/id = 2
+popup/item_3/text = "No Job"
+popup/item_3/id = 3
 
 [node name="Purpose" type="OptionButton" parent="tab1" unique_id=939006634]
 layout_mode = 0
@@ -72,9 +84,13 @@ offset_right = 144.0
 offset_bottom = 124.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 3
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
+popup/item_1/text = "Convention"
+popup/item_1/id = 1
+popup/item_2/text = "Conference"
+popup/item_2/id = 2
 
 [node name="tab2" type="TabBar" parent="." unique_id=1487145056]
 visible = false
