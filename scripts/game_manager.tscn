@@ -1,6 +1,19 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cp4ncvrwrp3k3"]
 
 [ext_resource type="Script" uid="uid://c47x548mtv1c4" path="res://game_manager.gd" id="1_76guv"]
 
 [node name="Node2D" type="Node2D" unique_id=1843300579]
 script = ExtResource("1_76guv")
+=======
+[gd_scene format=3 uid="uid://bi7tjxlj5dx1d"]
+
+[sub_resource type="GDScript" id="GDScript_hoorq"]
+script/source = "extends Node2D
+
+var spawn_location: Vector2 = Vector2.ZERO
+"
+
+[node name="Node2D" type="Node2D" unique_id=1843300579]
+script = SubResource("GDScript_hoorq")
+>>>>>>> Stashed changes

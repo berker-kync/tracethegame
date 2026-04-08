@@ -1,12 +1,22 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cfnij0p0ido7w"]
+=======
+[gd_scene format=3 uid="uid://dmjs6tjy7yrum"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_2wsvm"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_1cbqy"]
 [ext_resource type="PackedScene" uid="uid://658wvgab6kci" path="res://scenes/Lobby/elevator.tscn" id="3_e8v6b"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="4_hgere"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://beg6fp4ngyj1q" path="res://scenes/elevatorSceneLoad.gd" id="5_1cbqy"]
 [ext_resource type="Script" uid="uid://y2cm1pkbsgah" path="res://scenes/room201enter.gd" id="6_e8v6b"]
 [ext_resource type="Script" uid="uid://u0ly7628tdgn" path="res://scenes/room202enter.gd" id="7_hgere"]
+=======
+[ext_resource type="Script" path="res://scenes/elevatorSceneLoad.gd" id="5_1cbqy"]
+[ext_resource type="Script" path="res://scenes/room201enter.gd" id="6_e8v6b"]
+[ext_resource type="Script" path="res://scenes/room202enter.gd" id="7_hgere"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3k3o"]
 texture = ExtResource("1_2wsvm")

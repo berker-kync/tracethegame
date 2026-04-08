@@ -1,9 +1,17 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://caa7o64fso07f"]
+=======
+[gd_scene format=3 uid="uid://dmpf57brc1xrg"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_pvlac"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_v3665"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_62crr"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dnm5mc7iveojx" path="res://scenes/room202exit.gd" id="4_pvlac"]
+=======
+[ext_resource type="Script" path="res://scenes/room202exit.gd" id="4_pvlac"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx60c"]
 texture = ExtResource("1_pvlac")
