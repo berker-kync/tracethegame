@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b7ytwpf8qaw5k"]
+
+[ext_resource type="Texture2D" uid="uid://cyeobcra4efsq" path="res://assets/custom/suitcaseLock.png" id="1_nd7ks"]
+[ext_resource type="Script" uid="uid://cumvboj06f8c1" path="res://scenes/suitcase_lock_puzzle.gd" id="2_d8gar"]
+[ext_resource type="AudioStream" uid="uid://f1v063lt2seh" path="res://scenes/sounds/Foley Trunk Latch Opening 01.wav" id="3_wxjft"]
+
+[sub_resource type="Theme" id="Theme_d8gar"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxjft"]
+texture = ExtResource("1_nd7ks")
+
+[node name="Panel" type="Panel" unique_id=1964508557]
+z_index = 998
+offset_right = 605.0
+offset_bottom = 354.0
+theme = SubResource("Theme_d8gar")
+theme_override_styles/panel = SubResource("StyleBoxTexture_wxjft")
+script = ExtResource("2_d8gar")
+
+[node name="Label" type="Label" parent="." unique_id=842153048]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 115.99999
+offset_right = 196.0
+offset_bottom = 165.0
+scale = Vector2(2.4643629, 2.303995)
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1095691109]
+layout_mode = 0
+offset_left = 253.99998
+offset_top = 115.99999
+offset_right = 294.0
+offset_bottom = 165.0
+scale = Vector2(2.4643629, 2.303995)
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1301716520]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 116.0
+offset_right = 386.0
+offset_bottom = 165.0
+scale = Vector2(2.4643629, 2.303995)
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=403714788]
+stream = ExtResource("3_wxjft")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cgsaqehw8fyud"]
+
+[ext_resource type="PackedScene" uid="uid://b63qurp68nsmm" path="res://Scenes/letter_tile.tscn" id="1_y0xmf"]
+
+[node name="Row" type="HBoxContainer" unique_id=1296835463]
+
+[node name="LetterTile" parent="." unique_id=787927358 instance=ExtResource("1_y0xmf")]
+layout_mode = 2
+
+[node name="LetterTile2" parent="." unique_id=516189901 instance=ExtResource("1_y0xmf")]
+layout_mode = 2
+
+[node name="LetterTile3" parent="." unique_id=809778142 instance=ExtResource("1_y0xmf")]
+layout_mode = 2
+
+[node name="LetterTile4" parent="." unique_id=1204753596 instance=ExtResource("1_y0xmf")]
+layout_mode = 2
+
+[node name="LetterTile5" parent="." unique_id=315554613 instance=ExtResource("1_y0xmf")]
+layout_mode = 2

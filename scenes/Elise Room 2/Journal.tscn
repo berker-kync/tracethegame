@@ -1,77 +1,246 @@
-[gd_scene format=3 uid="uid://bvyrlne47qdtg"]
+[gd_scene format=3 uid="uid://d4f24npwnmsep"]
 
-[ext_resource type="Script" uid="uid://dkjmnyb5fsnkq" path="res://scripts/arrowHover.gd" id="1_bn3kp"]
-[ext_resource type="Texture2D" uid="uid://c5sd47v0ewqfo" path="res://assets/custom/arrow.png" id="2_2sydi"]
-[ext_resource type="Texture2D" uid="uid://bd4hfu1kbwtl3" path="res://assets/custom/journal1.png" id="3_uuajh"]
+[sub_resource type="Theme" id="Theme_qbr07"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5ahi"]
-size = Vector2(23, 18)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lael"]
+bg_color = Color(0.93134737, 0.9110636, 0.8435192, 1)
 
-[sub_resource type="Animation" id="Animation_sdrrl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Journal:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-147, -8)]
-}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_omu8a"]
+bg_color = Color(0.88871396, 0.89269656, 0.87108135, 1)
 
-[sub_resource type="Animation" id="Animation_e38b3"]
-resource_name = "arrowHoverAnimation"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Journal:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-147, -8), Vector2(0, -8)]
-}
+[sub_resource type="Theme" id="Theme_6ee85"]
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmxw3"]
-_data = {
-&"RESET": SubResource("Animation_sdrrl"),
-&"arrowHoverAnimation": SubResource("Animation_e38b3")
-}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjvlh"]
+bg_color = Color(0.89145625, 0.89145625, 0.8914562, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdrrl"]
-size = Vector2(202, 224)
+[node name="Journal" type="TabContainer" unique_id=334019793]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 239.0
+offset_bottom = 243.0
+mouse_filter = 0
+theme = SubResource("Theme_qbr07")
+theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
+theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_omu8a")
+current_tab = 0
 
-[node name="Journal" type="Area2D" unique_id=2107792888]
-z_index = 3
-position = Vector2(-147, -8)
-script = ExtResource("1_bn3kp")
+[node name="tab1" type="TabBar" parent="." unique_id=705700752]
+layout_mode = 2
+theme = SubResource("Theme_6ee85")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_yjvlh")
+metadata/_tab_index = 0
 
-[node name="Arrow" type="Sprite2D" parent="." unique_id=762576330]
-texture_filter = 1
-texture = ExtResource("2_2sydi")
+[node name="Label" type="Label" parent="tab1" unique_id=899146127]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1053921213]
-position = Vector2(-3.5, 0)
-shape = SubResource("RectangleShape2D_l5ahi")
+[node name="Who" type="OptionButton" parent="tab1" unique_id=2081754878]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+popup/item_1/text = "John Smithy"
+popup/item_1/id = 1
+popup/item_2/text = "John Doe"
+popup/item_2/id = 2
+popup/item_3/text = "Jane Doe"
+popup/item_3/id = 3
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=828065608]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_jmxw3")
+[node name="Job" type="OptionButton" parent="tab1" unique_id=412202537]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+popup/item_1/text = "Business Person"
+popup/item_1/id = 1
+popup/item_2/text = "Influencer"
+popup/item_2/id = 2
+popup/item_3/text = "No Job"
+popup/item_3/id = 3
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1616139660]
-z_index = 8
-position = Vector2(-114, 62)
-shape = SubResource("RectangleShape2D_sdrrl")
+[node name="Purpose" type="OptionButton" parent="tab1" unique_id=939006634]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+popup/item_1/text = "Convention"
+popup/item_1/id = 1
+popup/item_2/text = "Conference"
+popup/item_2/id = 2
 
-[node name="Page" type="Sprite2D" parent="." unique_id=494076165]
-z_index = 2
-position = Vector2(-112, 64.00001)
-rotation = -3.1415925
-scale = Vector2(3.254026, -3.7128377)
-texture = ExtResource("3_uuajh")
+[node name="tab2" type="TabBar" parent="." unique_id=1487145056]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="tab2" unique_id=1299629375]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
+
+[node name="Who" type="OptionButton" parent="tab2" unique_id=788118459]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+
+[node name="Job" type="OptionButton" parent="tab2" unique_id=1025178000]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+
+[node name="Purpose" type="OptionButton" parent="tab2" unique_id=1708028198]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+
+[node name="tab3" type="TabBar" parent="." unique_id=58732885]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="tab3" unique_id=570051697]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
+
+[node name="Who" type="OptionButton" parent="tab3" unique_id=1921329126]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+
+[node name="Job" type="OptionButton" parent="tab3" unique_id=1758561578]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+
+[node name="Purpose" type="OptionButton" parent="tab3" unique_id=19714810]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+
+[node name="tab4" type="TabBar" parent="." unique_id=1213271918]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="tab4" unique_id=1966940846]
+visible = false
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Who are they? 
+ What's their job? 
+ Why are they here?"
+
+[node name="Who" type="OptionButton" parent="tab4" unique_id=1142507069]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 35.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Who are they?"
+popup/item_0/id = 0
+
+[node name="Job" type="OptionButton" parent="tab4" unique_id=1184993575]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 80.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "What's their job?"
+popup/item_0/id = 0
+
+[node name="Purpose" type="OptionButton" parent="tab4" unique_id=2044804454]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 144.0
+offset_bottom = 124.0
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
