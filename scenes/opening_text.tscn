@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dh46nx18mlohe"]
+
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="1_agssv"]
+[ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="3_7u2xn"]
+[ext_resource type="Script" uid="uid://cov06h27ees05" path="res://scenes/opening_text.gd" id="4_7u2xn"]
+[ext_resource type="Script" uid="uid://c0imku6dy45sr" path="res://scenes/opentext.gd" id="4_tyg3u"]
+
+[node name="Opening Text" type="Node2D" unique_id=302075846]
+z_index = 1
+position = Vector2(21, -71)
+
+[node name="tutorial text" parent="." unique_id=1827124815 instance=ExtResource("3_7u2xn")]
+script = ExtResource("4_tyg3u")
+
+[node name="ProximityBox" parent="tutorial text" unique_id=1801853796 instance=ExtResource("1_agssv")]
+position = Vector2(21, -71)
+script = ExtResource("4_7u2xn")
+
+[connection signal="body_entered" from="tutorial text/ProximityBox" to="tutorial text/ProximityBox" method="_on_body_entered"]
+[connection signal="body_exited" from="tutorial text/ProximityBox" to="tutorial text/ProximityBox" method="_on_body_exited"]

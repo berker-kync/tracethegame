@@ -12,7 +12,14 @@ func _process(delta: float) -> void:
 		
 		# Send text to your dialogue system instead of toggling visibility
 		textBox.queueText("Hello Player! Welcome to the TRACE Hotel.")
-		textBox.queueText("This text is practice text.")
+		textBox.queueText("The best digital hotel in the whole world!..")
+		textBox.queueText("..or only.")
+		textBox.queueText("It is your job to figure out who is staying in this hotel")
+		textBox.queueText("based on the clues they have left behind.")
+		textBox.queueText("These people do not know anything about digital footprints!")
+		textBox.queueText("Well player, good luck! Head over to the elevator and press Enter.")
+		textBox.queueText("Begin your journey at Floor 1.")
+
 		
 		print("interacted")
 
