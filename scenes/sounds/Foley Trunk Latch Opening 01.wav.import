@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://f1v063lt2seh"
+path="res://.godot/imported/Foley Trunk Latch Opening 01.wav-a0425b871c5c8197beffc595dc1ad9e2.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/Foley Trunk Latch Opening 01.wav"
+dest_files=["res://.godot/imported/Foley Trunk Latch Opening 01.wav-a0425b871c5c8197beffc595dc1ad9e2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -3,6 +3,7 @@ extends Panel
 @onready var label: Label = $Label
 @onready var label_2: Label = $Label2
 @onready var label_3: Label = $Label3
+@onready var opensound: AudioStreamPlayer = $AudioStreamPlayer
 
 var lock = [0, 0, 0]
 var j = 0
@@ -80,5 +81,5 @@ func wincheck():
 		label.add_theme_color_override("font_color", Color.GREEN)
 		label_2.add_theme_color_override("font_color", Color.GREEN)
 		label_3.add_theme_color_override("font_color", Color.GREEN)
-		#click sound effect
+		opensound.play()
 		#timer set to freeze inputs and close suitcase

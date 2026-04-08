@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cyeobcra4efsq" path="res://assets/custom/suitcaseLock.png" id="1_nd7ks"]
 [ext_resource type="Script" uid="uid://cumvboj06f8c1" path="res://scenes/suitcase_lock_puzzle.gd" id="2_d8gar"]
+[ext_resource type="AudioStream" uid="uid://f1v063lt2seh" path="res://scenes/sounds/Foley Trunk Latch Opening 01.wav" id="3_wxjft"]
 
 [sub_resource type="Theme" id="Theme_d8gar"]
 
@@ -51,3 +52,6 @@ theme_override_font_sizes/font_size = 26
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=403714788]
+stream = ExtResource("3_wxjft")
