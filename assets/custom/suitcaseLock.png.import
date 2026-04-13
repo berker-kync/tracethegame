@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyeobcra4efsq"
-path="res://.godot/imported/suitcaseLock.png-d111ef4826750c92a9de8c8f2c2caaa9.ctex"
+path="res://.godot/imported/suitcaseLock.png-43c889039a47fefb8160238b9e989c43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/custom/suitcaseLock.png"
-dest_files=["res://.godot/imported/suitcaseLock.png-d111ef4826750c92a9de8c8f2c2caaa9.ctex"]
+source_file="res://Assets/custom/suitcaseLock.png"
+dest_files=["res://.godot/imported/suitcaseLock.png-43c889039a47fefb8160238b9e989c43.ctex"]
 
 [params]
 

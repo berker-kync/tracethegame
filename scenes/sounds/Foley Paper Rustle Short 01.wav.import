@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cdx8jn51oqsdq"
-path="res://.godot/imported/Foley Paper Rustle Short 01.wav-3c56f9f3e368126eeebd88976fa6605a.sample"
+path="res://.godot/imported/Foley Paper Rustle Short 01.wav-12abf83e529a2ceec3dc369b5249bf1f.sample"
 
 [deps]
 
-source_file="res://scenes/sounds/Foley Paper Rustle Short 01.wav"
-dest_files=["res://.godot/imported/Foley Paper Rustle Short 01.wav-3c56f9f3e368126eeebd88976fa6605a.sample"]
+source_file="res://Scenes/sounds/Foley Paper Rustle Short 01.wav"
+dest_files=["res://.godot/imported/Foley Paper Rustle Short 01.wav-12abf83e529a2ceec3dc369b5249bf1f.sample"]
 
 [params]
 

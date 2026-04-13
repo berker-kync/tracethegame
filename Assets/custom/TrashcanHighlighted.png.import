@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e36lin5f75h8"
-path="res://.godot/imported/TopDownHouse_SmallItems.png-d81fb2b71ecddb64a35302e60e84c662.ctex"
+uid="uid://b8dmccwx4krbe"
+path="res://.godot/imported/TrashcanHighlighted.png-3d5eb478fc71cdb64afaabb38f16b333.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png"
-dest_files=["res://.godot/imported/TopDownHouse_SmallItems.png-d81fb2b71ecddb64a35302e60e84c662.ctex"]
+source_file="res://Assets/custom/TrashcanHighlighted.png"
+dest_files=["res://.godot/imported/TrashcanHighlighted.png-3d5eb478fc71cdb64afaabb38f16b333.ctex"]
 
 [params]
 

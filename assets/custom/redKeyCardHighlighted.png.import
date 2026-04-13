@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c48qnu6ulbrp0"
-path="res://.godot/imported/redKeyCardHighlighted.png-51407679434178f86ca41242c7c95b24.ctex"
+path="res://.godot/imported/redKeyCardHighlighted.png-745127540cc23efd91682cbf9fc840a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/custom/redKeyCardHighlighted.png"
-dest_files=["res://.godot/imported/redKeyCardHighlighted.png-51407679434178f86ca41242c7c95b24.ctex"]
+source_file="res://Assets/custom/redKeyCardHighlighted.png"
+dest_files=["res://.godot/imported/redKeyCardHighlighted.png-745127540cc23efd91682cbf9fc840a5.ctex"]
 
 [params]
 

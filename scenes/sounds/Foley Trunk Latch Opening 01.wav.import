@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://f1v063lt2seh"
-path="res://.godot/imported/Foley Trunk Latch Opening 01.wav-a0425b871c5c8197beffc595dc1ad9e2.sample"
+path="res://.godot/imported/Foley Trunk Latch Opening 01.wav-5f71a426a68c973c97cb635b7d7a0a19.sample"
 
 [deps]
 
-source_file="res://scenes/sounds/Foley Trunk Latch Opening 01.wav"
-dest_files=["res://.godot/imported/Foley Trunk Latch Opening 01.wav-a0425b871c5c8197beffc595dc1ad9e2.sample"]
+source_file="res://Scenes/sounds/Foley Trunk Latch Opening 01.wav"
+dest_files=["res://.godot/imported/Foley Trunk Latch Opening 01.wav-5f71a426a68c973c97cb635b7d7a0a19.sample"]
 
 [params]
 

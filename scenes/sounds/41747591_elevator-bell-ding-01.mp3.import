@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b700edgey48m4"
-path="res://.godot/imported/41747591_elevator-bell-ding-01.mp3-6b5e37afb541e360208cd96c491dedfa.mp3str"
+path="res://.godot/imported/41747591_elevator-bell-ding-01.mp3-ce4c234fd546871248103ea1f18ecad9.mp3str"
 
 [deps]
 
-source_file="res://scenes/sounds/41747591_elevator-bell-ding-01.mp3"
-dest_files=["res://.godot/imported/41747591_elevator-bell-ding-01.mp3-6b5e37afb541e360208cd96c491dedfa.mp3str"]
+source_file="res://Scenes/sounds/41747591_elevator-bell-ding-01.mp3"
+dest_files=["res://.godot/imported/41747591_elevator-bell-ding-01.mp3-ce4c234fd546871248103ea1f18ecad9.mp3str"]
 
 [params]
 
