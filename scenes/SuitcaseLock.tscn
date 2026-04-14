@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cyeobcra4efsq" path="res://assets/custom/suitcaseLock.png" id="1_nd7ks"]
 [ext_resource type="Script" uid="uid://cumvboj06f8c1" path="res://scenes/suitcase_lock_puzzle.gd" id="2_d8gar"]
-[ext_resource type="AudioStream" uid="uid://f1v063lt2seh" path="res://scenes/sounds/Foley Trunk Latch Opening 01.wav" id="3_wxjft"]
+[ext_resource type="AudioStream" uid="uid://c1muxgoje0ldl" path="res://scenes/sounds/Undertale Sound Effect - You Win!.mp3" id="3_wxjft"]
 
 [sub_resource type="Theme" id="Theme_d8gar"]
 
@@ -55,3 +55,7 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=403714788]
 stream = ExtResource("3_wxjft")
+
+[node name="Timer" type="Timer" parent="." unique_id=911163561]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

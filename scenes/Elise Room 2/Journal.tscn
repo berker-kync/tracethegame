@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://d4f24npwnmsep"]
 
+[ext_resource type="Script" uid="uid://fp2j4b0qaim3" path="res://scenes/Elise Room 2/journal1win.gd" id="1_qbr07"]
+[ext_resource type="Texture2D" uid="uid://bsxjdmkc7enph" path="res://assets/custom/highlighted/BookHighlighted.png" id="2_omu8a"]
+[ext_resource type="Texture2D" uid="uid://du603r6kpu05r" path="res://assets/custom/highlighted/page_highlighted.png" id="3_6ee85"]
+
 [sub_resource type="Theme" id="Theme_qbr07"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lael"]
@@ -30,22 +34,22 @@ theme = SubResource("Theme_6ee85")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_yjvlh")
 metadata/_tab_index = 0
 
-[node name="Label" type="Label" parent="tab1" unique_id=899146127]
+[node name="LabelWho" type="Label" parent="tab1" unique_id=899146127]
 visible = false
 layout_mode = 0
-offset_right = 234.0
-offset_bottom = 210.0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 144.0
+offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = " Who are they? 
- What's their job? 
- Why are they here?"
+text = "Jerry Hopperson"
 
 [node name="Who" type="OptionButton" parent="tab1" unique_id=2081754878]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 4.0
-offset_right = 144.0
-offset_bottom = 35.0
+offset_top = 3.0
+offset_right = 160.0
+offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
 item_count = 4
@@ -53,10 +57,20 @@ popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
 popup/item_1/text = "John Smithy"
 popup/item_1/id = 1
-popup/item_2/text = "John Doe"
-popup/item_2/id = 2
-popup/item_3/text = "Jane Doe"
-popup/item_3/id = 3
+popup/item_2/text = "Jane Doe"
+popup/item_2/id = 3
+popup/item_3/text = "Jerry Hopperson"
+popup/item_3/id = 2
+
+[node name="LabelJob" type="Label" parent="tab1" unique_id=1770472482]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 53.0
+offset_right = 144.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Author"
 
 [node name="Job" type="OptionButton" parent="tab1" unique_id=412202537]
 layout_mode = 0
@@ -66,31 +80,74 @@ offset_right = 144.0
 offset_bottom = 80.0
 selected = 0
 fit_to_longest_item = false
-item_count = 4
+item_count = 5
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
-popup/item_1/text = "Business Person"
-popup/item_1/id = 1
-popup/item_2/text = "Influencer"
-popup/item_2/id = 2
-popup/item_3/text = "No Job"
-popup/item_3/id = 3
+popup/item_1/text = "Author"
+popup/item_1/id = 4
+popup/item_2/text = "Business Person"
+popup/item_2/id = 1
+popup/item_3/text = "Influencer"
+popup/item_3/id = 2
+popup/item_4/text = "No Job"
+popup/item_4/id = 3
+
+[node name="LabelPurpose" type="Label" parent="tab1" unique_id=1157881803]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 96.0
+offset_right = 144.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Public Speech"
 
 [node name="Purpose" type="OptionButton" parent="tab1" unique_id=939006634]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 93.0
+offset_top = 92.0
 offset_right = 144.0
-offset_bottom = 124.0
+offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 3
+item_count = 4
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
 popup/item_1/id = 1
 popup/item_2/text = "Conference"
 popup/item_2/id = 2
+popup/item_3/text = "Public Speech"
+popup/item_3/id = 3
+
+[node name="JournalWin1" type="Node" parent="tab1" unique_id=663195433]
+script = ExtResource("1_qbr07")
+
+[node name="PanelContainer" type="PanelContainer" parent="tab1" unique_id=528508262]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 152.0
+offset_right = 84.0
+offset_bottom = 192.0
+
+[node name="Book" type="Sprite2D" parent="tab1/PanelContainer" unique_id=954872782]
+visible = false
+position = Vector2(19, 15)
+scale = Vector2(2.125, 1.8125)
+texture = ExtResource("2_omu8a")
+
+[node name="PanelContainer2" type="PanelContainer" parent="tab1" unique_id=1789239554]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 152.0
+offset_right = 173.0
+offset_bottom = 192.0
+
+[node name="Note" type="Sprite2D" parent="tab1/PanelContainer2" unique_id=161058524]
+visible = false
+position = Vector2(21, 19)
+scale = Vector2(2.125, 1.8125)
+texture = ExtResource("3_6ee85")
 
 [node name="tab2" type="TabBar" parent="." unique_id=1487145056]
 visible = false

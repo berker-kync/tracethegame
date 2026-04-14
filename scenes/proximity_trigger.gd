@@ -9,7 +9,7 @@ func _ready() -> void:
 	if not transition.is_connected("animation_finished", Callable(self, "_on_transition_animation_finished")):
 		transition.connect("animation_finished", Callable(self, "_on_transition_animation_finished"))
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if proximity and Input.is_action_just_pressed("interact"):
 		transition.play("Fade_out")
 

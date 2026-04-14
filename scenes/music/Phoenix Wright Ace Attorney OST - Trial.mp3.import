@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8wj4hskhnkb7"
+path="res://.godot/imported/Phoenix Wright Ace Attorney OST - Trial.mp3-75e2fc331e5890b8a7e18755711adb1b.mp3str"
+
+[deps]
+
+source_file="res://scenes/music/Phoenix Wright Ace Attorney OST - Trial.mp3"
+dest_files=["res://.godot/imported/Phoenix Wright Ace Attorney OST - Trial.mp3-75e2fc331e5890b8a7e18755711adb1b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

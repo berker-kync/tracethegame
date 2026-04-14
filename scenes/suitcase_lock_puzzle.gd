@@ -4,6 +4,8 @@ extends Panel
 @onready var label_2: Label = $Label2
 @onready var label_3: Label = $Label3
 @onready var opensound: AudioStreamPlayer = $AudioStreamPlayer
+@onready var proximity_trigger: Area2D = $"../ProximityTrigger"
+@onready var timer: Timer = $Timer
 
 var lock = [0, 0, 0]
 var j = 0
@@ -18,7 +20,6 @@ func _process(delta: float) -> void:
 	#close the suitcase lock screen
 	if panel.visible == true && Input.is_action_just_pressed("escape"):
 		panel.visible = false
-	
 	if panel.visible == true && Input.is_action_just_pressed("up"):
 		uptick()
 		if (j) == 0:
@@ -78,8 +79,17 @@ func downtick():
 func wincheck():
 	if lock == [1,5,7]:
 		puzzleSolved = true
+		proximity_trigger.monitoring = false
 		label.add_theme_color_override("font_color", Color.GREEN)
 		label_2.add_theme_color_override("font_color", Color.GREEN)
 		label_3.add_theme_color_override("font_color", Color.GREEN)
 		opensound.play()
+		timer.start()
+		print("timer start")
 		#timer set to freeze inputs and close suitcase
+
+func _on_timer_timeout() -> void:
+	panel.visible = false
+	journalConst.room1keyItem1 = true
+	journalConst.room1keyItem2 = true
+	

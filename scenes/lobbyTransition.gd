@@ -3,7 +3,7 @@ extends Area2D
 @onready var transition: AnimationPlayer = $"../../LevelTransition"
 
 var proximity = false
-var Elevator = load("res://scenes/elevator_transition_scene.tscn")
+var nextlevel = load("res://scenes/hallway_1.tscn")
 
 func _ready() -> void:
 	# Ensure the animation_finished signal is connected
@@ -24,4 +24,4 @@ func _on_body_exited(_body: Node2D) -> void:
 
 func _on_transition_animation_finished(anim_name: StringName) -> void:
 	if anim_name != "Fade_in":
-		get_tree().change_scene_to_packed(Elevator)
+		get_tree().change_scene_to_packed(nextlevel)
