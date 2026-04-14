@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://3aksxpsfaruu" path="res://scenes/receptionist_trigger.gd" id="8_rrb0l"]
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="9_ihyci"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="9_rrb0l"]
+[ext_resource type="PackedScene" uid="uid://dm5f12i3v3ql6" path="res://scenes/escape_menu.tscn" id="11_bfwvt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlsvv"]
 texture = ExtResource("2_dlsvv")
@@ -2723,6 +2724,8 @@ color = Color(0, 0, 0, 0)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("9_rrb0l")]
 position = Vector2(0, 29.999998)
+
+[node name="EscapeMenu" parent="." unique_id=1798306514 instance=ExtResource("11_bfwvt")]
 
 [connection signal="body_entered" from="Elevator/ProximityBox" to="Elevator/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Elevator/ProximityBox" to="Elevator/ProximityBox" method="_on_body_exited"]

@@ -1,25 +1,36 @@
 [gd_scene format=3 uid="uid://c2slcciavn46i"]
 
 [ext_resource type="Script" uid="uid://b8sevfe7wxm6f" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://cqlync0i7a3b5" path="res://assets/at01.ttf" id="2_1o70l"]
+[ext_resource type="Script" uid="uid://cwwptwetu1j4e" path="res://scripts/audio_control.gd" id="3_iscfu"]
 
 [sub_resource type="Theme" id="Theme_ekxnf"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_3e4a6"]
+color = Color(0, 0.2596667, 0.41, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_gc41w"]
+color = Color(0.072600015, 0.19272003, 0.33, 1)
 
 [node name="MainMenu" type="Node2D" unique_id=1283482954]
 script = ExtResource("1_l6cm7")
 
 [node name="Label" type="Label" parent="." unique_id=1272108093]
-offset_right = 1153.0
-offset_bottom = 258.0
-theme_override_font_sizes/font_size = 175
+offset_left = 1.0
+offset_top = -40.0
+offset_right = 1154.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 250
 text = "TRACE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1721557529]
-offset_left = 2.0
-offset_top = 283.0
-offset_right = 1153.0
-offset_bottom = 603.0
+offset_left = -2.0
+offset_top = 237.0
+offset_right = 1149.0
+offset_bottom = 619.0
 theme = SubResource("Theme_ekxnf")
 
 [node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=101339334]
@@ -28,22 +39,28 @@ theme_override_constants/separation = 10
 
 [node name="Play" type="Button" parent="CenterContainer/MainButtons" unique_id=702088970]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 100
 text = "PLAY"
 
 [node name="Settings" type="Button" parent="CenterContainer/MainButtons" unique_id=921826957]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 100
 text = "SETTINGS"
 
 [node name="Credits" type="Button" parent="CenterContainer/MainButtons" unique_id=1289874801]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 100
 text = "CREDITS"
 
 [node name="Quit" type="Button" parent="CenterContainer/MainButtons" unique_id=331341037]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 100
 text = "QUIT"
 
 [node name="Settings" type="VBoxContainer" parent="CenterContainer" unique_id=1207651279]
@@ -51,8 +68,65 @@ visible = false
 layout_mode = 2
 theme_override_constants/separation = 16
 
+[node name="Label" type="Label" parent="CenterContainer/Settings" unique_id=1541361560]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 79
+text = "Settings"
+
+[node name="Volume" type="Label" parent="CenterContainer/Settings" unique_id=1220178926]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 46
+text = "Volume"
+
+[node name="AudioControl" type="HSlider" parent="CenterContainer/Settings" unique_id=1358644679]
+layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_3e4a6")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_gc41w")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_iscfu")
+audio_bus_name = "Master"
+
+[node name="Music" type="Label" parent="CenterContainer/Settings" unique_id=367991601]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 46
+text = "Music"
+
+[node name="AudioControl2" type="HSlider" parent="CenterContainer/Settings" unique_id=1441024100]
+layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_3e4a6")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_gc41w")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_iscfu")
+audio_bus_name = "Music"
+
+[node name="SFX" type="Label" parent="CenterContainer/Settings" unique_id=1206757573]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 46
+text = "SFX"
+
+[node name="AudioControl3" type="HSlider" parent="CenterContainer/Settings" unique_id=1356602386]
+layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_3e4a6")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_gc41w")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_iscfu")
+audio_bus_name = "SFX"
+
 [node name="Back" type="Button" parent="CenterContainer/Settings" unique_id=348397752]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1o70l")
 theme_override_font_sizes/font_size = 50
 text = "BACK"
 
@@ -64,8 +138,9 @@ theme_override_constants/separation = 16
 [node name="Label" type="Label" parent="CenterContainer/Credits" unique_id=676740941]
 custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "A Game by Elise Handley and Cal Atkins"
+theme_override_fonts/font = ExtResource("2_1o70l")
+theme_override_font_sizes/font_size = 86
+text = "A Game by Elise Handley and Cal Akins"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -74,9 +149,15 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "BACK"
 
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=406879805]
+bus = &"Music"
+
 [connection signal="pressed" from="CenterContainer/MainButtons/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="CenterContainer/Settings/AudioControl" to="CenterContainer/Settings/AudioControl" method="_on_value_changed"]
+[connection signal="value_changed" from="CenterContainer/Settings/AudioControl2" to="CenterContainer/Settings/AudioControl2" method="_on_value_changed"]
+[connection signal="value_changed" from="CenterContainer/Settings/AudioControl3" to="CenterContainer/Settings/AudioControl3" method="_on_value_changed"]
 [connection signal="pressed" from="CenterContainer/Settings/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CenterContainer/Credits/Back" to="." method="_on_back_pressed"]
