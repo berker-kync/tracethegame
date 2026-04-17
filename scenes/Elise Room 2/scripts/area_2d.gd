@@ -1,5 +1,6 @@
 extends Area2D
-@onready var highlighted: Sprite2D = $highlighted
+@onready var highlighted: Sprite2D = $"../Highlighted"
+
 
 func _on_body_entered(body: Node2D) -> void:
 	highlighted.visible = true

@@ -41,9 +41,9 @@ libraries/ = SubResource("AnimationLibrary_x6ixm")
 
 [node name="ColorRectGrey" type="ColorRect" parent="." unique_id=501642006]
 z_index = 98
-offset_left = -130.0
-offset_top = -80.0
-offset_right = -90.0
-offset_bottom = -40.0
-scale = Vector2(7.2941546, 4.224568)
+offset_left = -290.0
+offset_top = -248.0
+offset_right = -250.0
+offset_bottom = -208.0
+scale = Vector2(38.466034, 24.70974)
 color = Color(0, 0, 0, 0)

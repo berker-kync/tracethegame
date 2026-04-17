@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cgic26mxnqb8g" path="res://scenes/maze.tscn" id="16_hd51x"]
 [ext_resource type="AudioStream" uid="uid://cdx8jn51oqsdq" path="res://scenes/sounds/Foley Paper Rustle Short 01.wav" id="17_h4vym"]
 [ext_resource type="AudioStream" uid="uid://b8wj4hskhnkb7" path="res://scenes/music/Phoenix Wright Ace Attorney OST - Trial.mp3" id="18_fvkt5"]
+[ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="20_gb4l8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tpyqj"]
 texture = ExtResource("4_frh27")
@@ -2511,6 +2512,11 @@ stream = ExtResource("18_fvkt5")
 volume_db = -10.898
 autoplay = true
 parameters/looping = true
+
+[node name="textbox" type="Node2D" parent="." unique_id=808643585]
+z_index = 1
+
+[node name="SuitcaseOpen text" parent="textbox" unique_id=1827124815 instance=ExtResource("20_gb4l8")]
 
 [connection signal="body_entered" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Suitcase/ProximityTrigger" to="Suitcase/ProximityTrigger" method="_on_body_exited"]

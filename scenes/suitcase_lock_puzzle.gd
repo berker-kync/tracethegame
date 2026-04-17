@@ -6,6 +6,7 @@ extends Panel
 @onready var opensound: AudioStreamPlayer = $AudioStreamPlayer
 @onready var proximity_trigger: Area2D = $"../ProximityTrigger"
 @onready var timer: Timer = $Timer
+@onready var suitcase_open_text: CanvasLayer = $"../../textbox/SuitcaseOpen text"
 
 var lock = [0, 0, 0]
 var j = 0
@@ -77,7 +78,7 @@ func downtick():
 		lock[j] = 9
 
 func wincheck():
-	if lock == [1,5,7]:
+	if (lock == [1,5,7] && puzzleSolved != true):
 		puzzleSolved = true
 		proximity_trigger.monitoring = false
 		label.add_theme_color_override("font_color", Color.GREEN)
@@ -89,7 +90,12 @@ func wincheck():
 		#timer set to freeze inputs and close suitcase
 
 func _on_timer_timeout() -> void:
+	print("timer end")
+	timer.stop()
 	panel.visible = false
 	journalConst.room1keyItem1 = true
 	journalConst.room1keyItem2 = true
 	
+	# Send text to your dialogue system instead of toggling visibility
+	suitcase_open_text.queueText("Inside the suitcase is a handwritten speech, along with an unfinished book.")
+	suitcase_open_text.queueText("Press J to open your Journal to look at key items and piece together identities.")
