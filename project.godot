@@ -24,6 +24,10 @@ Global="*uid://b5mvu3m1r7yb0"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[global_group]
+
+dropable=""
+
 [input]
 
 ui_left={

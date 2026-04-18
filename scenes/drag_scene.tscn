@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dnctnylfux18c"]
+
+[ext_resource type="PackedScene" uid="uid://rxfsj8hd7i4p" path="res://scenes/moveable_applecore.tscn" id="1_ywwff"]
+[ext_resource type="PackedScene" uid="uid://cp8mmj3jh3xdk" path="res://scenes/moveable_can.tscn" id="2_ihv6q"]
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="2_ywwff"]
+[ext_resource type="Texture2D" uid="uid://cd1p625ps07xi" path="res://assets/trash assets/trash-screen.png" id="3_pd7ce"]
+[ext_resource type="PackedScene" uid="uid://xpr2erq1ov0v" path="res://scenes/moveable_crumpledpaper.tscn" id="5_4woqy"]
+
+[sub_resource type="Theme" id="Theme_xe84x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hxgq"]
+texture = ExtResource("3_pd7ce")
+
+[node name="drag_scene" type="Node2D" unique_id=385695521]
+
+[node name="moveable_object2" parent="." unique_id=1006204575 instance=ExtResource("2_ihv6q")]
+position = Vector2(36, -96)
+rotation = -0.34906584
+scale = Vector2(1.25, 1.25)
+
+[node name="moveable_object9" parent="." unique_id=253167098 instance=ExtResource("2_ihv6q")]
+position = Vector2(155, -24)
+rotation = -0.34906584
+scale = Vector2(1.25, 1.25)
+
+[node name="ProximityBox" parent="." unique_id=1801853796 instance=ExtResource("2_ywwff")]
+visible = false
+position = Vector2(204, -137)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2129894119]
+position = Vector2(136, -39)
+zoom = Vector2(1.4, 1.4)
+
+[node name="moveable_object1" parent="." unique_id=1407672426 instance=ExtResource("2_ihv6q")]
+position = Vector2(145, -126)
+rotation = 0.60562927
+scale = Vector2(1.25, 1.25)
+
+[node name="Panel" type="Panel" parent="." unique_id=1623223075]
+z_index = -3
+offset_left = -100.0
+offset_top = -173.0
+offset_right = 376.0
+offset_bottom = 193.0
+theme = SubResource("Theme_xe84x")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0hxgq")
+
+[node name="moveable_object3" parent="." unique_id=183063442 instance=ExtResource("1_ywwff")]
+position = Vector2(117, 5)
+rotation = -0.41887903
+scale = Vector2(1.25, 1.25)
+
+[node name="moveable_object8" parent="." unique_id=321865698 instance=ExtResource("1_ywwff")]
+position = Vector2(140.99998, -55.999996)
+rotation = 0.62831855
+scale = Vector2(1.25, 1.25)
+
+[node name="moveable_object4" parent="." unique_id=891216453 instance=ExtResource("1_ywwff")]
+position = Vector2(-9.000008, -100)
+rotation = 0.858702
+scale = Vector2(1.25, 1.25)
+
+[node name="moveable_object5" parent="." unique_id=1234098835 instance=ExtResource("5_4woqy")]
+z_index = -2
+position = Vector2(91, -122)
+rotation = 0.71733034
+scale = Vector2(1.25, 1.25)
+
+[node name="moveable_object6" parent="." unique_id=1700532947 instance=ExtResource("5_4woqy")]
+z_index = -2
+position = Vector2(96.99999, -60)
+rotation = 0.71733034
+scale = Vector2(1.25, 1.25)
+
+[node name="moveable_object7" parent="." unique_id=1433705273 instance=ExtResource("5_4woqy")]
+z_index = -2
+position = Vector2(227, -105.999985)
+rotation = 0.71733034
+scale = Vector2(1.25, 1.25)
+
+[connection signal="area_entered" from="ProximityBox" to="ProximityBox" method="_on_area_entered"]
+[connection signal="area_exited" from="ProximityBox" to="ProximityBox" method="_on_area_exited"]
+[connection signal="body_entered" from="ProximityBox" to="ProximityBox" method="_on_body_entered"]
+[connection signal="body_exited" from="ProximityBox" to="ProximityBox" method="_on_body_exited"]
+[connection signal="body_shape_entered" from="ProximityBox" to="ProximityBox" method="_on_body_shape_entered"]

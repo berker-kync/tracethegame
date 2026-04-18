@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://rxfsj8hd7i4p"]
+
+[ext_resource type="Script" uid="uid://y3qypuyipg8u" path="res://scripts/moveable_object.gd" id="1_sbsyn"]
+[ext_resource type="Texture2D" uid="uid://5a15am1v1ums" path="res://assets/trash assets/applecore.png" id="2_ydpho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnws3"]
+size = Vector2(49, 72)
+
+[node name="moveable_object1" type="Node2D" unique_id=1006204575]
+position = Vector2(1, -2)
+script = ExtResource("1_sbsyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1195667886]
+position = Vector2(64, -39)
+scale = Vector2(1.2187498, 1.2499999)
+texture = ExtResource("2_ydpho")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2137625787]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=299139177]
+position = Vector2(61.5, -40)
+shape = SubResource("RectangleShape2D_bnws3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

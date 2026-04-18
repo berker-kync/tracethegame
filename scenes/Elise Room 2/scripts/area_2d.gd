@@ -1,10 +1,13 @@
 extends Area2D
-@onready var highlighted: Sprite2D = $highlighted
+var proximity = false
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	#highlighted.visible = true
-	print("entered")
+	proximity = true
+	print("entered") 
 	
-func _on_body_exited(body: Node2D) -> void:
+	
+func _on_area_2d_body_exited(_body: Node2D) -> void:
 	#highlighted.visible = false
+	proximity = false
 	print("exited")
