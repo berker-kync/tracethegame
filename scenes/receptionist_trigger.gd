@@ -15,8 +15,8 @@ func _process(delta: float) -> void:
 		textBox.queueText("The best digital hotel in the whole world!..")
 		textBox.queueText("..or only.")
 		textBox.queueText("It is your job to figure out who is staying in this hotel")
-		textBox.queueText("based on the clues they have left behind.")
-		textBox.queueText("These people do not know anything about digital footprints!")
+		textBox.queueText("based on the clues from their digital footprint!")
+		textBox.queueText("I believe one of the people is someone specific you're looking for.")
 		textBox.queueText("Well player, good luck! Head over to the elevator and press Enter.")
 		textBox.queueText("Begin your journey at Floor 1.")
 
