@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://didrdkhd6xpee"
+path="res://.godot/imported/sfx-maaagical2.wav-69ca2de0c656e89ccd895634e7fc2362.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/sfx general/sfx-maaagical2.wav"
+dest_files=["res://.godot/imported/sfx-maaagical2.wav-69ca2de0c656e89ccd895634e7fc2362.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

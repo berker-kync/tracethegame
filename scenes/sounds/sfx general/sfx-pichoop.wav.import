@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dj05oi36ygl26"
+path="res://.godot/imported/sfx-pichoop.wav-c18304f03119566808f6aabbd6fbe35e.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/sfx general/sfx-pichoop.wav"
+dest_files=["res://.godot/imported/sfx-pichoop.wav-c18304f03119566808f6aabbd6fbe35e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

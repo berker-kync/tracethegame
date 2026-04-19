@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6refs8f5tqk1"]
 
 [ext_resource type="Script" uid="uid://dbmmt7woihjpm" path="res://scenes/tutorial_text.gd" id="1_mufi8"]
+[ext_resource type="AudioStream" uid="uid://ogmtqm3rrmu1" path="res://scenes/sounds/sfx general/sfx-blipfemale.wav" id="2_bfnq8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyeok"]
 bg_color = Color(0, 0, 0, 1)
@@ -65,3 +66,11 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 51
 text = "v"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=521709247]
+stream = ExtResource("2_bfnq8")
+
+[node name="Timer" type="Timer" parent="AudioStreamPlayer" unique_id=1900194589]
+wait_time = 0.09
+
+[connection signal="timeout" from="AudioStreamPlayer/Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dojv35q8fdi18"
+path="res://.godot/imported/sfx-selectblip.wav-47230d4511cc1026ba83831a4d39e0fe.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/sfx general/sfx-selectblip.wav"
+dest_files=["res://.godot/imported/sfx-selectblip.wav-47230d4511cc1026ba83831a4d39e0fe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

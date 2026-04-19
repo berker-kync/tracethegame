@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwerfwa1o3yfp"
+path="res://.godot/imported/sfx-objection.wav-655e63eaff3df7e13c4ca0dd83f1502d.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/sfx general/sfx-objection.wav"
+dest_files=["res://.godot/imported/sfx-objection.wav-655e63eaff3df7e13c4ca0dd83f1502d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

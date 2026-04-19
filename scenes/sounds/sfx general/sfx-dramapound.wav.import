@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://83nmh0mrr6pu"
+path="res://.godot/imported/sfx-dramapound.wav-782b808c0908dd6ebe97a0d366f52a6a.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/sfx general/sfx-dramapound.wav"
+dest_files=["res://.godot/imported/sfx-dramapound.wav-782b808c0908dd6ebe97a0d366f52a6a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

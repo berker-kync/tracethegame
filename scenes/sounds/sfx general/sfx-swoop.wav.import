@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbkhmg6imtrbo"
+path="res://.godot/imported/sfx-swoop.wav-07ded2b8c61ae925e92696167297626d.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/sfx general/sfx-swoop.wav"
+dest_files=["res://.godot/imported/sfx-swoop.wav-07ded2b8c61ae925e92696167297626d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

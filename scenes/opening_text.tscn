@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cov06h27ees05" path="res://scenes/opening_text.gd" id="4_7u2xn"]
 [ext_resource type="Script" uid="uid://c0imku6dy45sr" path="res://scenes/opentext.gd" id="4_tyg3u"]
 [ext_resource type="Texture2D" uid="uid://bab1o7dk26o5q" path="res://assets/custom/hotel2pixel.png" id="5_7u2xn"]
+[ext_resource type="AudioStream" uid="uid://ogmtqm3rrmu1" path="res://scenes/sounds/sfx general/sfx-blipfemale.wav" id="5_tpxys"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpxys"]
 texture = ExtResource("5_7u2xn")
@@ -20,6 +21,12 @@ script = ExtResource("4_tyg3u")
 position = Vector2(21, -71)
 script = ExtResource("4_7u2xn")
 
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="tutorial text" unique_id=1509550176]
+stream = ExtResource("5_tpxys")
+
+[node name="Timer" type="Timer" parent="tutorial text/AudioStreamPlayer2" unique_id=262609784]
+wait_time = 0.09
+
 [node name="Panel" type="Panel" parent="." unique_id=944988157]
 offset_left = -23.0
 offset_top = 65.0
@@ -29,3 +36,4 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_tpxys")
 
 [connection signal="body_entered" from="tutorial text/ProximityBox" to="tutorial text/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="tutorial text/ProximityBox" to="tutorial text/ProximityBox" method="_on_body_exited"]
+[connection signal="timeout" from="tutorial text/AudioStreamPlayer2/Timer" to="tutorial text" method="_on_timer_timeout"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://82dtljlrs7fe"
+path="res://.godot/imported/sfx-fwasshing.wav-4e09472b9eb8c5b2a8e9f76d46a81f5d.sample"
+
+[deps]
+
+source_file="res://scenes/sounds/sfx general/sfx-fwasshing.wav"
+dest_files=["res://.godot/imported/sfx-fwasshing.wav-4e09472b9eb8c5b2a8e9f76d46a81f5d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

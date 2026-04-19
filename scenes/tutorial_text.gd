@@ -4,6 +4,8 @@ extends CanvasLayer
 @onready var startSymbol = $TextboxContainer/MarginContainer/HBoxContainer/Start
 @onready var endSymbol = $TextboxContainer/MarginContainer/HBoxContainer/End
 @onready var label = $TextboxContainer/MarginContainer/HBoxContainer/Label
+@onready var timer: Timer = $AudioStreamPlayer/Timer
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 var CHAR_READ_RATE = 0.05
 
@@ -80,5 +82,12 @@ func change_state(nextState):
 				print("changing to state: READY")
 			state.READING:
 				print("changing to state: READING")
+				timer.start()
 			state.FINISHED:
 				print("changing to state: FINISHED")
+				timer.stop()
+				audio.stop()
+
+
+func _on_timer_timeout() -> void:
+	audio.play()
