@@ -3,6 +3,9 @@ extends Area2D
 
 var proximity = false
 
+func _ready() -> void:
+	highlighted.visible = false
+
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
 		print("interacted") 

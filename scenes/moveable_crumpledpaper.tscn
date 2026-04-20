@@ -1,30 +1,19 @@
 [gd_scene format=3 uid="uid://xpr2erq1ov0v"]
 
-[ext_resource type="Script" uid="uid://y3qypuyipg8u" path="res://scripts/moveable_object.gd" id="1_xkps2"]
+[ext_resource type="Script" uid="uid://csjnp5iwlhb8y" path="res://scripts/moveable_crumpledpaper.gd" id="1_j5pss"]
 [ext_resource type="Texture2D" uid="uid://bajitbxgtacpe" path="res://assets/trash assets/crumpledpaper.png" id="2_yfx1k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bnws3"]
 size = Vector2(66.5, 66)
 
-[node name="moveable_object1" type="Node2D" unique_id=1006204575]
-position = Vector2(1, -2)
-script = ExtResource("1_xkps2")
+[node name="Area2D" type="Area2D" unique_id=1229238069]
+script = ExtResource("1_j5pss")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1195667886]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916927451]
 position = Vector2(1.9999924, 1)
 scale = Vector2(1.2187498, 1.2499999)
 texture = ExtResource("2_yfx1k")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2137625787]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=299139177]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=65801848]
 position = Vector2(0.75, 2)
 shape = SubResource("RectangleShape2D_bnws3")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
