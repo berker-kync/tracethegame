@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dctxxkm5a2cr6" path="res://scenes/Elise Room 2/panel_container_2.gd" id="4_yjvlh"]
 [ext_resource type="Texture2D" uid="uid://ds7tkx1mukcpx" path="res://assets/custom/Book Description.png" id="6_tvhpk"]
 [ext_resource type="Texture2D" uid="uid://dkuehdubv7bwk" path="res://assets/custom/speech.png" id="7_yuig1"]
+[ext_resource type="AudioStream" uid="uid://dvv4y6kg6on2k" path="res://scenes/sounds/sfx general/sfx-maaagical3.wav" id="8_q2jlq"]
 
 [sub_resource type="Theme" id="Theme_qbr07"]
 
@@ -328,6 +329,9 @@ fit_to_longest_item = false
 item_count = 1
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1480881558]
+stream = ExtResource("8_q2jlq")
 
 [connection signal="mouse_entered" from="tab1/PanelContainer" to="tab1/PanelContainer" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab1/PanelContainer" to="tab1/PanelContainer" method="_on_mouse_exited"]

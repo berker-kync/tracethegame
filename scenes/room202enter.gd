@@ -4,6 +4,10 @@ extends Area2D
 var proximity = false
 var room202 = load("res://scenes/room_202.tscn")
 
+@onready var textbox: CanvasLayer = $"../../textbox"
+var locked = true
+
+
 func _ready() -> void:
 	# Ensure the animation_finished signal is connected
 	if not transition.is_connected("animation_finished", Callable(self, "_on_transition_animation_finished")):
@@ -11,7 +15,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if proximity and Input.is_action_just_pressed("interact"):
-		transition.play("Fade_out")
+		if locked == false:
+			transition.play("Fade_out")
+		else:
+			proximity = false
+			print("Interacted, locked")
+			textbox.queueText("This person has a Virtual Private Network (VPN) installed, blocking my path.")
+			textbox.queueText("I'll need to find another way in.")
 
 func _on_body_entered(_body: Node2D) -> void:
 	proximity = true
