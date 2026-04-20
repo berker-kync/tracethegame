@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://xpr2erq1ov0v"]
+
+[ext_resource type="Script" uid="uid://csjnp5iwlhb8y" path="res://scripts/moveable_crumpledpaper.gd" id="1_j5pss"]
+[ext_resource type="Texture2D" uid="uid://bajitbxgtacpe" path="res://assets/trash assets/crumpledpaper.png" id="2_yfx1k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnws3"]
+size = Vector2(66.5, 66)
+
+[node name="Area2D" type="Area2D" unique_id=1229238069]
+script = ExtResource("1_j5pss")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=916927451]
+position = Vector2(1.9999924, 1)
+scale = Vector2(1.2187498, 1.2499999)
+texture = ExtResource("2_yfx1k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=65801848]
+position = Vector2(0.75, 2)
+shape = SubResource("RectangleShape2D_bnws3")

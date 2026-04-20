@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cp8mmj3jh3xdk"]
+
+[ext_resource type="Script" uid="uid://dgv3p3dhqq5ii" path="res://scripts/moveable_can.gd" id="1_j0dq3"]
+[ext_resource type="Texture2D" uid="uid://boril5es6p1hd" path="res://assets/trash assets/sodacrushed.png" id="2_v8n3k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnws3"]
+size = Vector2(66.5, 66)
+
+[node name="Area2D" type="Area2D" unique_id=465202228]
+script = ExtResource("1_j0dq3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=594144406]
+position = Vector2(1.9999924, 1)
+scale = Vector2(1.2187498, 1.2499999)
+texture = ExtResource("2_v8n3k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1494949663]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_bnws3")
