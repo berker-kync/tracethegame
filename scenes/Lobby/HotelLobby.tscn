@@ -2694,7 +2694,7 @@ layer_0/tile_data = PackedInt32Array(-196610, 720896, 1, -262146, 720896, 0)
 position = Vector2(0, -137)
 
 [node name="ProximityBox" parent="Elevator" unique_id=1801853796 instance=ExtResource("7_3al0f")]
-position = Vector2(0, 3)
+position = Vector2(0, 1)
 script = ExtResource("7_ihyci")
 
 [node name="Ding" type="AudioStreamPlayer" parent="Elevator" unique_id=1878651913]

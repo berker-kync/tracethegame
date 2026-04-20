@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://y4j1dmc6b406"]
+
+[ext_resource type="Texture2D" uid="uid://dly1pobbhn3fr" path="res://assets/laptop assets/laptop wallpaper.png" id="1_5ijq5"]
+[ext_resource type="Texture2D" uid="uid://du3o4hsvc7le2" path="res://assets/laptop assets/smiley pix.png" id="2_creid"]
+[ext_resource type="Script" uid="uid://c1x7b55k34v1j" path="res://scripts/smile.gd" id="3_2jtcb"]
+[ext_resource type="Texture2D" uid="uid://bh7yuuv67x7ld" path="res://assets/laptop assets/settings pix.png" id="3_ejyiq"]
+[ext_resource type="Texture2D" uid="uid://cxhvxtkb6nu0" path="res://assets/laptop assets/postit pix.png" id="4_2jtcb"]
+[ext_resource type="Script" uid="uid://dfp881v5srcs6" path="res://scripts/settings.gd" id="5_jj3px"]
+
+[sub_resource type="FontFile" id="FontFile_b8h6g"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_5t67i"]
+default_font = SubResource("FontFile_b8h6g")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jj3px"]
+size = Vector2(363.18182, 356.6176)
+
+[node name="Area2D" type="Area2D" unique_id=1935990265]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1581606986]
+light_mask = 2
+visibility_layer = 2
+z_index = -1
+position = Vector2(425, 266)
+texture = ExtResource("1_5ijq5")
+
+[node name="Post-it" type="Sprite2D" parent="." unique_id=428326985]
+position = Vector2(672, 177)
+texture = ExtResource("4_2jtcb")
+
+[node name="Label" type="Label" parent="Post-it" unique_id=1414148699]
+offset_left = -130.0
+offset_top = -76.0
+offset_right = 147.0
+offset_bottom = 110.78
+rotation = -0.17453292
+theme = SubResource("Theme_5t67i")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "TO DO:
+-POST ON SMILESGRAM
+-TEXT GRANDMA
+-MOMS BDAY: 04/07"
+
+[node name="Smile" type="Area2D" parent="." unique_id=462045203]
+script = ExtResource("3_2jtcb")
+
+[node name="Smile Gram" type="Sprite2D" parent="Smile" unique_id=297762661]
+position = Vector2(73.999985, 71)
+scale = Vector2(0.275, 0.272)
+texture = ExtResource("2_creid")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Smile" unique_id=732829046]
+position = Vector2(74, 70)
+scale = Vector2(0.275, 0.272)
+shape = SubResource("RectangleShape2D_jj3px")
+
+[node name="Settings" type="Area2D" parent="." unique_id=1035936512]
+script = ExtResource("5_jj3px")
+
+[node name="Settings" type="Sprite2D" parent="Settings" unique_id=157687466]
+position = Vector2(75.00003, 192.00002)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_ejyiq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Settings" unique_id=40604218]
+position = Vector2(74, 191.99998)
+scale = Vector2(0.27499998, 0.27199998)
+shape = SubResource("RectangleShape2D_jj3px")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2042086760]
+position = Vector2(423, 262)
+zoom = Vector2(1.255, 1.255)
+
+[connection signal="input_event" from="Smile" to="Smile" method="_on_input_event"]
+[connection signal="mouse_entered" from="Smile" to="Smile" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Smile" to="Smile" method="_on_mouse_exited"]
+[connection signal="input_event" from="Settings" to="Settings" method="_on_input_event"]

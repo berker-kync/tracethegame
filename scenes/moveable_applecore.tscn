@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://rxfsj8hd7i4p"]
+
+[ext_resource type="Script" uid="uid://c1mhpbhkywm55" path="res://scripts/moveable_applecore.gd" id="1_ydpho"]
+[ext_resource type="Texture2D" uid="uid://5a15am1v1ums" path="res://assets/trash assets/applecore.png" id="2_ydpho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnws3"]
+size = Vector2(49, 72)
+
+[node name="Area2D" type="Area2D" unique_id=69491249]
+script = ExtResource("1_ydpho")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1198794828]
+position = Vector2(64, -39)
+scale = Vector2(1.2187498, 1.2499999)
+texture = ExtResource("2_ydpho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1130385524]
+position = Vector2(61.5, -40)
+shape = SubResource("RectangleShape2D_bnws3")

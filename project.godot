@@ -25,6 +25,10 @@ journalConst="*uid://bxng1u6uiji3v"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[global_group]
+
+dropable=""
+
 [input]
 
 ui_left={
