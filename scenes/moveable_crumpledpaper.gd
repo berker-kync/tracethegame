@@ -64,6 +64,8 @@ func is_correct(zone_type) -> bool:
 
 func handle_correct():
 	print("correct drop!")
+	Global.points += 1
+	print("point up")
 	queue_free()
 
 

@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if proximity and Input.is_action_just_pressed("interact"):
 		transition.play("Fade_out")
+		Global.hallway2 = 0
 
 func _on_body_entered(_body: Node2D) -> void:
 	proximity = true

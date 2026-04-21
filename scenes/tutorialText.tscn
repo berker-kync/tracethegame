@@ -69,6 +69,7 @@ text = "v"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=521709247]
 stream = ExtResource("2_bfnq8")
+volume_db = -22.026
 
 [node name="Timer" type="Timer" parent="AudioStreamPlayer" unique_id=1900194589]
 wait_time = 0.09

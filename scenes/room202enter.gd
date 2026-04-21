@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 	if proximity and Input.is_action_just_pressed("interact"):
 		if locked == false:
 			transition.play("Fade_out")
+			Global.hallway2 = 2
 		else:
 			proximity = false
 			print("Interacted, locked")

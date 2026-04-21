@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://db0y6reyxyx7w" path="res://assets/HotelAssets_NEW/Tileset.png" id="5_h4vym"]
 [ext_resource type="Texture2D" uid="uid://c5plwq4sosaf6" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="6_gb4l8"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="7_n1i7x"]
-[ext_resource type="Script" uid="uid://cgmbvulhijflv" path="res://scenes/Elise Room 2/proximity.gd" id="8_rtbbc"]
+[ext_resource type="Script" uid="uid://dsj5l47es3ivb" path="res://scenes/suitcaseProximity.gd" id="8_frh27"]
 [ext_resource type="Texture2D" uid="uid://ddudglkuefvhu" path="res://assets/custom/suitcase.png" id="9_nuv48"]
 [ext_resource type="PackedScene" uid="uid://b7ytwpf8qaw5k" path="res://scenes/SuitcaseLock.tscn" id="10_5k8q0"]
 [ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="11_4upx3"]
@@ -2400,8 +2400,6 @@ _data = {
 [node name="GameDemo" type="Node2D" unique_id=1836168088]
 script = ExtResource("1_8kbn0")
 
-[node name="Journal Manager" parent="." unique_id=2009897970 instance=ExtResource("2_b0iqm")]
-
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("3_fvkt5")]
 z_index = 2
 position = Vector2(0, 60)
@@ -2432,7 +2430,8 @@ z_index = 1
 position = Vector2(-42.5, 39.5)
 
 [node name="ProximityTrigger" parent="Suitcase" unique_id=2116753924 instance=ExtResource("7_n1i7x")]
-script = ExtResource("8_rtbbc")
+scale = Vector2(0.6229565, 0.51330596)
+script = ExtResource("8_frh27")
 
 [node name="highlighted" type="Sprite2D" parent="Suitcase" unique_id=1400705703]
 visible = false
@@ -2453,6 +2452,7 @@ scale = Vector2(0.4910167, 0.47750637)
 position = Vector2(0, 63)
 
 [node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("7_n1i7x")]
+scale = Vector2(0.4074565, 0.3370042)
 script = ExtResource("11_4upx3")
 
 [node name="LevelTransition" type="AnimationPlayer" parent="." unique_id=2032135501]
@@ -2460,7 +2460,6 @@ libraries/ = SubResource("AnimationLibrary_t8k86")
 autoplay = &"Fade_in"
 
 [node name="ColorRectBlack" type="ColorRect" parent="LevelTransition" unique_id=108836160]
-visible = false
 z_index = 15
 offset_left = -130.0
 offset_top = -80.00001
@@ -2475,14 +2474,32 @@ zoom = Vector2(4, 4)
 
 [node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("12_ttrsv")]
 
+[node name="Journal Manager" parent="." unique_id=2009897970 instance=ExtResource("2_b0iqm")]
+
 [node name="Journal" parent="." unique_id=334019793 instance=ExtResource("13_klc0r")]
 visible = false
 z_index = 999
-offset_left = -56.000004
+offset_left = -66.0
 offset_top = -77.0
-offset_right = 181.0
+offset_right = 171.0
 offset_bottom = 165.0
 scale = Vector2(0.5873148, 0.6653026)
+
+[node name="Node2D" type="Node2D" parent="Journal" unique_id=1576330748]
+
+[node name="Label" type="Label" parent="Journal/Node2D" unique_id=1316071872]
+z_index = 999
+offset_left = 246.88634
+offset_top = 15.030756
+offset_right = 548.88635
+offset_bottom = 194.03076
+text = "Press J to open 
+and close the 
+journal
+
+Use the mouse 
+to hover over 
+key items"
 
 [node name="Paper" type="Node2D" parent="." unique_id=1851996515]
 position = Vector2(32, 48)
@@ -2493,7 +2510,8 @@ position = Vector2(24, -24)
 texture = ExtResource("14_h5d36")
 
 [node name="ProximityBox" parent="Paper" unique_id=1129325327 instance=ExtResource("7_n1i7x")]
-position = Vector2(22, -19)
+position = Vector2(16, -22)
+scale = Vector2(0.65805763, 0.5652641)
 script = ExtResource("15_p5hed")
 
 [node name="Panel" parent="Paper" unique_id=1656055429 instance=ExtResource("16_hd51x")]

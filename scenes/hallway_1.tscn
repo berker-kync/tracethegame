@@ -963,6 +963,14 @@ theme_override_font_sizes/font_size = 5
 theme_override_styles/normal = SubResource("StyleBoxFlat_q2l2c")
 text = "102"
 
+[node name="spawnpoints" type="Node" parent="." unique_id=693438842]
+
+[node name="spawn102" type="Node2D" parent="spawnpoints" unique_id=1768872524]
+position = Vector2(96, -28)
+
+[node name="spawn101" type="Node2D" parent="spawnpoints" unique_id=1594303377]
+position = Vector2(-96, -28)
+
 [connection signal="body_entered" from="elevatorDoor/ProximityBox" to="elevatorDoor/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="elevatorDoor/ProximityBox" to="elevatorDoor/ProximityBox" method="_on_body_exited"]
 [connection signal="body_entered" from="room101Door/ProximityBox" to="room101Door/ProximityBox" method="_on_body_entered"]

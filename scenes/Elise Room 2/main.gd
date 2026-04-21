@@ -5,3 +5,7 @@ extends Node2D
 
 func _ready() -> void:
 	camera_2d.make_current()
+	if Global.points == -1:
+		pass
+	
+	

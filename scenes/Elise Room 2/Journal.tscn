@@ -7,7 +7,10 @@
 [ext_resource type="Script" uid="uid://dctxxkm5a2cr6" path="res://scenes/Elise Room 2/panel_container_2.gd" id="4_yjvlh"]
 [ext_resource type="Texture2D" uid="uid://ds7tkx1mukcpx" path="res://assets/custom/Book Description.png" id="6_tvhpk"]
 [ext_resource type="Texture2D" uid="uid://dkuehdubv7bwk" path="res://assets/custom/speech.png" id="7_yuig1"]
+[ext_resource type="FontFile" uid="uid://dj8gdkx6r1sip" path="res://Themes/fonts/PressStart2P-Regular.ttf" id="8_bg7ji"]
+[ext_resource type="Script" uid="uid://bpnevk5kpp0g6" path="res://scenes/Elise Room 2/journal2win.gd" id="8_ct5k2"]
 [ext_resource type="AudioStream" uid="uid://dvv4y6kg6on2k" path="res://scenes/sounds/sfx general/sfx-maaagical3.wav" id="8_q2jlq"]
+[ext_resource type="Script" uid="uid://b8tiuu0rp00je" path="res://scenes/Elise Room 2/receiptcontainer.gd" id="9_bg7ji"]
 
 [sub_resource type="Theme" id="Theme_qbr07"]
 
@@ -23,10 +26,11 @@ bg_color = Color(0.88871396, 0.89269656, 0.87108135, 1)
 bg_color = Color(0.89145625, 0.89145625, 0.8914562, 1)
 
 [node name="Journal" type="TabContainer" unique_id=334019793]
-offset_left = 2.0
-offset_top = 1.0
-offset_right = 239.0
-offset_bottom = 243.0
+offset_left = -89.99999
+offset_top = -85.0
+offset_right = 147.0
+offset_bottom = 157.0
+scale = Vector2(0.7909173, 0.8313165)
 mouse_filter = 0
 theme = SubResource("Theme_qbr07")
 theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
@@ -67,7 +71,7 @@ popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
 popup/item_1/text = "John Smithy"
 popup/item_1/id = 1
-popup/item_2/text = "Jane Doe"
+popup/item_2/text = "Davis Johnson"
 popup/item_2/id = 3
 popup/item_3/text = "Jerry Hopperson"
 popup/item_3/id = 2
@@ -99,7 +103,7 @@ popup/item_2/text = "Business Person"
 popup/item_2/id = 1
 popup/item_3/text = "Influencer"
 popup/item_3/id = 2
-popup/item_4/text = "No Job"
+popup/item_4/text = "Hacker"
 popup/item_4/id = 3
 
 [node name="LabelPurpose" type="Label" parent="tab1" unique_id=1157881803]
@@ -164,6 +168,7 @@ texture = ExtResource("3_6ee85")
 
 [node name="BookDescription" type="Sprite2D" parent="tab1" unique_id=1633324118]
 visible = false
+z_index = 999
 position = Vector2(160, 146)
 scale = Vector2(0.31150177, 0.34985277)
 texture = ExtResource("6_tvhpk")
@@ -174,57 +179,142 @@ position = Vector2(262, 141)
 scale = Vector2(0.32812497, 0.35972223)
 texture = ExtResource("7_yuig1")
 
+[node name="KeyItemsLabel" type="Label" parent="tab1" unique_id=862594081]
+layout_mode = 0
+offset_left = 7.5861197
+offset_top = 127.784294
+offset_right = 167.58612
+offset_bottom = 150.7843
+scale = Vector2(0.7419276, 0.88078636)
+theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
+theme_override_fonts/font = ExtResource("8_bg7ji")
+text = "Key Items:"
+
 [node name="tab2" type="TabBar" parent="." unique_id=1487145056]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "102"
 
-[node name="Label" type="Label" parent="tab2" unique_id=1299629375]
+[node name="LabelWho" type="Label" parent="tab2" unique_id=1279513939]
 visible = false
 layout_mode = 0
-offset_right = 234.0
-offset_bottom = 210.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = " Who are they? 
- What's their job? 
- Why are they here?"
-
-[node name="Who" type="OptionButton" parent="tab2" unique_id=788118459]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 4.0
+offset_left = 9.0
+offset_top = 7.0
 offset_right = 144.0
 offset_bottom = 35.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Davis Johnson"
+
+[node name="Who" type="OptionButton" parent="tab2" unique_id=1578286435]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 160.0
+offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
+popup/item_1/text = "John Smithy"
+popup/item_1/id = 1
+popup/item_2/text = "Davis Johnson"
+popup/item_2/id = 3
+popup/item_3/text = "Jerry Hopperson"
+popup/item_3/id = 2
 
-[node name="Job" type="OptionButton" parent="tab2" unique_id=1025178000]
+[node name="LabelJob" type="Label" parent="tab2" unique_id=70363868]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 53.0
+offset_right = 144.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Author"
+
+[node name="Job" type="OptionButton" parent="tab2" unique_id=1656814357]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 49.0
-offset_right = 144.0
+offset_right = 163.0
 offset_bottom = 80.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 5
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
+popup/item_1/text = "Author"
+popup/item_1/id = 4
+popup/item_2/text = "Business Person"
+popup/item_2/id = 1
+popup/item_3/text = "Influencer"
+popup/item_3/id = 2
+popup/item_4/text = "Hacker"
+popup/item_4/id = 3
 
-[node name="Purpose" type="OptionButton" parent="tab2" unique_id=1708028198]
+[node name="LabelPurpose" type="Label" parent="tab2" unique_id=1204011585]
+visible = false
 layout_mode = 0
-offset_left = 1.0
-offset_top = 93.0
+offset_left = 9.0
+offset_top = 96.0
 offset_right = 144.0
 offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Public Speech"
+
+[node name="Purpose" type="OptionButton" parent="tab2" unique_id=1395810370]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 92.0
+offset_right = 182.0
+offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
+popup/item_1/text = "Convention"
+popup/item_1/id = 1
+popup/item_2/text = "Conference"
+popup/item_2/id = 2
+popup/item_3/text = "Public Speech"
+popup/item_3/id = 3
+
+[node name="JournalWin2" type="Node" parent="tab2" unique_id=926548069]
+script = ExtResource("8_ct5k2")
+
+[node name="NoteDescription" type="Sprite2D" parent="tab2" unique_id=1098141772]
+visible = false
+position = Vector2(284, 293)
+scale = Vector2(0.32812497, 0.35972223)
+texture = ExtResource("7_yuig1")
+
+[node name="PanelContainer1" type="PanelContainer" parent="tab2" unique_id=133594024]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 152.0
+offset_right = 62.0
+offset_bottom = 192.0
+script = ExtResource("9_bg7ji")
+
+[node name="Note" type="Sprite2D" parent="tab2/PanelContainer1" unique_id=705566530]
+visible = false
+position = Vector2(21, 19)
+scale = Vector2(2.125, 1.8125)
+texture = ExtResource("3_6ee85")
+
+[node name="KeyItemsLabel" type="Label" parent="tab2" unique_id=1007010362]
+layout_mode = 0
+offset_left = 7.5861197
+offset_top = 127.784294
+offset_right = 167.58612
+offset_bottom = 150.7843
+scale = Vector2(0.7419276, 0.88078636)
+theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
+theme_override_fonts/font = ExtResource("8_bg7ji")
+text = "Key Items:"
 
 [node name="tab3" type="TabBar" parent="." unique_id=58732885]
 visible = false
@@ -232,29 +322,45 @@ layout_mode = 2
 metadata/_tab_index = 2
 metadata/_tab_name = "201"
 
-[node name="Label" type="Label" parent="tab3" unique_id=570051697]
+[node name="LabelWho" type="Label" parent="tab3" unique_id=1745262718]
 visible = false
 layout_mode = 0
-offset_right = 234.0
-offset_bottom = 210.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = " Who are they? 
- What's their job? 
- Why are they here?"
-
-[node name="Who" type="OptionButton" parent="tab3" unique_id=1921329126]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 4.0
+offset_left = 9.0
+offset_top = 7.0
 offset_right = 144.0
 offset_bottom = 35.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Jerry Hopperson"
+
+[node name="Who" type="OptionButton" parent="tab3" unique_id=1167885406]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 160.0
+offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
+popup/item_1/text = "John Smithy"
+popup/item_1/id = 1
+popup/item_2/text = "Davis Johnson"
+popup/item_2/id = 3
+popup/item_3/text = "Jerry Hopperson"
+popup/item_3/id = 2
 
-[node name="Job" type="OptionButton" parent="tab3" unique_id=1758561578]
+[node name="LabelJob" type="Label" parent="tab3" unique_id=520665726]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 53.0
+offset_right = 144.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Author"
+
+[node name="Job" type="OptionButton" parent="tab3" unique_id=1921965886]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 49.0
@@ -262,21 +368,56 @@ offset_right = 144.0
 offset_bottom = 80.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 5
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
+popup/item_1/text = "Author"
+popup/item_1/id = 4
+popup/item_2/text = "Business Person"
+popup/item_2/id = 1
+popup/item_3/text = "Influencer"
+popup/item_3/id = 2
+popup/item_4/text = "Hacker"
+popup/item_4/id = 3
 
-[node name="Purpose" type="OptionButton" parent="tab3" unique_id=19714810]
+[node name="LabelPurpose" type="Label" parent="tab3" unique_id=96889463]
+visible = false
 layout_mode = 0
-offset_left = 1.0
-offset_top = 93.0
+offset_left = 9.0
+offset_top = 96.0
 offset_right = 144.0
 offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Public Speech"
+
+[node name="Purpose" type="OptionButton" parent="tab3" unique_id=2032249930]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 92.0
+offset_right = 144.0
+offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
+popup/item_1/text = "Convention"
+popup/item_1/id = 1
+popup/item_2/text = "Conference"
+popup/item_2/id = 2
+popup/item_3/text = "Public Speech"
+popup/item_3/id = 3
+
+[node name="KeyItemsLabel" type="Label" parent="tab3" unique_id=84640163]
+layout_mode = 0
+offset_left = 7.5861197
+offset_top = 127.784294
+offset_right = 167.58612
+offset_bottom = 150.7843
+scale = Vector2(0.7419276, 0.88078636)
+theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
+theme_override_fonts/font = ExtResource("8_bg7ji")
+text = "Key Items:"
 
 [node name="tab4" type="TabBar" parent="." unique_id=1213271918]
 visible = false
@@ -284,29 +425,45 @@ layout_mode = 2
 metadata/_tab_index = 3
 metadata/_tab_name = "202"
 
-[node name="Label" type="Label" parent="tab4" unique_id=1966940846]
+[node name="LabelWho" type="Label" parent="tab4" unique_id=2039057539]
 visible = false
 layout_mode = 0
-offset_right = 234.0
-offset_bottom = 210.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = " Who are they? 
- What's their job? 
- Why are they here?"
-
-[node name="Who" type="OptionButton" parent="tab4" unique_id=1142507069]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 4.0
+offset_left = 9.0
+offset_top = 7.0
 offset_right = 144.0
 offset_bottom = 35.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Jerry Hopperson"
+
+[node name="Who" type="OptionButton" parent="tab4" unique_id=2067071992]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 160.0
+offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
+popup/item_1/text = "John Smithy"
+popup/item_1/id = 1
+popup/item_2/text = "Davis Johnson"
+popup/item_2/id = 3
+popup/item_3/text = "Jerry Hopperson"
+popup/item_3/id = 2
 
-[node name="Job" type="OptionButton" parent="tab4" unique_id=1184993575]
+[node name="LabelJob" type="Label" parent="tab4" unique_id=1648725942]
+visible = false
+layout_mode = 0
+offset_left = 9.0
+offset_top = 53.0
+offset_right = 144.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Author"
+
+[node name="Job" type="OptionButton" parent="tab4" unique_id=220265071]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 49.0
@@ -314,21 +471,56 @@ offset_right = 144.0
 offset_bottom = 80.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 5
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
+popup/item_1/text = "Author"
+popup/item_1/id = 4
+popup/item_2/text = "Business Person"
+popup/item_2/id = 1
+popup/item_3/text = "Influencer"
+popup/item_3/id = 2
+popup/item_4/text = "Hacker"
+popup/item_4/id = 3
 
-[node name="Purpose" type="OptionButton" parent="tab4" unique_id=2044804454]
+[node name="LabelPurpose" type="Label" parent="tab4" unique_id=247640139]
+visible = false
 layout_mode = 0
-offset_left = 1.0
-offset_top = 93.0
+offset_left = 9.0
+offset_top = 96.0
 offset_right = 144.0
 offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Public Speech"
+
+[node name="Purpose" type="OptionButton" parent="tab4" unique_id=670388960]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 92.0
+offset_right = 144.0
+offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 1
+item_count = 4
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
+popup/item_1/text = "Convention"
+popup/item_1/id = 1
+popup/item_2/text = "Conference"
+popup/item_2/id = 2
+popup/item_3/text = "Public Speech"
+popup/item_3/id = 3
+
+[node name="KeyItemsLabel" type="Label" parent="tab4" unique_id=325504792]
+layout_mode = 0
+offset_left = 7.5861197
+offset_top = 127.784294
+offset_right = 167.58612
+offset_bottom = 150.7843
+scale = Vector2(0.7419276, 0.88078636)
+theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
+theme_override_fonts/font = ExtResource("8_bg7ji")
+text = "Key Items:"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1480881558]
 stream = ExtResource("8_q2jlq")
@@ -337,3 +529,5 @@ stream = ExtResource("8_q2jlq")
 [connection signal="mouse_exited" from="tab1/PanelContainer" to="tab1/PanelContainer" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab1/PanelContainer2" to="tab1/PanelContainer2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab1/PanelContainer2" to="tab1/PanelContainer2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_exited"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfnij0p0ido7w"]
 
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_2wsvm"]
+[ext_resource type="Script" uid="uid://crvf8spbyydib" path="res://scenes/hallway_2_startup.gd" id="1_5yxrw"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_1cbqy"]
 [ext_resource type="PackedScene" uid="uid://658wvgab6kci" path="res://scenes/Lobby/elevator.tscn" id="3_e8v6b"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="4_hgere"]
@@ -9,6 +10,7 @@
 [ext_resource type="Script" uid="uid://u0ly7628tdgn" path="res://scenes/room202enter.gd" id="7_hgere"]
 [ext_resource type="FontFile" uid="uid://dj8gdkx6r1sip" path="res://Themes/fonts/PressStart2P-Regular.ttf" id="8_t3k3o"]
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="9_b3u05"]
+[ext_resource type="AudioStream" uid="uid://b700edgey48m4" path="res://scenes/sounds/41747591_elevator-bell-ding-01.mp3" id="11_dt78h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3k3o"]
 texture = ExtResource("1_2wsvm")
@@ -852,6 +854,7 @@ _data = {
 bg_color = Color(0.4063754, 0.6244816, 0.80517167, 1)
 
 [node name="hallway_2" type="Node2D" unique_id=283459477]
+script = ExtResource("1_5yxrw")
 
 [node name="backWall_sideWall_floor" type="TileMap" parent="." unique_id=2072870824]
 tile_set = SubResource("TileSet_b3u05")
@@ -954,6 +957,17 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_b3u05")
 text = "202"
 
 [node name="textbox" parent="." unique_id=1827124815 instance=ExtResource("9_b3u05")]
+
+[node name="spawnpoints" type="Node" parent="." unique_id=313711296]
+
+[node name="spawn202" type="Node2D" parent="spawnpoints" unique_id=710945251]
+position = Vector2(98, -28)
+
+[node name="spawn201" type="Node2D" parent="spawnpoints" unique_id=1394728814]
+position = Vector2(-96, -29)
+
+[node name="ElevatorDing" type="AudioStreamPlayer" parent="." unique_id=1041724524]
+stream = ExtResource("11_dt78h")
 
 [connection signal="body_entered" from="elevatorDoor/ProximityBox" to="elevatorDoor/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="elevatorDoor/ProximityBox" to="elevatorDoor/ProximityBox" method="_on_body_exited"]

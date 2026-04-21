@@ -1,26 +1,24 @@
-[gd_scene format=3 uid="uid://css170e4u0e2p"]
+[gd_scene format=3 uid="uid://cms17vdixody1"]
 
-[ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_2041i"]
-[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://scenes/Elise Room 2/main.gd" id="1_ath7v"]
-[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_rgy80"]
-[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_m5tsb"]
-[ext_resource type="Script" uid="uid://civccgpwl7uu8" path="res://scenes/room102exit.gd" id="4_m5tsb"]
-[ext_resource type="Texture2D" uid="uid://oqrx7r5ei8sd" path="res://assets/trash assets/Trashcan.png" id="5_boroa"]
-[ext_resource type="Texture2D" uid="uid://bhtydgbyad0cn" path="res://assets/trash assets/TrashcanHighlighted.png" id="6_46i0o"]
-[ext_resource type="Script" uid="uid://cn2ygmgox4axp" path="res://scenes/smartwatchProximity.gd" id="6_lnjf1"]
-[ext_resource type="Texture2D" uid="uid://bvt1vo3e0jg66" path="res://assets/laptop.png" id="7_46i0o"]
-[ext_resource type="Texture2D" uid="uid://cyfl75m6kenb5" path="res://assets/custom/smartwatch3.png" id="7_xgesw"]
-[ext_resource type="Texture2D" uid="uid://d0dxoqdnl2yjy" path="res://assets/custom/smartwatch3_highlighted.png" id="8_bok3y"]
-[ext_resource type="Script" uid="uid://daqqmqipve842" path="res://scenes/trashcanProximity.gd" id="8_rxgkc"]
-[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://assets/custom/computerHighlighted.png" id="10_ldsjk"]
-[ext_resource type="Script" uid="uid://xpxpewnpatdw" path="res://scenes/laptop102proximity.gd" id="11_pwdxe"]
-[ext_resource type="PackedScene" uid="uid://c11hy008cw1go" path="res://scenes/Elise Room 2/journal_manager.tscn" id="15_6c62v"]
-[ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="17_acvm4"]
-[ext_resource type="AudioStream" uid="uid://bxchgtp38syf3" path="res://scenes/music/Phoenix Wright Ace Attorney OST - Courtroom Lobby  Beginning Overture.mp3" id="18_bok3y"]
-[ext_resource type="PackedScene" uid="uid://d4f24npwnmsep" path="res://scenes/Elise Room 2/Journal.tscn" id="18_xgesw"]
+[ext_resource type="Script" uid="uid://yb8eu1f7id3p" path="res://scenes/Elise Room 2/main.gd" id="1_e6imw"]
+[ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="2_a1q1u"]
+[ext_resource type="Script" uid="uid://civccgpwl7uu8" path="res://scenes/room102exit.gd" id="3_oerri"]
+[ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="4_ktdvk"]
+[ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="5_71c4t"]
+[ext_resource type="Texture2D" uid="uid://oqrx7r5ei8sd" path="res://assets/trash assets/Trashcan.png" id="6_rm6sk"]
+[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://assets/custom/computerHighlighted.png" id="8_e6imw"]
+[ext_resource type="Script" uid="uid://xpxpewnpatdw" path="res://scenes/laptop102proximity.gd" id="9_a1q1u"]
+[ext_resource type="Texture2D" uid="uid://bvt1vo3e0jg66" path="res://assets/laptop.png" id="9_nu370"]
+[ext_resource type="Script" uid="uid://cn2ygmgox4axp" path="res://scenes/smartwatchProximity.gd" id="10_ktdvk"]
+[ext_resource type="Texture2D" uid="uid://cyfl75m6kenb5" path="res://assets/custom/smartwatch3.png" id="11_q65i7"]
+[ext_resource type="Texture2D" uid="uid://d0dxoqdnl2yjy" path="res://assets/custom/smartwatch3_highlighted.png" id="12_nu370"]
+[ext_resource type="PackedScene" uid="uid://d4f24npwnmsep" path="res://scenes/Elise Room 2/Journal.tscn" id="13_71c4t"]
+[ext_resource type="PackedScene" uid="uid://c11hy008cw1go" path="res://scenes/Elise Room 2/journal_manager.tscn" id="14_1ovy8"]
+[ext_resource type="AudioStream" uid="uid://bxchgtp38syf3" path="res://scenes/music/Phoenix Wright Ace Attorney OST - Courtroom Lobby  Beginning Overture.mp3" id="16_nu370"]
+[ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="16_q65i7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m5tsb"]
-texture = ExtResource("1_2041i")
+texture = ExtResource("4_ktdvk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -407,7 +405,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_m5tsb")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fifsi"]
-texture = ExtResource("1_2041i")
+texture = ExtResource("4_ktdvk")
 0:0/0 = 0
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.091427, 8, 4.091427, 8, 8, -8, 8)
@@ -793,7 +791,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fifsi")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_boroa"]
-texture = ExtResource("1_2041i")
+texture = ExtResource("4_ktdvk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1204,19 +1202,19 @@ _data = {
 }
 
 [node name="Room102" type="Node2D" unique_id=1972692697]
-script = ExtResource("1_ath7v")
+script = ExtResource("1_e6imw")
 
 [node name="Door" type="Node2D" parent="." unique_id=966456411]
 
-[node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("3_m5tsb")]
+[node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("2_a1q1u")]
 position = Vector2(0, -12)
-scale = Vector2(0.50798434, 0.51961017)
-script = ExtResource("4_m5tsb")
+scale = Vector2(0.55595183, 0.4755793)
+script = ExtResource("3_oerri")
 
 [node name="Floor_sideWalls_backWalls" type="TileMap" parent="." unique_id=1152262633]
 tile_set = SubResource("TileSet_aruyb")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 65536, 2, -65536, 65536, 2, -65538, 65536, 2, -65537, 65536, 2, -131072, 65536, 2, -131071, 65536, 2, -65539, 65536, 2, -65541, 65536, 2, -65540, 65536, 2, -131070, 65536, 2, -131069, 65536, 2, -131068, 65536, 2, -65542, 65536, 2, -131067, 65536, 2, -131078, 65536, 2, -196614, 65536, 2, -262150, 65536, 2, -327686, 65536, 2, -393222, 65536, 2, -393221, 65536, 2, -393220, 65536, 2, -393219, 65536, 2, -393218, 65536, 2, -393217, 65536, 2, -458752, 65536, 2, -458751, 65536, 2, -458750, 65536, 2, -458749, 65536, 2, -458748, 65536, 2, -458747, 65536, 2, -393211, 65536, 2, -196603, 65536, 2, -327685, 65536, 2, -327684, 65536, 2, -327683, 65536, 2, -327682, 65536, 2, -327681, 65536, 2, -393216, 65536, 2, -393215, 65536, 2, -393214, 65536, 2, -393213, 65536, 2, -327677, 65536, 2, -327676, 65536, 2, -393212, 65536, 2, -262140, 65536, 2, -196604, 65536, 2, -196605, 65536, 2, -262141, 65536, 2, -196606, 65536, 2, -262142, 65536, 2, -327678, 65536, 2, -327679, 65536, 2, -327680, 65536, 2, -262145, 65536, 2, -262146, 65536, 2, -262147, 65536, 2, -262148, 65536, 2, -196612, 65536, 2, -196613, 65536, 2, -262149, 65536, 2, -196611, 65536, 2, -196610, 65536, 2, -196609, 65536, 2, -262144, 65536, 2, -262143, 65536, 2, -196607, 65536, 2, -196608, 65536, 2, -131073, 65536, 2, -131074, 65536, 2, -131075, 65536, 2, -131076, 65536, 2, -131077, 65536, 2, -524283, 65536, 5, -524284, 65536, 5, -524285, 65536, 5, -524286, 65536, 5, -524287, 65536, 5, -524288, 65536, 5, -458753, 65536, 5, -458754, 65536, 5, -458755, 65536, 5, -458756, 65536, 5, -458757, 65536, 5, -458758, 65536, 5, -589819, 65536, 0, -589820, 65536, 0, -589821, 65536, 0, -589822, 65536, 0, -589823, 65536, 0, -589824, 65536, 0, -524289, 65536, 0, -524290, 65536, 0, -524291, 65536, 0, -524292, 65536, 0, -524293, 65536, 0, -524294, 65536, 0, -524282, 131072, 1, -589818, 131072, 0, -524295, 0, 0, -458759, 0, 1, -393223, 0, 1, -327687, 0, 1, -262151, 0, 1, -196615, 0, 1, -131079, 0, 1, -65543, 0, 1, -65535, 131072, 1, -2, 0, 1, -327675, 65536, 2, -262139, 65536, 2, -458746, 131072, 1, -393210, 131072, 1, -327674, 131072, 1, -262138, 131072, 1, -196602, 131072, 1, -131066, 131072, 1)
+layer_0/tile_data = PackedInt32Array(-1, 65536, 2, -65536, 65536, 2, -65538, 65536, 2, -65537, 65536, 2, -131072, 65536, 2, -131071, 65536, 2, -65539, 65536, 2, -65541, 65536, 2, -65540, 65536, 2, -131070, 65536, 2, -131069, 65536, 2, -131068, 65536, 2, -65542, 65536, 2, -131067, 65536, 2, -131078, 65536, 2, -196614, 65536, 2, -262150, 65536, 2, -327686, 65536, 2, -393222, 65536, 2, -393221, 65536, 2, -393220, 65536, 2, -393219, 65536, 2, -393218, 65536, 2, -393217, 65536, 2, -458752, 65536, 2, -458751, 65536, 2, -458750, 65536, 2, -458749, 65536, 2, -458748, 65536, 2, -458747, 65536, 2, -393211, 65536, 2, -327675, 65536, 2, -262139, 65536, 2, -196603, 65536, 2, -327685, 65536, 2, -327684, 65536, 2, -327683, 65536, 2, -327682, 65536, 2, -327681, 65536, 2, -393216, 65536, 2, -393215, 65536, 2, -393214, 65536, 2, -393213, 65536, 2, -327677, 65536, 2, -327676, 65536, 2, -393212, 65536, 2, -262140, 65536, 2, -196604, 65536, 2, -196605, 65536, 2, -262141, 65536, 2, -196606, 65536, 2, -262142, 65536, 2, -327678, 65536, 2, -327679, 65536, 2, -327680, 65536, 2, -262145, 65536, 2, -262146, 65536, 2, -262147, 65536, 2, -262148, 65536, 2, -196612, 65536, 2, -196613, 65536, 2, -262149, 65536, 2, -196611, 65536, 2, -196610, 65536, 2, -196609, 65536, 2, -262144, 65536, 2, -262143, 65536, 2, -196607, 65536, 2, -196608, 65536, 2, -131073, 65536, 2, -131074, 65536, 2, -131075, 65536, 2, -131076, 65536, 2, -131077, 65536, 2, -524283, 65536, 5, -524284, 65536, 5, -524285, 65536, 5, -524286, 65536, 5, -524287, 65536, 5, -524288, 65536, 5, -458753, 65536, 5, -458754, 65536, 5, -458755, 65536, 5, -458756, 65536, 5, -458757, 65536, 5, -458758, 65536, 5, -589819, 65536, 0, -589820, 65536, 0, -589821, 65536, 0, -589822, 65536, 0, -589823, 65536, 0, -589824, 65536, 0, -524289, 65536, 0, -524290, 65536, 0, -524291, 65536, 0, -524292, 65536, 0, -524293, 65536, 0, -524294, 65536, 0, -524282, 131072, 1, -589818, 131072, 0, -524295, 0, 0, -458759, 0, 1, -393223, 0, 1, -327687, 0, 1, -262151, 0, 1, -196615, 0, 1, -131079, 0, 1, -65543, 0, 1, -65535, 131072, 1, -2, 0, 1, -458746, 131072, 1, -393210, 131072, 1, -327674, 131072, 1, -262138, 131072, 1, -196602, 131072, 1, -131066, 131072, 1)
 
 [node name="bottomWalls_mainFurniture" type="TileMap" parent="." unique_id=735899275]
 tile_set = SubResource("TileSet_fifsi")
@@ -1229,7 +1227,8 @@ tile_set = SubResource("TileSet_46i0o")
 format = 2
 layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -131067, 1900544, 6)
 
-[node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_rgy80")]
+[node name="Player" parent="." unique_id=1926654213 instance=ExtResource("5_71c4t")]
+position = Vector2(47, -26)
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=1816972964]
 libraries/ = SubResource("AnimationLibrary_rgy80")
@@ -1250,53 +1249,60 @@ color = Color(0, 0, 0, 0)
 [node name="Normal Can" type="Sprite2D" parent="TrashCan" unique_id=2095605108]
 position = Vector2(67.962776, -33.165405)
 scale = Vector2(0.84278744, 0.7396622)
-texture = ExtResource("5_boroa")
+texture = ExtResource("6_rm6sk")
 
-[node name="Highlighted Can" type="Sprite2D" parent="TrashCan" unique_id=1559696107]
+[node name="Laptop" type="Node2D" parent="." unique_id=1168244888]
+
+[node name="Sprite2D" type="Sprite2D" parent="Laptop" unique_id=404494579]
+position = Vector2(-9.000001, -102)
+scale = Vector2(0.06422018, 0.08974359)
+texture = ExtResource("9_nu370")
+
+[node name="highlighted" type="Sprite2D" parent="Laptop" unique_id=503300136]
 visible = false
-position = Vector2(67.962776, -33.165405)
-scale = Vector2(0.8726735, 0.7396622)
-texture = ExtResource("6_46i0o")
+position = Vector2(-9, -102)
+scale = Vector2(0.8558997, 1.1610159)
+texture = ExtResource("8_e6imw")
 
-[node name="ProximityBox" parent="TrashCan" unique_id=416076567 instance=ExtResource("3_m5tsb")]
-position = Vector2(67.96277, -33.415405)
-scale = Vector2(0.7299591, 0.52294666)
-script = ExtResource("8_rxgkc")
+[node name="ProximityBox" parent="Laptop" unique_id=311318269 instance=ExtResource("2_a1q1u")]
+position = Vector2(-9, -100)
+scale = Vector2(0.5707279, 0.38595214)
+script = ExtResource("9_a1q1u")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1478956389]
 position = Vector2(0, -68)
 scale = Vector2(0.6885572, -1.1557206)
 zoom = Vector2(5.11, 5.11)
 
-[node name="Laptop" type="Node2D" parent="." unique_id=1160454103]
+[node name="Smartwatch" type="Node2D" parent="." unique_id=171662103]
+position = Vector2(28, -56)
 
-[node name="Sprite2D" type="Sprite2D" parent="Laptop" unique_id=1637674594]
-position = Vector2(-9.000001, -102)
-scale = Vector2(0.06422018, 0.08974359)
-texture = ExtResource("7_46i0o")
+[node name="watch" type="Sprite2D" parent="Smartwatch" unique_id=1865994338]
+scale = Vector2(0.657582, 0.4159378)
+texture = ExtResource("11_q65i7")
 
-[node name="highlighted" type="Sprite2D" parent="Laptop" unique_id=47923253]
+[node name="highlighted" type="Sprite2D" parent="Smartwatch" unique_id=642902185]
 visible = false
-position = Vector2(-9, -102)
-scale = Vector2(0.8558997, 1.1610159)
-texture = ExtResource("10_ldsjk")
+position = Vector2(1, 0)
+scale = Vector2(0.6973302, 0.4390422)
+texture = ExtResource("12_nu370")
 
-[node name="ProximityBox" parent="Laptop" unique_id=2094972799 instance=ExtResource("3_m5tsb")]
-position = Vector2(-9, -100)
-scale = Vector2(0.5707279, 0.38595214)
-script = ExtResource("11_pwdxe")
+[node name="ProximityBox" parent="Smartwatch" unique_id=69295089 instance=ExtResource("2_a1q1u")]
+position = Vector2(-8.34465e-07, 3.9999998)
+scale = Vector2(0.5573452, 0.57483494)
+script = ExtResource("10_ktdvk")
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1361600969]
-stream = ExtResource("18_bok3y")
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=759244071]
+stream = ExtResource("16_nu370")
 volume_db = -10.898
 autoplay = true
 parameters/looping = true
 
-[node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("17_acvm4")]
+[node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("16_q65i7")]
 
-[node name="Journal Manager" parent="." unique_id=2009897970 instance=ExtResource("15_6c62v")]
+[node name="Journal Manager" parent="." unique_id=2009897970 instance=ExtResource("14_1ovy8")]
 
-[node name="Journal" parent="." unique_id=334019793 instance=ExtResource("18_xgesw")]
+[node name="Journal" parent="." unique_id=334019793 instance=ExtResource("13_71c4t")]
 visible = false
 z_index = 999
 offset_left = -55.0
@@ -1305,29 +1311,9 @@ offset_right = 182.0
 offset_bottom = 112.0
 scale = Vector2(0.4758116, 0.5265603)
 
-[node name="Smartwatch" type="Node2D" parent="." unique_id=1747529140]
-position = Vector2(28, -56)
-
-[node name="watch" type="Sprite2D" parent="Smartwatch" unique_id=471561838]
-scale = Vector2(0.657582, 0.4159378)
-texture = ExtResource("7_xgesw")
-
-[node name="highlighted" type="Sprite2D" parent="Smartwatch" unique_id=1715196093]
-visible = false
-position = Vector2(1, 0)
-scale = Vector2(0.6973302, 0.4390422)
-texture = ExtResource("8_bok3y")
-
-[node name="ProximityBox" parent="Smartwatch" unique_id=7984477 instance=ExtResource("3_m5tsb")]
-position = Vector2(-8.34465e-07, 3.9999998)
-scale = Vector2(0.5573452, 0.57483494)
-script = ExtResource("6_lnjf1")
-
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
 [connection signal="animation_finished" from="Transition" to="Door/ProximityBox" method="_on_transition_animation_finished"]
-[connection signal="body_entered" from="TrashCan/ProximityBox" to="TrashCan/ProximityBox" method="_on_body_entered"]
-[connection signal="body_exited" from="TrashCan/ProximityBox" to="TrashCan/ProximityBox" method="_on_body_exited"]
 [connection signal="body_entered" from="Laptop/ProximityBox" to="Laptop/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Laptop/ProximityBox" to="Laptop/ProximityBox" method="_on_body_exited"]
 [connection signal="body_entered" from="Smartwatch/ProximityBox" to="Smartwatch/ProximityBox" method="_on_body_entered"]

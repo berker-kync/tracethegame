@@ -1,15 +1,12 @@
 extends Area2D
-@onready var highlighted: Sprite2D = $"../highlighted"
-
+@onready var highlighted: Sprite2D = $"../Highlighted Can"
+var dragscene = load("res://scenes/drag_scene.tscn")
 var proximity = false
-
-func _ready() -> void:
-	highlighted.visible = false
 
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
 		print("interacted") 
-		
+		get_tree().change_scene_to_packed(dragscene)
 
 func _on_body_entered(_body: Node2D) -> void:
 	highlighted.visible = true

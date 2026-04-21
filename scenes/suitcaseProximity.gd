@@ -1,5 +1,6 @@
 extends Area2D
 @onready var highlighted: Sprite2D = $"../highlighted"
+@onready var suitcase_lock: Panel = $"../SuitcaseLock"
 
 var proximity = false
 
@@ -9,6 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
 		print("interacted") 
+		suitcase_lock.visible = true
 		
 
 func _on_body_entered(_body: Node2D) -> void:

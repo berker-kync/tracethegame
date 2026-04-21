@@ -1,5 +1,5 @@
 extends PanelContainer
-@onready var panel_container: PanelContainer = $"."
+
 @onready var note_description: Sprite2D = $"../NoteDescription"
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_mouse_entered() -> void:
-	if (journalConst.room1keyItem2 == true):
+	if (journalConst.room2keyItem1 == true):
 		note_description.visible = true
 
 func _on_mouse_exited() -> void:

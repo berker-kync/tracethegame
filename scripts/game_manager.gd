@@ -12,10 +12,10 @@ func _process(delta: float) -> void:
 			journal_animator.play("RESET")
 			journal.visible = false
 			journalActive = false
-			pickupsound.play()
+			#pickupsound.play()
 		else:
 			journal_animator.play("Pause")
 			journal.visible = true
 			journalActive = true
-			pickupsound.play()
+			#pickupsound.play()
 		

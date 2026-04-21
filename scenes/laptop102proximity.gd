@@ -1,15 +1,10 @@
 extends Area2D
 @onready var highlighted: Sprite2D = $"../highlighted"
-
 var proximity = false
-
-func _ready() -> void:
-	highlighted.visible = false
 
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
 		print("interacted") 
-		
 
 func _on_body_entered(_body: Node2D) -> void:
 	highlighted.visible = true

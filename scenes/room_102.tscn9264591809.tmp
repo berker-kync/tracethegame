@@ -1307,6 +1307,7 @@ scale = Vector2(0.4758116, 0.5265603)
 
 [node name="Smartwatch" type="Node2D" parent="." unique_id=1747529140]
 position = Vector2(28, -56)
+script = ExtResource("6_lnjf1")
 
 [node name="watch" type="Sprite2D" parent="Smartwatch" unique_id=471561838]
 scale = Vector2(0.657582, 0.4159378)
