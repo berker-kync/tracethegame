@@ -1,4 +1,5 @@
 extends Control
+@onready var textbox: CanvasLayer = $"../textbox"
 
 var attempts = 0
 var max_attempts = 3
@@ -10,6 +11,7 @@ var input = []
 @onready var status_label = $PassLabel
 
 func _ready():
+	textbox.visible = false
 	for child in $GridContainer.get_children():
 		if child is Button:
 			child.pressed.connect(_on_number_pressed.bind(child.text.to_int()))
@@ -50,10 +52,17 @@ func check_password():
 func lock_out():
 	locked = true
 	status_label.text = "🔒 Locked out"
-
+	
+	textbox.visible = true
+	textbox.queueText("It looks like you failed the password too many times.")
+	textbox.queueText("Maybe there is more evidence somewhere else in the room.")
+	textbox.queueText("When you're ready, come back and try again.")
+	
 	for child in $GridContainer.get_children():
 		if child is Button:
 			child.disabled = true
+	
+	
 
 func full_reset():
 	attempts = 0

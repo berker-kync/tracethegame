@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://bh7yuuv67x7ld" path="res://assets/laptop assets/settings pix.png" id="3_ejyiq"]
 [ext_resource type="Texture2D" uid="uid://cxhvxtkb6nu0" path="res://assets/laptop assets/postit pix.png" id="4_2jtcb"]
 [ext_resource type="Script" uid="uid://dfp881v5srcs6" path="res://scripts/settings.gd" id="5_jj3px"]
+[ext_resource type="Texture2D" uid="uid://cyx0r1s80bw6m" path="res://assets/instagram frame.jpg" id="7_2jtcb"]
+[ext_resource type="Texture2D" uid="uid://bfp47wqros8qq" path="res://assets/instagram pix/pixel coffee.png" id="8_5t67i"]
+[ext_resource type="Script" uid="uid://dt058oseyolib" path="res://scenes/clickable_caption.gd" id="9_2lb2v"]
+[ext_resource type="Texture2D" uid="uid://44ef18hxk3o2" path="res://assets/instagram pix/pixel friends.png" id="9_8qokd"]
+[ext_resource type="Texture2D" uid="uid://c6s4m3cl7ffsy" path="res://assets/instagram pix/pixel outside shop.png" id="10_2lb2v"]
 
 [sub_resource type="FontFile" id="FontFile_b8h6g"]
 cache/0/variation_coordinates = {}
@@ -94,6 +99,15 @@ default_font = SubResource("FontFile_b8h6g")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jj3px"]
 size = Vector2(363.18182, 356.6176)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t67i"]
+size = Vector2(313.8, 80.59683)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qokd"]
+size = Vector2(486.56714, 77.612076)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t67i"]
+bg_color = Color(1, 1, 1, 1)
+
 [node name="Area2D" type="Area2D" unique_id=1935990265]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1581606986]
@@ -120,6 +134,7 @@ text = "TO DO:
 -POST ON SMILESGRAM
 -TEXT GRANDMA
 -MOMS BDAY: 04/07"
+metadata/_edit_use_anchors_ = true
 
 [node name="Smile" type="Area2D" parent="." unique_id=462045203]
 script = ExtResource("3_2jtcb")
@@ -147,11 +162,150 @@ position = Vector2(74, 191.99998)
 scale = Vector2(0.27499998, 0.27199998)
 shape = SubResource("RectangleShape2D_jj3px")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2042086760]
-position = Vector2(423, 262)
-zoom = Vector2(1.255, 1.255)
+[node name="Smilesgram" type="Area2D" parent="." unique_id=411268928]
+visible = false
+
+[node name="post1" type="Sprite2D" parent="Smilesgram" unique_id=800281343]
+position = Vector2(108.473, 347)
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("7_2jtcb")
+
+[node name="coffee" type="Sprite2D" parent="Smilesgram/post1" unique_id=1563937594]
+position = Vector2(4.9238977, 23.880547)
+scale = Vector2(1.0523608, 1.1804215)
+texture = ExtResource("8_5t67i")
+
+[node name="Label" type="Label" parent="Smilesgram/post1" unique_id=1449320501]
+offset_left = -222.30745
+offset_top = -441.79102
+offset_right = 177.69255
+offset_bottom = -377.79102
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "@beautifullifeilive"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Smilesgram/post1" unique_id=662738969]
+offset_left = -311.8597
+offset_top = -298.50745
+offset_right = -15.859711
+offset_bottom = -197.50745
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Coffee Crew inc.
+Atlanta"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Smilesgram/post1" unique_id=1868505263]
+offset_left = -317.82983
+offset_top = 271.64178
+offset_right = 70.170166
+offset_bottom = 294.64178
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "@beautifullifeilive: I am always in this coffee shop!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Smilesgram/post1" unique_id=1483192611]
+script = ExtResource("9_2lb2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Smilesgram/post1/Area2D" unique_id=611489984]
+position = Vector2(-166.9, -258.20868)
+shape = SubResource("RectangleShape2D_5t67i")
+
+[node name="post2" type="Sprite2D" parent="Smilesgram" unique_id=1776918414]
+position = Vector2(366.473, 347)
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("7_2jtcb")
+
+[node name="friends" type="Sprite2D" parent="Smilesgram/post2" unique_id=1569040149]
+position = Vector2(0.90150833, 23.880596)
+scale = Vector2(1.1965173, 1.3432833)
+texture = ExtResource("9_8qokd")
+
+[node name="Label" type="Label" parent="Smilesgram/post2" unique_id=1538154020]
+offset_left = -222.30745
+offset_top = -441.79102
+offset_right = 177.69255
+offset_bottom = -377.79102
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "@beautifullifeilive"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Smilesgram/post2" unique_id=1557796616]
+offset_left = -317.82983
+offset_top = 271.64178
+offset_right = 70.170166
+offset_bottom = 294.64178
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "@johnnyepic: lotta love Davis my boy!!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Smilesgram/post2" unique_id=918638378]
+script = ExtResource("9_2lb2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Smilesgram/post2/Area2D" unique_id=1697024493]
+position = Vector2(-86.48657, 308.95532)
+shape = SubResource("RectangleShape2D_8qokd")
+
+[node name="taggedPost" type="Sprite2D" parent="Smilesgram" unique_id=320248502]
+position = Vector2(707, 347)
+scale = Vector2(0.335, 0.335)
+texture = ExtResource("7_2jtcb")
+
+[node name="tagged" type="Sprite2D" parent="Smilesgram/taggedPost" unique_id=1596533207]
+position = Vector2(0.093307495, 30.410435)
+scale = Vector2(1.2277898, 1.4125799)
+texture = ExtResource("10_2lb2v")
+
+[node name="Label" type="Label" parent="Smilesgram/taggedPost" unique_id=1670687151]
+offset_left = -222.30745
+offset_top = -441.79102
+offset_right = 177.69255
+offset_bottom = -377.79102
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 46
+text = "@laylathegreat"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Smilesgram/taggedPost" unique_id=212896937]
+offset_left = -317.82983
+offset_top = 271.64178
+offset_right = 70.170166
+offset_bottom = 294.64178
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "@laylathegreat: I love Davis Johnson!
+@beautifullifeilive: Love ya!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Smilesgram/taggedPost" unique_id=73020121]
+script = ExtResource("9_2lb2v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Smilesgram/taggedPost/Area2D" unique_id=461424216]
+position = Vector2(-86.486694, 313.4331)
+shape = SubResource("RectangleShape2D_8qokd")
+
+[node name="Panel" type="Panel" parent="Smilesgram" unique_id=91797561]
+z_index = -1
+offset_left = -37.0
+offset_top = 3.0
+offset_right = 880.0
+offset_bottom = 516.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5t67i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2049456633]
+position = Vector2(424, 261)
+zoom = Vector2(1.1, 1.1)
 
 [connection signal="input_event" from="Smile" to="Smile" method="_on_input_event"]
 [connection signal="mouse_entered" from="Smile" to="Smile" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Smile" to="Smile" method="_on_mouse_exited"]
 [connection signal="input_event" from="Settings" to="Settings" method="_on_input_event"]
+[connection signal="input_event" from="Smilesgram/post1/Area2D" to="Smilesgram/post1/Area2D" method="_on_input_event"]
+[connection signal="input_event" from="Smilesgram/post2/Area2D" to="Smilesgram/post2/Area2D" method="_on_input_event"]
+[connection signal="input_event" from="Smilesgram/taggedPost/Area2D" to="Smilesgram/taggedPost/Area2D" method="_on_input_event"]
