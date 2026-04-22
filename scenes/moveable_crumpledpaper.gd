@@ -8,6 +8,7 @@ var current_zone = null
 var drop_processed := false
 
 @export var item_type := "receipt"
+@onready var pointsound: AudioStreamPlayer = $"../pointsound"
 
 
 func _ready():
@@ -66,6 +67,7 @@ func handle_correct():
 	print("correct drop!")
 	Global.points += 1
 	print("point up")
+	pointsound.play()
 	queue_free()
 
 

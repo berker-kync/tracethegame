@@ -3,7 +3,6 @@ extends Node
 @onready var journal_animator: AnimationPlayer = $"../JournalAnimator"
 @onready var pickupsound: AudioStreamPlayer = $"../Paper/pickupsound"
 
-
 @onready var journalActive = false
 
 func _process(delta: float) -> void:
@@ -19,3 +18,11 @@ func _process(delta: float) -> void:
 			journalActive = true
 			#pickupsound.play()
 		
+	if Input.is_action_just_pressed("escape"):
+		if journalActive == true: 
+			journal_animator.play("RESET")
+			journal.visible = false
+			journalActive = false
+			#pickupsound.play()
+		else:
+			pass

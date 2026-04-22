@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://bexm5smbka8jj" path="res://scenes/moveable_crumpledpaper.gd" id="6_4woqy"]
 [ext_resource type="Script" uid="uid://cgs8f4qocg875" path="res://scenes/area_2d_2.gd" id="7_b0gfo"]
 [ext_resource type="Script" uid="uid://7y4delfytswt" path="res://scenes/area_2d.gd" id="8_yu778"]
+[ext_resource type="AudioStream" uid="uid://c1muxgoje0ldl" path="res://scenes/sounds/Undertale Sound Effect - You Win!.mp3" id="9_b0gfo"]
+[ext_resource type="AudioStream" uid="uid://b25b8ilu8cqer" path="res://scenes/sounds/sfx general/sfx-cancel.wav" id="10_yu778"]
 
 [sub_resource type="Theme" id="Theme_xe84x"]
 
@@ -151,6 +153,12 @@ theme = SubResource("Theme_xe84x")
 theme_override_styles/panel = SubResource("StyleBoxFlat_b0gfo")
 
 [node name="Timer" type="Timer" parent="." unique_id=1558643427]
+
+[node name="winsound" type="AudioStreamPlayer" parent="." unique_id=1000726427]
+stream = ExtResource("9_b0gfo")
+
+[node name="pointsound" type="AudioStreamPlayer" parent="." unique_id=1461711065]
+stream = ExtResource("10_yu778")
 
 [connection signal="area_entered" from="Area2D2" to="Area2D2" method="_on_area_entered"]
 [connection signal="area_exited" from="Area2D2" to="Area2D2" method="_on_area_exited"]

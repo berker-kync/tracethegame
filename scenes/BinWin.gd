@@ -1,6 +1,7 @@
 extends Node2D
 @onready var timer: Timer = $Timer
 var room102_2 = load("res://scenes/room_102_2.tscn")
+@onready var winsound: AudioStreamPlayer = $winsound
 
 var points = 0
 
@@ -10,6 +11,7 @@ func _process(delta: float) -> void:
 		print("win")
 		Global.points = 0
 		timer.start()
+		winsound.play()
 
 
 
