@@ -11,6 +11,9 @@
 [ext_resource type="Script" uid="uid://dt058oseyolib" path="res://scenes/clickable_caption.gd" id="9_2lb2v"]
 [ext_resource type="Texture2D" uid="uid://44ef18hxk3o2" path="res://assets/instagram pix/pixel friends.png" id="9_8qokd"]
 [ext_resource type="Texture2D" uid="uid://c6s4m3cl7ffsy" path="res://assets/instagram pix/pixel outside shop.png" id="10_2lb2v"]
+[ext_resource type="Script" uid="uid://pxspeeex1u6w" path="res://scenes/clickable_caption2.gd" id="11_5453l"]
+[ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="12_2lb2v"]
+[ext_resource type="Script" uid="uid://bhdj75asq64vn" path="res://scenes/clickable_caption3.gd" id="13_ak6us"]
 
 [sub_resource type="FontFile" id="FontFile_b8h6g"]
 cache/0/variation_coordinates = {}
@@ -244,7 +247,7 @@ text = "@johnnyepic: lotta love Davis my boy!!!"
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="Smilesgram/post2" unique_id=918638378]
-script = ExtResource("9_2lb2v")
+script = ExtResource("11_5453l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Smilesgram/post2/Area2D" unique_id=1697024493]
 position = Vector2(-86.48657, 308.95532)
@@ -282,7 +285,7 @@ text = "@laylathegreat: I love Davis Johnson!
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="Smilesgram/taggedPost" unique_id=73020121]
-script = ExtResource("9_2lb2v")
+script = ExtResource("13_ak6us")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Smilesgram/taggedPost/Area2D" unique_id=461424216]
 position = Vector2(-86.486694, 313.4331)
@@ -298,9 +301,43 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5t67i")
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="Smilesgram" unique_id=1562203555]
+offset_left = -17.0
+offset_top = 118.0
+offset_right = 209.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "Your Posts:"
+
+[node name="Label2" type="Label" parent="Smilesgram" unique_id=809792343]
+offset_left = 579.0
+offset_top = 117.0
+offset_right = 855.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "Tagged Posts:"
+
+[node name="TextBox" type="Node2D" parent="Smilesgram" unique_id=694349707]
+position = Vector2(-421, -25)
+
+[node name="textbox" parent="Smilesgram/TextBox" unique_id=1827124815 instance=ExtResource("12_2lb2v")]
+offset = Vector2(0, -375)
+scale = Vector2(0.91, 0.91)
+transform = Transform2D(0.91, 0, 0, 0.91, 0, -375)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2049456633]
 position = Vector2(424, 261)
 zoom = Vector2(1.1, 1.1)
+
+[node name="TextBox" type="Node2D" parent="." unique_id=516323826]
+position = Vector2(-421, -25)
+
+[node name="textbox" parent="TextBox" unique_id=1980341592 instance=ExtResource("12_2lb2v")]
+offset = Vector2(0, -375)
+scale = Vector2(0.91, 0.91)
+transform = Transform2D(0.91, 0, 0, 0.91, 0, -375)
 
 [connection signal="input_event" from="Smile" to="Smile" method="_on_input_event"]
 [connection signal="mouse_entered" from="Smile" to="Smile" method="_on_mouse_entered"]
