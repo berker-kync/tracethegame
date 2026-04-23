@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://ednpjvs32oip" path="res://scenes/lobbyTransition.gd" id="11_4upx3"]
 [ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="12_ttrsv"]
 [ext_resource type="PackedScene" uid="uid://d4f24npwnmsep" path="res://scenes/Elise Room 2/Journal.tscn" id="13_klc0r"]
-[ext_resource type="Texture2D" uid="uid://du603r6kpu05r" path="res://assets/custom/highlighted/page_highlighted.png" id="14_h5d36"]
+[ext_resource type="Texture2D" uid="uid://0nyccoshlxfo" path="res://assets/custom/highlighted/page_highlighted-export.png" id="14_frh27"]
 [ext_resource type="Script" uid="uid://ba04dsblceyig" path="res://scenes/paper_proximity.gd" id="15_p5hed"]
 [ext_resource type="PackedScene" uid="uid://cgic26mxnqb8g" path="res://scenes/maze.tscn" id="16_hd51x"]
 [ext_resource type="AudioStream" uid="uid://cdx8jn51oqsdq" path="res://scenes/sounds/Foley Paper Rustle Short 01.wav" id="17_h4vym"]
@@ -2507,9 +2507,10 @@ position = Vector2(32, 48)
 [node name="Sprite2D" type="Sprite2D" parent="Paper" unique_id=1932980803]
 visible = false
 position = Vector2(24, -24)
-texture = ExtResource("14_h5d36")
+texture = ExtResource("14_frh27")
 
 [node name="ProximityBox" parent="Paper" unique_id=1129325327 instance=ExtResource("7_n1i7x")]
+visible = false
 position = Vector2(16, -22)
 scale = Vector2(0.65805763, 0.5652641)
 script = ExtResource("15_p5hed")

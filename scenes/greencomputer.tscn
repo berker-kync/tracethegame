@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://nbfu4ehokktj"]
+
+[ext_resource type="Script" uid="uid://dmo78qddqlmyj" path="res://control.gd" id="1_44nbp"]
+[ext_resource type="FontFile" uid="uid://dj8gdkx6r1sip" path="res://Themes/fonts/PressStart2P-Regular.ttf" id="2_sn6y3"]
+
+[sub_resource type="Theme" id="Theme_v4ydq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irn7t"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="greencomputer" type="Control" unique_id=1027914042]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.89454734, 1.0997245)
+script = ExtResource("1_44nbp")
+
+[node name="Label" type="Label" parent="." unique_id=395716274]
+layout_mode = 0
+offset_left = 11.178838
+offset_top = 17.277052
+offset_right = 1547.1788
+offset_bottom = 109.277054
+scale = Vector2(0.9718589, 1.4624879)
+theme = SubResource("Theme_v4ydq")
+theme_override_colors/font_color = Color(0.047058824, 1, 0.21960784, 1)
+theme_override_fonts/font = ExtResource("2_sn6y3")
+text = "A father gives his first son a nickel and dime, 
+and his second son only a dime. 
+
+
+What time is it?"
+
+[node name="Panel" type="Panel" parent="." unique_id=854536961]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.372149, 4.65588)
+theme_override_styles/panel = SubResource("StyleBoxFlat_irn7t")
+
+[node name="first" type="Label" parent="." unique_id=1854213515]
+layout_mode = 0
+offset_left = 418.08853
+offset_top = 112.75551
+offset_right = 458.08853
+offset_bottom = 135.75551
+scale = Vector2(2.4290879, 2.5270607)
+theme_override_fonts/font = ExtResource("2_sn6y3")
+theme_override_font_sizes/font_size = 16
+text = "0"
+
+[node name="second" type="Label" parent="." unique_id=322216598]
+layout_mode = 0
+offset_left = 536.5842
+offset_top = 112.75551
+offset_right = 576.58417
+offset_bottom = 135.75551
+scale = Vector2(2.4290879, 2.5270622)
+theme_override_fonts/font = ExtResource("2_sn6y3")
+theme_override_font_sizes/font_size = 16
+text = "0"
+
+[node name="third" type="Label" parent="." unique_id=1903517572]
+layout_mode = 0
+offset_left = 593.5963
+offset_top = 112.75551
+offset_right = 633.59625
+offset_bottom = 135.75551
+scale = Vector2(2.4290879, 2.5270622)
+theme_override_fonts/font = ExtResource("2_sn6y3")
+theme_override_font_sizes/font_size = 16
+text = "0"
+
+[node name="colon" type="Label" parent="." unique_id=505426107]
+layout_mode = 0
+offset_left = 496.3404
+offset_top = 112.755516
+offset_right = 536.3404
+offset_bottom = 135.75552
+scale = Vector2(2.4290879, 2.5270607)
+theme_override_fonts/font = ExtResource("2_sn6y3")
+theme_override_font_sizes/font_size = 16
+text = ":"
+
+[node name="Timer" type="Timer" parent="." unique_id=748262260]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

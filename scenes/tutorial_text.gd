@@ -7,7 +7,7 @@ extends CanvasLayer
 @onready var timer: Timer = $AudioStreamPlayer/Timer
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
-var CHAR_READ_RATE = 0.05
+var CHAR_READ_RATE = 0.02
 
 enum state {
 	READY,

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://du3o4hsvc7le2" path="res://assets/laptop assets/smiley pix.png" id="2_creid"]
 [ext_resource type="Script" uid="uid://c1x7b55k34v1j" path="res://scripts/smile.gd" id="3_2jtcb"]
 [ext_resource type="Texture2D" uid="uid://bh7yuuv67x7ld" path="res://assets/laptop assets/settings pix.png" id="3_ejyiq"]
+[ext_resource type="Script" uid="uid://di74a7ttfin07" path="res://scenes/note_hover.gd" id="3_s55a7"]
 [ext_resource type="Texture2D" uid="uid://cxhvxtkb6nu0" path="res://assets/laptop assets/postit pix.png" id="4_2jtcb"]
 [ext_resource type="Script" uid="uid://dfp881v5srcs6" path="res://scripts/settings.gd" id="5_jj3px"]
 [ext_resource type="Texture2D" uid="uid://cyx0r1s80bw6m" path="res://assets/instagram frame.jpg" id="7_2jtcb"]
@@ -14,8 +15,13 @@
 [ext_resource type="Script" uid="uid://pxspeeex1u6w" path="res://scenes/clickable_caption2.gd" id="11_5453l"]
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="12_2lb2v"]
 [ext_resource type="Script" uid="uid://bhdj75asq64vn" path="res://scenes/clickable_caption3.gd" id="13_ak6us"]
+[ext_resource type="Script" uid="uid://bctuhaxk18w28" path="res://scenes/back_button.gd" id="15_0orhk"]
+[ext_resource type="Texture2D" uid="uid://c5sd47v0ewqfo" path="res://assets/custom/arrow.png" id="16_s55a7"]
 
 [sub_resource type="FontFile" id="FontFile_b8h6g"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -99,6 +105,9 @@ cache/0/18/0/scale = 1.0
 [sub_resource type="Theme" id="Theme_5t67i"]
 default_font = SubResource("FontFile_b8h6g")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s55a7"]
+size = Vector2(12.00178, 15.063306)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jj3px"]
 size = Vector2(363.18182, 356.6176)
 
@@ -111,6 +120,9 @@ size = Vector2(486.56714, 77.612076)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t67i"]
 bg_color = Color(1, 1, 1, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8d4vc"]
+size = Vector2(81, 76)
+
 [node name="Area2D" type="Area2D" unique_id=1935990265]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1581606986]
@@ -118,9 +130,11 @@ light_mask = 2
 visibility_layer = 2
 z_index = -1
 position = Vector2(425, 266)
+scale = Vector2(1.0768293, 0.95750093)
 texture = ExtResource("1_5ijq5")
 
 [node name="Post-it" type="Sprite2D" parent="." unique_id=428326985]
+z_index = 1
 position = Vector2(672, 177)
 texture = ExtResource("4_2jtcb")
 
@@ -139,6 +153,15 @@ text = "TO DO:
 -MOMS BDAY: 04/07"
 metadata/_edit_use_anchors_ = true
 
+[node name="Area2D" type="Area2D" parent="Post-it" unique_id=681024298]
+position = Vector2(376, 180)
+script = ExtResource("3_s55a7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Post-it/Area2D" unique_id=1003140048]
+position = Vector2(-370, -165)
+scale = Vector2(16.924265, 12.123255)
+shape = SubResource("RectangleShape2D_s55a7")
+
 [node name="Smile" type="Area2D" parent="." unique_id=462045203]
 script = ExtResource("3_2jtcb")
 
@@ -153,6 +176,7 @@ scale = Vector2(0.275, 0.272)
 shape = SubResource("RectangleShape2D_jj3px")
 
 [node name="Settings" type="Area2D" parent="." unique_id=1035936512]
+visible = false
 script = ExtResource("5_jj3px")
 
 [node name="Settings" type="Sprite2D" parent="Settings" unique_id=157687466]
@@ -327,6 +351,19 @@ offset = Vector2(0, -375)
 scale = Vector2(0.91, 0.91)
 transform = Transform2D(0.91, 0, 0, 0.91, 0, -375)
 
+[node name="BackButton" type="Area2D" parent="Smilesgram" unique_id=244918537]
+script = ExtResource("15_0orhk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Smilesgram/BackButton" unique_id=1861717674]
+position = Vector2(4.5, 48)
+shape = SubResource("RectangleShape2D_8d4vc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Smilesgram/BackButton" unique_id=1773574731]
+position = Vector2(4.000002, 48)
+scale = Vector2(5.125, 4.875)
+texture = ExtResource("16_s55a7")
+flip_h = true
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2049456633]
 position = Vector2(424, 261)
 zoom = Vector2(1.1, 1.1)
@@ -339,10 +376,14 @@ offset = Vector2(0, -375)
 scale = Vector2(0.91, 0.91)
 transform = Transform2D(0.91, 0, 0, 0.91, 0, -375)
 
+[connection signal="mouse_entered" from="Post-it/Area2D" to="Post-it/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Post-it/Area2D" to="Post-it/Area2D" method="_on_mouse_exited"]
 [connection signal="input_event" from="Smile" to="Smile" method="_on_input_event"]
 [connection signal="mouse_entered" from="Smile" to="Smile" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Smile" to="Smile" method="_on_mouse_exited"]
 [connection signal="input_event" from="Settings" to="Settings" method="_on_input_event"]
+[connection signal="input_event" from="Settings" to="Smilesgram/BackButton" method="_on_settings_input_event"]
 [connection signal="input_event" from="Smilesgram/post1/Area2D" to="Smilesgram/post1/Area2D" method="_on_input_event"]
 [connection signal="input_event" from="Smilesgram/post2/Area2D" to="Smilesgram/post2/Area2D" method="_on_input_event"]
 [connection signal="input_event" from="Smilesgram/taggedPost/Area2D" to="Smilesgram/taggedPost/Area2D" method="_on_input_event"]
+[connection signal="input_event" from="Smilesgram/BackButton" to="Smilesgram/BackButton" method="_on_input_event"]

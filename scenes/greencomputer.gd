@@ -1,21 +1,21 @@
-extends Node2D
-@onready var highlighted: Sprite2D = $"../highlighted"
-@onready var lock_cam: Camera2D = $"../../Camera2D2"
-
+extends Area2D
 var proximity = false
+@onready var highlighted: Sprite2D = $HighlightedGreen
+@onready var green_cam: Camera2D = $"../greenCam"
 
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
 		print("interacted") 
-		lock_cam.make_current()
+		green_cam.make_current()
+		
+	
 
-func _on_body_entered(_body: Node2D) -> void:
+func _on_body_entered(body: Node2D) -> void:
 	highlighted.visible = true
 	proximity = true
-	print("entered") 
+	print("entered")
 	
-	
-func _on_body_exited(_body: Node2D) -> void:
+func _on_body_exited(body: Node2D) -> void:
 	highlighted.visible = false
 	proximity = false
 	print("exited")

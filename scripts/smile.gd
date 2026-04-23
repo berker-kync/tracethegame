@@ -14,7 +14,7 @@ func _on_input_event(viewport, event, shape_idx):
 			print("Clicked on: Smile")
 			smile.visible = false
 			background.visible = false
-			post_it.visible = false
+			#post_it.visible = false
 			settings.visible = false
 			smilesgram.visible = true
 			textBox.queueText("Hmm looks like their account is public!")

@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bpnevk5kpp0g6" path="res://scenes/Elise Room 2/journal2win.gd" id="8_ct5k2"]
 [ext_resource type="AudioStream" uid="uid://dvv4y6kg6on2k" path="res://scenes/sounds/sfx general/sfx-maaagical3.wav" id="8_q2jlq"]
 [ext_resource type="Script" uid="uid://b8tiuu0rp00je" path="res://scenes/Elise Room 2/receiptcontainer.gd" id="9_bg7ji"]
+[ext_resource type="Texture2D" uid="uid://6kvggxqdsdk" path="res://assets/custom/receiptdescription.png" id="10_7843h"]
 
 [sub_resource type="Theme" id="Theme_qbr07"]
 
@@ -35,13 +36,14 @@ mouse_filter = 0
 theme = SubResource("Theme_qbr07")
 theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
 theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_omu8a")
-current_tab = 0
+current_tab = 1
 tab_0/title = "101"
 tab_1/title = "102"
 tab_2/title = "201"
 tab_3/title = "202"
 
 [node name="tab1" type="TabBar" parent="." unique_id=705700752]
+visible = false
 layout_mode = 2
 theme = SubResource("Theme_6ee85")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_yjvlh")
@@ -191,7 +193,6 @@ theme_override_fonts/font = ExtResource("8_bg7ji")
 text = "Key Items:"
 
 [node name="tab2" type="TabBar" parent="." unique_id=1487145056]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "102"
@@ -221,7 +222,7 @@ popup/item_1/text = "John Smithy"
 popup/item_1/id = 1
 popup/item_2/text = "Davis Johnson"
 popup/item_2/id = 3
-popup/item_3/text = "Jerry Hopperson"
+popup/item_3/text = "Johnny Bravo"
 popup/item_3/id = 2
 
 [node name="LabelJob" type="Label" parent="tab2" unique_id=70363868]
@@ -232,7 +233,7 @@ offset_top = 53.0
 offset_right = 144.0
 offset_bottom = 81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Author"
+text = "Influencer"
 
 [node name="Job" type="OptionButton" parent="tab2" unique_id=1656814357]
 layout_mode = 0
@@ -262,7 +263,7 @@ offset_top = 96.0
 offset_right = 144.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Public Speech"
+text = "Convention"
 
 [node name="Purpose" type="OptionButton" parent="tab2" unique_id=1395810370]
 layout_mode = 0
@@ -272,7 +273,7 @@ offset_right = 182.0
 offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 4
+item_count = 5
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
@@ -281,15 +282,17 @@ popup/item_2/text = "Conference"
 popup/item_2/id = 2
 popup/item_3/text = "Public Speech"
 popup/item_3/id = 3
+popup/item_4/text = "Birthday"
+popup/item_4/id = 4
 
 [node name="JournalWin2" type="Node" parent="tab2" unique_id=926548069]
 script = ExtResource("8_ct5k2")
 
 [node name="NoteDescription" type="Sprite2D" parent="tab2" unique_id=1098141772]
 visible = false
-position = Vector2(284, 293)
-scale = Vector2(0.32812497, 0.35972223)
-texture = ExtResource("7_yuig1")
+position = Vector2(123.90674, 172.29202)
+scale = Vector2(0.75672877, 0.4523959)
+texture = ExtResource("10_7843h")
 
 [node name="PanelContainer1" type="PanelContainer" parent="tab2" unique_id=133594024]
 layout_mode = 0

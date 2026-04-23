@@ -10,7 +10,7 @@ extends Node
 @onready var label_purpose: Label = $"../LabelPurpose"
 
 #key items
-@onready var note: Sprite2D = $"../PanelContainer2/Note"
+@onready var note: Sprite2D = $"../PanelContainer1/Note"
 
 #audio
 @onready var audio_stream_player: AudioStreamPlayer = $"../../AudioStreamPlayer"
@@ -18,7 +18,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if (journalConst.person1 == true):
+	if (journalConst.person2 == true):
 		who.visible = false
 		job.visible = false
 		purpose.visible = false
@@ -45,6 +45,8 @@ func _process(delta: float) -> void:
 		
 	if (journalConst.room2keyItem1 == true):
 		#book.visible = true
-		pass
+		note.visible = true
+		
 	if (journalConst.room2keyItem2 == true):
 		note.visible = true
+		#change this

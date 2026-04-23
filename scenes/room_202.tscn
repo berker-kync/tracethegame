@@ -14,6 +14,14 @@
 [ext_resource type="Script" uid="uid://dvbthwg6u1c44" path="res://scenes/Elise Room 2/game_manager_202.gd" id="11_h3bdr"]
 [ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="11_v3bci"]
 [ext_resource type="Texture2D" uid="uid://bkvs8nlwidyu3" path="res://assets/custom/panel.png" id="14_8rk14"]
+[ext_resource type="Script" uid="uid://cfejnvegagopr" path="res://scenes/bluecomputer.gd" id="15_ho12b"]
+[ext_resource type="Script" uid="uid://cei3yfghusc1m" path="res://scenes/greencomputer.gd" id="16_6fktq"]
+[ext_resource type="Script" uid="uid://diolvnmwsxc88" path="res://scenes/helixcomputer.gd" id="16_16hol"]
+[ext_resource type="Texture2D" uid="uid://c0s3bcg1erxhg" path="res://assets/custom/greenhighlighted.png" id="17_ejuuc"]
+[ext_resource type="Texture2D" uid="uid://bow0lautig0bi" path="res://assets/custom/helixhighlighted.png" id="19_bhdd3"]
+[ext_resource type="PackedScene" uid="uid://nbfu4ehokktj" path="res://scenes/greencomputer.tscn" id="20_dhg8h"]
+[ext_resource type="Texture2D" uid="uid://blotb2wxepjqa" path="res://assets/custom/bigmaze.png" id="21_5fmy0"]
+[ext_resource type="Texture2D" uid="uid://dxdu7nsd3o4tb" path="res://assets/custom/MazeStartArrow.png" id="22_dv7g4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mx60c"]
 texture = ExtResource("1_pvlac")
@@ -291,12 +299,17 @@ texture = ExtResource("1_pvlac")
 16:11/0 = 0
 17:11/0 = 0
 18:11/0 = 0
+18:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:11/0 = 0
+19:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:11/0 = 0
 21:11/0 = 0
 23:11/0 = 0
+23:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 24:11/0 = 0
+24:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 25:11/0 = 0
+25:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 29:11/0 = 0
 30:11/0 = 0
 0:12/0 = 0
@@ -311,14 +324,20 @@ texture = ExtResource("1_pvlac")
 12:12/0 = 0
 13:12/0 = 0
 14:12/0 = 0
+14:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:12/0 = 0
 17:12/0 = 0
 18:12/0 = 0
+18:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 19:12/0 = 0
+19:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 20:12/0 = 0
 23:12/0 = 0
+23:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 24:12/0 = 0
+24:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 25:12/0 = 0
+25:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 26:12/0 = 0
 27:12/0 = 0
 28:12/0 = 0
@@ -335,14 +354,17 @@ texture = ExtResource("1_pvlac")
 12:13/0 = 0
 13:13/0 = 0
 14:13/0 = 0
+14:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:13/0 = 0
 17:13/0 = 0
 19:13/0 = 0
 20:13/0 = 0
 21:13/0 = 0
 23:13/0 = 0
+23:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 24:13/0 = 0
 25:13/0 = 0
+25:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 26:13/0 = 0
 28:13/0 = 0
 29:13/0 = 0
@@ -1678,6 +1700,9 @@ _data = {
 &"RESET": SubResource("Animation_037ag")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhg8h"]
+bg_color = Color(0, 0, 0, 1)
+
 [node name="room202" type="Node2D" unique_id=287427570]
 scale = Vector2(1.030458, 1.0207367)
 script = ExtResource("1_i1sb8")
@@ -1685,7 +1710,9 @@ script = ExtResource("1_i1sb8")
 [node name="Floor_sideWalls_backWalls" type="TileMap" parent="." unique_id=1354864084]
 tile_set = SubResource("TileSet_dvtcr")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 65536, 2, -65536, 65536, 2, -65538, 1572864, 14, -65537, 1572864, 13, -131072, 1572864, 13, -131071, 1572864, 13, -65539, 1572864, 14, -65541, 1572864, 14, -65540, 1572864, 14, -131070, 1572864, 13, -131069, 1572864, 13, -131068, 1572864, 13, -65542, 1572864, 14, -131067, 1572864, 13, -131078, 1572864, 14, -196614, 1572864, 14, -262150, 1572864, 14, -327686, 1572864, 14, -393218, 1572864, 13, -393217, 1572864, 13, -458752, 1572864, 14, -458751, 1572864, 14, -458750, 1572864, 14, -458749, 1572864, 14, -458748, 1572864, 14, -458747, 1572864, 14, -393211, 1572864, 14, -327675, 1572864, 14, -262139, 1572864, 14, -196603, 1572864, 14, -327685, 1572864, 13, -327684, 1572864, 13, -327683, 1572864, 13, -327682, 1835008, 13, -327681, 1900544, 13, -393216, 1966080, 13, -393215, 1572864, 13, -393214, 1572864, 14, -393213, 1572864, 14, -327677, 1572864, 14, -327676, 1572864, 14, -393212, 1572864, 14, -262140, 1572864, 14, -196604, 1572864, 13, -196605, 1572864, 13, -262141, 1572864, 13, -196606, 1572864, 13, -262142, 1572864, 13, -327678, 1572864, 13, -327679, 1572864, 13, -327680, 1966080, 14, -262145, 1900544, 14, -262146, 1835008, 14, -262147, 1572864, 13, -262148, 1572864, 13, -196612, 1572864, 14, -196613, 1572864, 14, -262149, 1572864, 14, -196611, 1572864, 13, -196610, 1835008, 15, -196609, 1900544, 15, -262144, 1966080, 15, -262143, 1572864, 13, -196607, 1572864, 13, -196608, 1572864, 13, -131073, 1572864, 13, -131074, 1572864, 13, -131075, 1572864, 14, -131076, 1572864, 14, -131077, 1572864, 13, -524283, 1572864, 12, -524284, 1572864, 12, -524285, 1572864, 12, -524286, 1572864, 12, -524287, 1572864, 12, -524288, 1572864, 12, -458753, 1572864, 12, -458754, 1572864, 12, -458755, 1572864, 12, -458756, 1572864, 12, -458757, 1572864, 12, -458758, 1572864, 12, -589819, 1572864, 11, -589820, 1572864, 11, -589821, 1572864, 11, -589822, 1572864, 11, -589823, 1572864, 11, -589824, 1572864, 11, -524289, 1572864, 11, -524290, 1572864, 11, -524291, 1572864, 11, -524292, 1572864, 11, -524293, 1572864, 11, -524294, 1572864, 11, -524282, 1638400, 13, -589818, 1638400, 11, -524295, 1507328, 11, -458759, 1507328, 13, -393223, 1507328, 13, -327687, 1507328, 13, -262151, 1507328, 13, -196615, 1507328, 13, -131079, 1507328, 13, -65543, 1507328, 13, -65535, 131072, 1, -2, 0, 1, -458746, 1638400, 13, -393210, 1638400, 13, -327674, 1638400, 13, -262138, 1638400, 13, -196602, 1638400, 13, -131066, 1638400, 13, -393222, 1572864, 14, -393221, 1572864, 13, -393220, 1572864, 13, -393219, 1572864, 13)
+layer_0/tile_data = PackedInt32Array(-1, 65536, 2, -65536, 65536, 2, -65538, 1572864, 14, -65537, 1572864, 13, -131072, 1572864, 13, -131071, 1572864, 13, -65539, 1572864, 14, -65541, 1572864, 14, -65540, 1572864, 14, -131070, 1572864, 13, -131069, 1572864, 13, -131068, 1572864, 13, -65542, 1572864, 14, -131067, 1572864, 13, -131078, 1572864, 14, -196614, 1572864, 14, -393218, 1572864, 13, -393217, 1572864, 13, -458752, 1572864, 14, -458751, 1572864, 14, -458750, 1572864, 14, -458749, 1572864, 14, -458748, 1572864, 14, -458747, 1572864, 14, -393211, 1572864, 14, -327675, 1572864, 14, -262139, 1572864, 14, -196603, 1572864, 14, -327684, 1572864, 13, -327683, 1572864, 13, -327682, 1835008, 13, -327681, 1900544, 13, -393216, 1966080, 13, -393215, 1572864, 13, -393214, 1572864, 14, -393213, 1572864, 14, -327677, 1572864, 14, -327676, 1572864, 14, -393212, 1572864, 14, -262140, 1572864, 14, -196604, 1572864, 13, -196605, 1572864, 13, -262141, 1572864, 13, -196606, 1572864, 13, -262142, 1572864, 13, -327678, 1572864, 13, -327679, 1572864, 13, -327680, 1966080, 14, -262145, 1900544, 14, -262146, 1835008, 14, -262147, 1572864, 13, -262148, 1572864, 13, -196612, 1572864, 14, -196613, 1572864, 14, -196611, 1572864, 13, -196610, 1835008, 15, -196609, 1900544, 15, -262144, 1966080, 15, -262143, 1572864, 13, -196607, 1572864, 13, -196608, 1572864, 13, -131073, 1572864, 13, -131074, 1572864, 13, -131075, 1572864, 14, -131076, 1572864, 14, -131077, 1572864, 14, -524283, 1572864, 12, -524284, 1572864, 12, -524285, 1572864, 12, -524286, 1572864, 12, -524287, 1572864, 12, -524288, 1572864, 12, -458753, 1572864, 12, -458757, 1572864, 12, -458758, 1572864, 12, -589819, 1572864, 11, -589820, 1572864, 11, -589821, 1572864, 11, -589822, 1572864, 11, -589823, 1572864, 11, -589824, 1572864, 11, -524289, 1572864, 11, -524290, 1572864, 11, -524291, 1572864, 11, -524292, 1572864, 11, -524293, 1572864, 11, -524294, 1572864, 11, -524282, 1638400, 13, -589818, 1638400, 11, -524295, 1507328, 11, -458759, 1507328, 13, -393223, 1507328, 13, -327687, 1507328, 13, -262151, 1507328, 13, -196615, 1507328, 13, -131079, 1507328, 13, -65543, 1507328, 13, -65535, 131072, 1, -2, 0, 1, -458746, 1638400, 13, -393210, 1638400, 13, -327674, 1638400, 13, -262138, 1638400, 13, -196602, 1638400, 13, -131066, 1638400, 13, -393222, 1572864, 14, -393221, 1572864, 13, -393220, 1572864, 13, -393219, 1572864, 13, -327686, 1572864, 14, -262150, 1572864, 14, -327685, 1572864, 13, -262149, 1572864, 14, -458754, 1572864, 12, -458755, 1572864, 12, -458756, 1572864, 12)
+layer_1/name = "Layer1"
+layer_1/tile_data = PackedInt32Array(-458756, 1638400, 10, -458755, 1638400, 10, -458754, 1638400, 10, -458758, 917504, 12, -393222, 917504, 13, -458757, 917504, 12, -393221, 917504, 13, -262140, 1179648, 11, -196604, 1179648, 12, -262139, 1245184, 11, -196603, 1245184, 12)
 
 [node name="bottomWalls_mainFurniture" type="TileMap" parent="." unique_id=238509080]
 position = Vector2(0, -3.3974648e-06)
@@ -1699,9 +1726,9 @@ layer_1/tile_data = PackedInt32Array(-458753, 1376256, 15)
 z_index = 2
 tile_set = SubResource("TileSet_i1sb8")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -65541, 1572864, 11, -65542, 1572864, 11, -131069, 1572864, 11, -131068, 1572864, 11, -131067, 1572864, 11, -65540, 1572864, 11, -65539, 1572864, 11, -65538, 1572864, 11, -131071, 1572864, 11, -131070, 1572864, 11, -2, 1507328, 12, -65535, 1638400, 12, -524288, 1376256, 14, -458754, 1638400, 10, -458755, 1638400, 10, -458756, 1638400, 10, -458757, 917504, 12, -458758, 917504, 12, -393222, 917504, 13, -393221, 917504, 13, -327686, 1179648, 11, -262150, 1179648, 12, -327685, 1245184, 11, -262149, 1245184, 12)
+layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -65541, 1572864, 11, -65542, 1572864, 11, -131069, 1572864, 11, -131068, 1572864, 11, -131067, 1572864, 11, -65540, 1572864, 11, -65539, 1572864, 11, -65538, 1572864, 11, -131071, 1572864, 11, -131070, 1572864, 11, -2, 1507328, 12, -65535, 1638400, 12, -524288, 1376256, 14)
 layer_1/name = "Layer1"
-layer_1/tile_data = PackedInt32Array(-262149, 1441792, 15, -393221, 1310720, 15)
+layer_1/tile_data = PackedInt32Array(-393221, 1310720, 15, -196604, 1441792, 15)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_v3665")]
 z_index = 1
@@ -1710,6 +1737,7 @@ z_index = 1
 
 [node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("3_62crr")]
 position = Vector2(0, -12)
+scale = Vector2(0.48005164, 0.437014)
 script = ExtResource("4_pvlac")
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=1192541143]
@@ -1737,6 +1765,7 @@ texture = ExtResource("7_x3j1r")
 
 [node name="ProximityBox" parent="Computer" unique_id=49061706 instance=ExtResource("3_62crr")]
 position = Vector2(4.8522153, 7.837477)
+scale = Vector2(0.5934497, 0.430854)
 script = ExtResource("8_mx60c")
 
 [node name="Journal" parent="." unique_id=334019793 instance=ExtResource("9_dvtcr")]
@@ -1748,7 +1777,7 @@ offset_right = 190.0
 offset_bottom = 120.0
 scale = Vector2(0.4143284, 0.4252024)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1134534592]
+[node name="mainCam" type="Camera2D" parent="." unique_id=1134534592]
 position = Vector2(0, -74)
 zoom = Vector2(5.23, 5.23)
 
@@ -1757,12 +1786,77 @@ script = ExtResource("11_h3bdr")
 
 [node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("11_v3bci")]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1312529368]
+[node name="ProximityBox" parent="." unique_id=55491117 instance=ExtResource("3_62crr")]
+position = Vector2(-7.763538, -118.54184)
+scale = Vector2(0.48005167, 0.43701404)
+script = ExtResource("15_ho12b")
+
+[node name="HighlightedBlue" type="Sprite2D" parent="ProximityBox" unique_id=1312529368]
 visible = false
-position = Vector2(-7.7635384, -120.501205)
+position = Vector2(-1.9073486e-06, -4.4835205)
+scale = Vector2(2.083109, 2.288256)
 texture = ExtResource("14_8rk14")
+
+[node name="ProximityBoxGreen" parent="." unique_id=1122646487 instance=ExtResource("3_62crr")]
+position = Vector2(-71.81272, -105.80592)
+scale = Vector2(0.48005167, 0.43701404)
+script = ExtResource("16_6fktq")
+
+[node name="HighlightedGreen" type="Sprite2D" parent="ProximityBoxGreen" unique_id=1027022895]
+visible = false
+position = Vector2(-1.7330454e-05, 4.4835043)
+scale = Vector2(2.083109, 2.288256)
+texture = ExtResource("17_ejuuc")
+
+[node name="ProximityBoxHelix" parent="." unique_id=231307144 instance=ExtResource("3_62crr")]
+position = Vector2(71.81273, -37.228012)
+scale = Vector2(0.48005167, 0.43701404)
+script = ExtResource("16_16hol")
+
+[node name="HighlightedHelix" type="Sprite2D" parent="ProximityBoxHelix" unique_id=751094317]
+visible = false
+position = Vector2(-1.9073486e-06, -6.725315)
+scale = Vector2(2.083109, 2.288256)
+texture = ExtResource("19_bhdd3")
+
+[node name="greencomputer" parent="." unique_id=1027914042 instance=ExtResource("20_dhg8h")]
+offset_left = -815.17163
+offset_top = -224.34778
+offset_right = -815.17163
+offset_bottom = -224.34778
+
+[node name="greenCam" type="Camera2D" parent="." unique_id=595484544]
+position = Vector2(-492.9847, -105.80594)
+zoom = Vector2(1.695, 1.695)
+
+[node name="black" type="Panel" parent="." unique_id=1375080174]
+z_index = -3
+offset_left = -852.04834
+offset_top = -313.49908
+offset_right = -812.04834
+offset_bottom = -273.49908
+scale = Vector2(17.659306, 10.976254)
+theme_override_styles/panel = SubResource("StyleBoxFlat_dhg8h")
+
+[node name="maze" type="Sprite2D" parent="." unique_id=1319002340]
+visible = false
+z_index = 998
+position = Vector2(0, -74.45603)
+scale = Vector2(0.4173884, 0.39460537)
+texture = ExtResource("21_5fmy0")
+
+[node name="Sprite2D" type="Sprite2D" parent="maze" unique_id=1050528777]
+position = Vector2(-6.9751024, -136.54819)
+scale = Vector2(1.9357466, 2.2702131)
+texture = ExtResource("22_dv7g4")
 
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
 [connection signal="body_entered" from="Computer/ProximityBox" to="Computer/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Computer/ProximityBox" to="Computer/ProximityBox" method="_on_body_exited"]
+[connection signal="body_entered" from="ProximityBox" to="ProximityBox" method="_on_body_entered"]
+[connection signal="body_exited" from="ProximityBox" to="ProximityBox" method="_on_body_exited"]
+[connection signal="body_entered" from="ProximityBoxGreen" to="ProximityBoxGreen" method="_on_body_entered"]
+[connection signal="body_exited" from="ProximityBoxGreen" to="ProximityBoxGreen" method="_on_body_exited"]
+[connection signal="body_entered" from="ProximityBoxHelix" to="ProximityBoxHelix" method="_on_body_entered"]
+[connection signal="body_exited" from="ProximityBoxHelix" to="ProximityBoxHelix" method="_on_body_exited"]
