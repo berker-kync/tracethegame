@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d4f24npwnmsep"]
 
 [ext_resource type="Script" uid="uid://fp2j4b0qaim3" path="res://scenes/Elise Room 2/journal1win.gd" id="1_qbr07"]
+[ext_resource type="Script" uid="uid://cc3wthym758nq" path="res://scenes/Elise Room 2/journalbigwin.gd" id="1_sclml"]
 [ext_resource type="Script" uid="uid://do670gyr13bsf" path="res://scenes/Elise Room 2/panelHover.gd" id="2_6ee85"]
 [ext_resource type="Texture2D" uid="uid://bsxjdmkc7enph" path="res://assets/custom/highlighted/BookHighlighted.png" id="2_omu8a"]
 [ext_resource type="Texture2D" uid="uid://du603r6kpu05r" path="res://assets/custom/highlighted/page_highlighted.png" id="3_6ee85"]
@@ -12,6 +13,13 @@
 [ext_resource type="AudioStream" uid="uid://dvv4y6kg6on2k" path="res://scenes/sounds/sfx general/sfx-maaagical3.wav" id="8_q2jlq"]
 [ext_resource type="Script" uid="uid://b8tiuu0rp00je" path="res://scenes/Elise Room 2/receiptcontainer.gd" id="9_bg7ji"]
 [ext_resource type="Texture2D" uid="uid://6kvggxqdsdk" path="res://assets/custom/receiptdescription.png" id="10_7843h"]
+[ext_resource type="Script" uid="uid://coiyd7qiioivc" path="res://scenes/Elise Room 2/202panelcontainer1.gd" id="12_4sw32"]
+[ext_resource type="Texture2D" uid="uid://cyfl75m6kenb5" path="res://assets/custom/smartwatch3.png" id="13_sclml"]
+[ext_resource type="Texture2D" uid="uid://dfca8l72o1c1t" path="res://assets/custom/202watchdescription.png" id="15_d88hs"]
+[ext_resource type="Texture2D" uid="uid://dw5h38ns3wcs" path="res://assets/custom/computer.png" id="15_oresk"]
+[ext_resource type="Script" uid="uid://dx1hdt8pu2ik6" path="res://scenes/Elise Room 2/laptopcontainer.gd" id="16_veuxe"]
+[ext_resource type="Texture2D" uid="uid://byuvr181tylrf" path="res://assets/custom/laptopdescription.png" id="17_im14q"]
+[ext_resource type="Script" uid="uid://7nvrbc66p2s0" path="res://scenes/Elise Room 2/journal4win.gd" id="18_im14q"]
 
 [sub_resource type="Theme" id="Theme_qbr07"]
 
@@ -36,11 +44,12 @@ mouse_filter = 0
 theme = SubResource("Theme_qbr07")
 theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
 theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_omu8a")
-current_tab = 1
+current_tab = 3
 tab_0/title = "101"
 tab_1/title = "102"
 tab_2/title = "201"
 tab_3/title = "202"
+script = ExtResource("1_sclml")
 
 [node name="tab1" type="TabBar" parent="." unique_id=705700752]
 visible = false
@@ -193,6 +202,7 @@ theme_override_fonts/font = ExtResource("8_bg7ji")
 text = "Key Items:"
 
 [node name="tab2" type="TabBar" parent="." unique_id=1487145056]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "102"
@@ -423,7 +433,6 @@ theme_override_fonts/font = ExtResource("8_bg7ji")
 text = "Key Items:"
 
 [node name="tab4" type="TabBar" parent="." unique_id=1213271918]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 metadata/_tab_name = "202"
@@ -436,7 +445,7 @@ offset_top = 7.0
 offset_right = 144.0
 offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Jerry Hopperson"
+text = "Cody Hackerson"
 
 [node name="Who" type="OptionButton" parent="tab4" unique_id=2067071992]
 layout_mode = 0
@@ -446,7 +455,7 @@ offset_right = 160.0
 offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 4
+item_count = 6
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
 popup/item_1/text = "John Smithy"
@@ -455,6 +464,10 @@ popup/item_2/text = "Davis Johnson"
 popup/item_2/id = 3
 popup/item_3/text = "Jerry Hopperson"
 popup/item_3/id = 2
+popup/item_4/text = "Cody Hackins"
+popup/item_4/id = 4
+popup/item_5/text = "Jane Doe"
+popup/item_5/id = 5
 
 [node name="LabelJob" type="Label" parent="tab4" unique_id=1648725942]
 visible = false
@@ -464,7 +477,7 @@ offset_top = 53.0
 offset_right = 144.0
 offset_bottom = 81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Author"
+text = "Hacker"
 
 [node name="Job" type="OptionButton" parent="tab4" unique_id=220265071]
 layout_mode = 0
@@ -474,7 +487,7 @@ offset_right = 144.0
 offset_bottom = 80.0
 selected = 0
 fit_to_longest_item = false
-item_count = 5
+item_count = 7
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
 popup/item_1/text = "Author"
@@ -485,6 +498,10 @@ popup/item_3/text = "Influencer"
 popup/item_3/id = 2
 popup/item_4/text = "Hacker"
 popup/item_4/id = 3
+popup/item_5/text = "Receptionist"
+popup/item_5/id = 5
+popup/item_6/text = "Detective"
+popup/item_6/id = 6
 
 [node name="LabelPurpose" type="Label" parent="tab4" unique_id=247640139]
 visible = false
@@ -494,7 +511,7 @@ offset_top = 96.0
 offset_right = 144.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Public Speech"
+text = "Malicious Intent"
 
 [node name="Purpose" type="OptionButton" parent="tab4" unique_id=670388960]
 layout_mode = 0
@@ -504,7 +521,7 @@ offset_right = 144.0
 offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 4
+item_count = 5
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
@@ -513,6 +530,8 @@ popup/item_2/text = "Conference"
 popup/item_2/id = 2
 popup/item_3/text = "Public Speech"
 popup/item_3/id = 3
+popup/item_4/text = "Malicious Intent"
+popup/item_4/id = 4
 
 [node name="KeyItemsLabel" type="Label" parent="tab4" unique_id=325504792]
 layout_mode = 0
@@ -525,6 +544,52 @@ theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.001085344
 theme_override_fonts/font = ExtResource("8_bg7ji")
 text = "Key Items:"
 
+[node name="PanelContainer" type="PanelContainer" parent="tab4" unique_id=857712744]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 152.0
+offset_right = 84.0
+offset_bottom = 192.0
+scale = Vector2(0.99714386, 0.92009634)
+script = ExtResource("12_4sw32")
+
+[node name="Watch" type="Sprite2D" parent="tab4/PanelContainer" unique_id=493099731]
+visible = false
+position = Vector2(19.27277, 19.439472)
+scale = Vector2(2.125, 1.8125)
+texture = ExtResource("13_sclml")
+
+[node name="WatchDescription" type="Sprite2D" parent="tab4" unique_id=953813721]
+visible = false
+z_index = 1
+position = Vector2(154.25127, 174.69783)
+scale = Vector2(1.0006639, 0.9780175)
+texture = ExtResource("15_d88hs")
+
+[node name="PanelContainer2" type="PanelContainer" parent="tab4" unique_id=641539308]
+layout_mode = 0
+offset_left = 113.791916
+offset_top = 151.84251
+offset_right = 153.79192
+offset_bottom = 191.84251
+scale = Vector2(0.99714386, 0.92009634)
+script = ExtResource("16_veuxe")
+
+[node name="laptop" type="Sprite2D" parent="tab4/PanelContainer2" unique_id=2091892691]
+visible = false
+position = Vector2(19.019642, 18.303268)
+scale = Vector2(2.125, 3.0669024)
+texture = ExtResource("15_oresk")
+
+[node name="laptopDescription" type="Sprite2D" parent="tab4/PanelContainer2" unique_id=478821924]
+visible = false
+position = Vector2(96.3662, 19.610638)
+scale = Vector2(0.8023913, 0.8988205)
+texture = ExtResource("17_im14q")
+
+[node name="JournalWin4" type="Node" parent="tab4" unique_id=131773375]
+script = ExtResource("18_im14q")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1480881558]
 stream = ExtResource("8_q2jlq")
 
@@ -534,3 +599,7 @@ stream = ExtResource("8_q2jlq")
 [connection signal="mouse_exited" from="tab1/PanelContainer2" to="tab1/PanelContainer2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="tab4/PanelContainer" to="tab4/PanelContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tab4/PanelContainer" to="tab4/PanelContainer" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="tab4/PanelContainer2" to="tab4/PanelContainer2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tab4/PanelContainer2" to="tab4/PanelContainer2" method="_on_mouse_exited"]

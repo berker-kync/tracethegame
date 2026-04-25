@@ -5,6 +5,7 @@ extends Control
 @onready var timer: Timer = $Timer
 @onready var green_cam: Camera2D = $"../greenCam"
 @onready var main_cam: Camera2D = $"../mainCam"
+@onready var r_switch: Sprite2D = $"../Laptop/RSwitch"
 
 
 @onready var control: Control = $"."
@@ -104,8 +105,7 @@ func _on_timer_timeout() -> void:
 	print("timer end")
 	timer.stop()
 	main_cam.make_current()
-	journalConst.room1keyItem1 = true
-	journalConst.room1keyItem2 = true
+	r_switch.visible = false
 	
 	# Send text to your dialogue system instead of toggling visibility
 	#suitcase_open_text.queueText("Inside the suitcase is a handwritten speech, along with an unfinished book.")

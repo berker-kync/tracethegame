@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bdrb08s7osy1i"]
+
+[ext_resource type="Script" uid="uid://b0tyj8wsm78bl" path="res://ending.gd" id="1_2x1jc"]
+[ext_resource type="Texture2D" uid="uid://cf28rntgnou43" path="res://assets/custom/hotelfrontpixel.png" id="2_nfmnx"]
+[ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="3_qa3ag"]
+
+[node name="Ending" type="Node2D" unique_id=341456665]
+position = Vector2(447, 250)
+script = ExtResource("1_2x1jc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=969860710]
+texture = ExtResource("2_nfmnx")
+
+[node name="textbox" type="Node2D" parent="." unique_id=1154007208]
+z_index = 1
+
+[node name="Text" parent="textbox" unique_id=1827124815 instance=ExtResource("3_qa3ag")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=873446242]
+zoom = Vector2(1.28, 1.28)

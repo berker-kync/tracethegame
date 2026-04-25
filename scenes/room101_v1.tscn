@@ -2468,7 +2468,7 @@ offset_bottom = -40.000008
 scale = Vector2(7.306642, 4.150565)
 color = Color(0, 0, 0, 0)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1646162324]
+[node name="mainCam" type="Camera2D" parent="." unique_id=1646162324]
 position = Vector2(16, 2)
 zoom = Vector2(4, 4)
 

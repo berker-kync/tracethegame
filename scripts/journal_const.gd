@@ -18,4 +18,3 @@ var room3keyItem3 = false
 var person4 = false
 var room4keyItem1 = false
 var room4keyItem2 = false
-var room4keyItem3 = false
