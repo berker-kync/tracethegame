@@ -13,16 +13,16 @@ func _process(delta: float) -> void:
 		label.visible = true
 		journal_animator.play("Pause")
 		pickupsound.play()
-		
+
 	if (panel.visible == true && Input.is_action_just_pressed("escape")):
 		panel.visible = false
 		journal_animator.play("RESET")
-		
+
 func _on_body_entered(body: Node2D) -> void:
 	highlighted.visible = true
 	proximity = true
 	print("entered")
-	
+
 func _on_body_exited(body: Node2D) -> void:
 	highlighted.visible = false
 	proximity = false
