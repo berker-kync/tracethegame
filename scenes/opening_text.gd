@@ -4,7 +4,7 @@ extends Node2D
 
 func _ready():
 	# Queue all dialogue immediately when scene loads
-	textBox.queueText("Welcome to the TRACE: The Game. Press Enter to forward dialoge")
+	textBox.queueText("Welcome to the TRACE: The Game! Press Enter to forward dialoge")
 	textBox.queueText("You are a digi-tective, specializing in following the trace of people's digital footprints.")
 	textBox.queueText("There's been reports of a malicious user hacking into people's devices at the Digital Hotel.")
 	textBox.queueText("Hotel Wi-Fi networks are often unsecured and unencrypted.")

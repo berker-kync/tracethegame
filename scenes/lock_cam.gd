@@ -1,6 +1,6 @@
 extends Camera2D
 @onready var lock_cam: Camera2D = $"."
-@onready var camera_2d: Camera2D = $"../Camera2D"
+@onready var main_cam: Camera2D = $"../mainCam"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,5 +12,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):		
 		if lock_cam.is_current():
-			camera_2d.make_current()
+			main_cam.make_current()
 		

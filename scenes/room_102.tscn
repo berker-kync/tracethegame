@@ -1268,7 +1268,7 @@ position = Vector2(67, -36)
 scale = Vector2(0.44995907, 0.3229466)
 script = ExtResource("8_rxgkc")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1478956389]
+[node name="mainCam" type="Camera2D" parent="." unique_id=1478956389]
 position = Vector2(0, -68)
 scale = Vector2(0.6885572, -1.1557206)
 zoom = Vector2(5.11, 5.11)

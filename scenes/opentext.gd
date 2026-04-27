@@ -10,7 +10,7 @@ signal finished
 @onready var timer: Timer = $AudioStreamPlayer2/Timer
 
 
-var CHAR_READ_RATE = 0.05
+var CHAR_READ_RATE = 0.03
 
 enum state {
 	READY,
