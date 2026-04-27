@@ -2526,6 +2526,16 @@ offset_bottom = -36.999992
 [node name="pickupsound" type="AudioStreamPlayer" parent="Paper" unique_id=390068647]
 stream = ExtResource("17_h4vym")
 
+[node name="Label" type="Label" parent="Paper" unique_id=500906068]
+visible = false
+z_index = 99
+offset_left = -147.0
+offset_top = -115.0
+offset_right = -77.0
+offset_bottom = -92.0
+theme_override_font_sizes/font_size = 9
+text = "Escape to exit"
+
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=247872605]
 stream = ExtResource("18_fvkt5")
 volume_db = -10.898

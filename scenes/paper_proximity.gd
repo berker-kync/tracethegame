@@ -4,11 +4,13 @@ var proximity = false
 @onready var journal_animator: AnimationPlayer = $"../../JournalAnimator"
 @onready var panel: Panel = $"../Panel"
 @onready var pickupsound: AudioStreamPlayer = $"../pickupsound"
+@onready var label: Label = $"../Label"
 
 func _process(delta: float) -> void:
 	if proximity == true && Input.is_action_just_pressed("interact"):
 		print("interacted") 
 		panel.visible = true
+		label.visible = true
 		journal_animator.play("Pause")
 		pickupsound.play()
 		
