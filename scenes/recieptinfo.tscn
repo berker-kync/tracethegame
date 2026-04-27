@@ -1,0 +1,224 @@
+[gd_scene format=3 uid="uid://bfwmefjuv1pqc"]
+
+[ext_resource type="Texture2D" uid="uid://clqdlsfdi54yt" path="res://assets/custom/highlighted/crumpledpaper.png" id="1_jjvg2"]
+[ext_resource type="Script" uid="uid://ds21w3mu1m6es" path="res://scenes/ReciptShop.gd" id="2_bwpc8"]
+[ext_resource type="FontFile" uid="uid://cqlync0i7a3b5" path="res://assets/at01.ttf" id="3_32tkq"]
+[ext_resource type="Script" uid="uid://lpncjt1thq7g" path="res://scenes/RecieptAtlanta.gd" id="3_hos8f"]
+[ext_resource type="Script" uid="uid://blifg8jdvc7p1" path="res://scenes/multipleReciepts.gd" id="4_32tkq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hos8f"]
+size = Vector2(3.288333, 0.89655185)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5byy"]
+size = Vector2(79.66576, 21.729794)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocb57"]
+size = Vector2(15.876255, 118.96912)
+
+[node name="Panel" type="Panel" unique_id=846151156]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 1153.0
+offset_bottom = 647.0
+mouse_filter = 2
+
+[node name="Crumpledpaper" type="Sprite2D" parent="." unique_id=1254701635]
+position = Vector2(911, 327.4)
+scale = Vector2(4.85, 4.85)
+texture = ExtResource("1_jjvg2")
+
+[node name="Area2D" type="Area2D" parent="Crumpledpaper" unique_id=2141691777]
+position = Vector2(-232.6462, -136.91362)
+scale = Vector2(4.85, 4.85)
+script = ExtResource("2_bwpc8")
+
+[node name="Location" type="CollisionShape2D" parent="Crumpledpaper/Area2D" unique_id=272180457]
+position = Vector2(47.773865, 17.49346)
+scale = Vector2(4.85, 4.85)
+shape = SubResource("RectangleShape2D_hos8f")
+
+[node name="Area2D2" type="Area2D" parent="Crumpledpaper" unique_id=1983345782]
+script = ExtResource("3_hos8f")
+
+[node name="Location (Atlanta)" type="CollisionShape2D" parent="Crumpledpaper/Area2D2" unique_id=816641362]
+position = Vector2(0.38989258, 53.271545)
+scale = Vector2(0.9999996, 0.9999996)
+shape = SubResource("RectangleShape2D_w5byy")
+
+[node name="Area2D3" type="Area2D" parent="Crumpledpaper" unique_id=12005642]
+script = ExtResource("4_32tkq")
+
+[node name="Other reciepts" type="CollisionShape2D" parent="Crumpledpaper/Area2D3" unique_id=1357538008]
+position = Vector2(-47.93811, -4.721657)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_ocb57")
+
+[node name="Crumpledpaper2" type="Sprite2D" parent="." unique_id=134406575]
+z_index = -1
+position = Vector2(884.2, 317.52002)
+scale = Vector2(1.795, 1.795)
+texture = ExtResource("1_jjvg2")
+
+[node name="Crumpledpaper3" type="Sprite2D" parent="." unique_id=684974820]
+z_index = -2
+position = Vector2(852.99994, 290)
+scale = Vector2(5.384999, 4.5849996)
+texture = ExtResource("1_jjvg2")
+
+[node name="Label" type="Label" parent="." unique_id=97824967]
+layout_mode = 0
+offset_left = 730.4001
+offset_top = 19.640045
+offset_right = 1110.4001
+offset_bottom = 88.640045
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 66
+text = "COFFEE CREW INC."
+
+[node name="Label2" type="Label" parent="." unique_id=395785130]
+layout_mode = 0
+offset_left = 757.4001
+offset_top = 65.640045
+offset_right = 1087.4001
+offset_bottom = 134.64005
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 35
+text = "Thank you for shopping with us!"
+
+[node name="Label3" type="Label" parent="." unique_id=1477104552]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 155.0
+offset_right = 1106.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 43
+text = "1. Vanilla Cold Brew       $4.75"
+
+[node name="Label5" type="Label" parent="." unique_id=594913082]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 382.0
+offset_right = 1096.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 41
+text = "TOTAL:                  $5.00"
+
+[node name="Label6" type="Label" parent="." unique_id=1860040008]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 350.0
+offset_right = 1095.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 41
+text = "TAX:                   $0.25"
+
+[node name="Label7" type="Label" parent="." unique_id=1589914318]
+layout_mode = 0
+offset_left = 726.0
+offset_top = 535.0
+offset_right = 1123.0
+offset_bottom = 633.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 54
+text = "Coffee Crew inc.
+Atlanta"
+
+[node name="Label4" type="Label" parent="." unique_id=1981885577]
+layout_mode = 0
+offset_left = 727.0
+offset_top = 308.0
+offset_right = 1141.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 41
+text = "------------------------"
+
+[node name="INFO" type="Label" parent="." unique_id=724366728]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 218.0
+offset_bottom = 218.0
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 38
+text = "Looks like the recipts we
+found contain lots of 
+interesting information!
+
+Hover over to find out more.
+
+When you're ready - press 
+back to return, and 'J' to see
+what you found out!"
+
+[node name="LocationInfo" type="Label" parent="." unique_id=998592750]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 63.0
+offset_right = 711.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 40
+text = "We can see here
+ the coffee shop they were at!"
+
+[node name="MultipleReciepts" type="Label" parent="." unique_id=726238599]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 199.0
+offset_right = 750.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 40
+text = "All the reciepts we found 
+are almost the exact same."
+
+[node name="Label8" type="Label" parent="." unique_id=1545778512]
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 608.0
+offset_right = 1095.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 30
+text = "10:04am"
+
+[node name="LocationTime" type="Label" parent="." unique_id=740106864]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 440.0
+offset_right = 699.0
+offset_bottom = 577.0
+theme_override_fonts/font = ExtResource("3_32tkq")
+theme_override_font_sizes/font_size = 40
+text = "We now know they are based in
+Atlanta. They also regularly
+go to this coffee store
+at 10am."
+
+[node name="Button" type="Button" parent="." unique_id=856072726]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 553.0
+offset_right = 87.0
+offset_bottom = 634.0
+theme_override_font_sizes/font_size = 53
+text = "<"
+
+[connection signal="mouse_entered" from="Crumpledpaper/Area2D" to="Crumpledpaper/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Crumpledpaper/Area2D" to="Crumpledpaper/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Crumpledpaper/Area2D2" to="Crumpledpaper/Area2D2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Crumpledpaper/Area2D2" to="Crumpledpaper/Area2D2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Crumpledpaper/Area2D3" to="Crumpledpaper/Area2D3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Crumpledpaper/Area2D3" to="Crumpledpaper/Area2D3" method="_on_mouse_exited"]

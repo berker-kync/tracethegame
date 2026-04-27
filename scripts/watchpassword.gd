@@ -1,5 +1,6 @@
 extends Control
 @onready var textbox: CanvasLayer = $"../textbox"
+var watchScreen = load("res://scenes/smartwatch.tscn")
 
 var attempts = 0
 var max_attempts = 3
@@ -39,6 +40,9 @@ func check_password():
 	if input == password:
 		status_label.text = "✔ Correct!"
 		reset_attempts()
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_packed(watchScreen)
+
 	else:
 		attempts += 1
 		status_label.text = "✖ Wrong! (" + str(attempts) + "/" + str(max_attempts) + ")"

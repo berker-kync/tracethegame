@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cms2dc00n1of2"]
+
+[ext_resource type="Texture2D" uid="uid://cyt11riunqfqt" path="res://assets/pixelWatch.png" id="1_hjarr"]
+[ext_resource type="Texture2D" uid="uid://bd4hfu1kbwtl3" path="res://assets/custom/journal1.png" id="2_6ae01"]
+[ext_resource type="Script" uid="uid://bx40qpumvb8xl" path="res://scripts/smartwatchhover.gd" id="3_vuxqn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ae01"]
+size = Vector2(145.70566, 172.24146)
+
+[node name="Panel" type="Panel" unique_id=809774779]
+offset_left = -8.000122
+offset_top = 1.5258789e-05
+offset_right = 901.01965
+offset_bottom = 502.74518
+scale = Vector2(1.275, 1.275)
+mouse_filter = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=989077106]
+position = Vector2(469.01953, 246.27448)
+scale = Vector2(1.1500001, 1.1500001)
+texture = ExtResource("1_hjarr")
+
+[node name="Journal1" type="Sprite2D" parent="." unique_id=737505443]
+position = Vector2(468.70605, 240.47058)
+scale = Vector2(3.6862755, 4.37255)
+texture = ExtResource("2_6ae01")
+
+[node name="Area2D" type="Area2D" parent="Journal1" unique_id=1752393478]
+position = Vector2(-127.14896, -54.995502)
+scale = Vector2(0.3458776, 0.29159188)
+script = ExtResource("3_vuxqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Journal1/Area2D" unique_id=1613870522]
+position = Vector2(367.2435, 187.92775)
+scale = Vector2(1.275, 1.275)
+shape = SubResource("RectangleShape2D_6ae01")
+
+[node name="Label" type="Label" parent="." unique_id=794082650]
+layout_mode = 0
+offset_left = 636.07855
+offset_top = 23.5294
+offset_right = 1215.0786
+offset_bottom = 176.5294
+theme_override_font_sizes/font_size = 25
+text = "Hi Davis! Here is your 
+regular walk around 
+Canadian Geese Park."
+justification_flags = 162
+
+[connection signal="mouse_entered" from="Journal1/Area2D" to="Journal1/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Journal1/Area2D" to="Journal1/Area2D" method="_on_mouse_exited"]
