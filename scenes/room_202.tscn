@@ -2073,7 +2073,6 @@ offset_top = -160.66829
 offset_right = 149.09154
 offset_bottom = 129.7166
 scale = Vector2(0.6102489, 0.51138896)
-current_tab = 0
 
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
