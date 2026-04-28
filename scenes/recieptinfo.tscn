@@ -74,7 +74,7 @@ offset_bottom = 88.640045
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 66
-text = "COFFEE CREW INC."
+text = "I LOVE WATCHES"
 
 [node name="Label2" type="Label" parent="." unique_id=395785130]
 layout_mode = 0
@@ -96,7 +96,8 @@ offset_bottom = 224.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 43
-text = "1. Vanilla Cold Brew       $4.75"
+text = "1. Super Smart Watch     $98
+2. Birthday Gift Wrap	      $2"
 
 [node name="Label5" type="Label" parent="." unique_id=594913082]
 layout_mode = 0
@@ -107,7 +108,7 @@ offset_bottom = 451.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 41
-text = "TOTAL:                  $5.00"
+text = "TOTAL:                 $101.00"
 
 [node name="Label6" type="Label" parent="." unique_id=1860040008]
 layout_mode = 0
@@ -118,7 +119,7 @@ offset_bottom = 384.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 41
-text = "TAX:                   $0.25"
+text = "TAX:                    $1.00"
 
 [node name="Label7" type="Label" parent="." unique_id=1589914318]
 layout_mode = 0
@@ -129,15 +130,15 @@ offset_bottom = 633.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 54
-text = "Coffee Crew inc.
+text = "I LOVE WATCHES
 Atlanta"
 
 [node name="Label4" type="Label" parent="." unique_id=1981885577]
 layout_mode = 0
 offset_left = 727.0
-offset_top = 308.0
+offset_top = 309.0
 offset_right = 1141.0
-offset_bottom = 377.0
+offset_bottom = 378.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 41
