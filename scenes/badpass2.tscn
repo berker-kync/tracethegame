@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b14dvjtt8ttma"]
+
+[ext_resource type="Script" uid="uid://cd7sjc5mqk0xv" path="res://scenes/badpass_1.gd" id="1_n8nq4"]
+[ext_resource type="Texture2D" uid="uid://ccmb43q8cbx8r" path="res://assets/passwords/badpass2.jpg" id="2_t1857"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnws3"]
+size = Vector2(120, 42)
+
+[node name="Area2D" type="Area2D" unique_id=465202228]
+script = ExtResource("1_n8nq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=594144406]
+position = Vector2(-30.812498, 9.999999)
+scale = Vector2(0.7870065, 0.87499994)
+texture = ExtResource("2_t1857")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1494949663]
+position = Vector2(-31, 10)
+shape = SubResource("RectangleShape2D_bnws3")

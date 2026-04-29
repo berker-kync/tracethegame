@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c0r3d54um23y1"]
+
+[ext_resource type="Script" uid="uid://cib0q3gopvcd7" path="res://scenes/goodpass_1.gd" id="1_4uoca"]
+[ext_resource type="Texture2D" uid="uid://c7tgwmlpghyvv" path="res://assets/passwords/goodpass1.jpg" id="2_bfr71"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfr71"]
+size = Vector2(173, 44)
+
+[node name="Area2D" type="Area2D" unique_id=465202228]
+script = ExtResource("1_4uoca")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=594144406]
+position = Vector2(-30.812498, 9.999999)
+scale = Vector2(0.7870065, 0.87499994)
+texture = ExtResource("2_bfr71")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1554612722]
+position = Vector2(-31.5, 9)
+shape = SubResource("RectangleShape2D_bfr71")

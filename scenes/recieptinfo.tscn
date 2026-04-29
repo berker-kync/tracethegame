@@ -18,8 +18,9 @@ size = Vector2(15.876255, 118.96912)
 [node name="Panel" type="Panel" unique_id=846151156]
 offset_left = 8.0
 offset_top = 5.0
-offset_right = 1153.0
+offset_right = 1153.685
 offset_bottom = 647.0
+scale = Vector2(1.61, 1.61)
 mouse_filter = 2
 
 [node name="Crumpledpaper" type="Sprite2D" parent="." unique_id=1254701635]
@@ -74,7 +75,7 @@ offset_bottom = 88.640045
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 66
-text = "I LOVE WATCHES"
+text = "COFFEE CREW INC."
 
 [node name="Label2" type="Label" parent="." unique_id=395785130]
 layout_mode = 0
@@ -96,8 +97,7 @@ offset_bottom = 224.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 43
-text = "1. Super Smart Watch     $98
-2. Birthday Gift Wrap	      $2"
+text = "1. Vanilla Cold Brew        $5"
 
 [node name="Label5" type="Label" parent="." unique_id=594913082]
 layout_mode = 0
@@ -108,7 +108,7 @@ offset_bottom = 451.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 41
-text = "TOTAL:                 $101.00"
+text = "TOTAL:                  $5.00"
 
 [node name="Label6" type="Label" parent="." unique_id=1860040008]
 layout_mode = 0
@@ -130,7 +130,7 @@ offset_bottom = 633.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_32tkq")
 theme_override_font_sizes/font_size = 54
-text = "I LOVE WATCHES
+text = "COFFEE CREW INC
 Atlanta"
 
 [node name="Label4" type="Label" parent="." unique_id=1981885577]
@@ -208,14 +208,9 @@ Atlanta. They also regularly
 go to this coffee store
 at 10am."
 
-[node name="Button" type="Button" parent="." unique_id=856072726]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 553.0
-offset_right = 87.0
-offset_bottom = 634.0
-theme_override_font_sizes/font_size = 53
-text = "<"
+[node name="Camera2D" type="Camera2D" parent="." unique_id=403141455]
+position = Vector2(575.7764, 319.25467)
+zoom = Vector2(0.58, 0.58)
 
 [connection signal="mouse_entered" from="Crumpledpaper/Area2D" to="Crumpledpaper/Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Crumpledpaper/Area2D" to="Crumpledpaper/Area2D" method="_on_mouse_exited"]
