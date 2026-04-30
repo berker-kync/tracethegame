@@ -41,7 +41,10 @@ func check_password():
 		status_label.text = "✔ Correct!"
 		reset_attempts()
 		await get_tree().create_timer(1.0).timeout
-		get_tree().change_scene_to_packed(watchScreen)
+		#get_tree().change_scene_to_packed(watchScreen)
+		textbox.queueText("It looks like they always go on the same walk in Atlanta.")
+		textbox.queueText("Allowing their device to track their location means it recognises patterns.")
+		
 
 	else:
 		attempts += 1
