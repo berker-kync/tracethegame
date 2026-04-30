@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnl4wfw15u2q4"
-path="res://.godot/imported/goodpass2.jpg-073e795a4c5c09e11141cd40fd68225a.ctex"
+path="res://.godot/imported/goodpass2.jpg-19024f7219ea938b6fd8e5c350e72b5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/passwords/goodpass2.jpg"
-dest_files=["res://.godot/imported/goodpass2.jpg-073e795a4c5c09e11141cd40fd68225a.ctex"]
+source_file="res://assets/passwords/goodpass2.jpg"
+dest_files=["res://.godot/imported/goodpass2.jpg-19024f7219ea938b6fd8e5c350e72b5b.ctex"]
 
 [params]
 

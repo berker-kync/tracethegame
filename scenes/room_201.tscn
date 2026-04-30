@@ -10,7 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://ywvipujyws66" path="res://scenes/hacked_laptop.tscn" id="7_b5rd7"]
 [ext_resource type="Texture2D" uid="uid://bfiajkpyw156y" path="res://assets/custom/Book_closed_highlighted.png" id="9_bo2c8"]
 [ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://assets/custom/computerHighlighted.png" id="10_3i3di"]
-[ext_resource type="Script" uid="uid://bswlk5ihigkr" path="res://scripts/book.gd" id="10_bo2c8"]
+[ext_resource type="Script" uid="uid://bj56g6goobgie" path="res://scenes/201notebookarea.gd" id="10_t7ogi"]
+[ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="12_t7ogi"]
+[ext_resource type="PackedScene" uid="uid://c11hy008cw1go" path="res://scenes/Elise Room 2/journal_manager.tscn" id="13_wy206"]
+[ext_resource type="PackedScene" uid="uid://d4f24npwnmsep" path="res://scenes/Elise Room 2/Journal.tscn" id="14_kmut5"]
+[ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="15_wy206"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpotk"]
 texture = ExtResource("1_im4vo")
@@ -1267,27 +1271,28 @@ _data = {
 &"RESET": SubResource("Animation_037ag")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_t7ogi"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_wy206"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmut5"]
+radius = 9.782553
 
 [node name="room201" type="Node2D" unique_id=2091286415]
 
 [node name="Floor_sideWalls_backWalls" type="TileMap" parent="." unique_id=5208988]
 tile_set = SubResource("TileSet_mv304")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 65536, 2, -65536, 65536, 2, -65538, 65536, 2, -65537, 65536, 2, -131072, 65536, 2, -131071, 65536, 2, -65539, 65536, 2, -65541, 65536, 2, -65540, 65536, 2, -131070, 65536, 2, -131069, 65536, 2, -131068, 65536, 2, -65542, 65536, 2, -131067, 65536, 2, -131078, 65536, 2, -196614, 65536, 2, -262150, 65536, 2, -327686, 65536, 2, -393222, 65536, 2, -393221, 65536, 2, -393220, 65536, 2, -393219, 65536, 2, -393218, 65536, 2, -393217, 65536, 2, -458752, 65536, 2, -458751, 65536, 2, -458750, 65536, 2, -458749, 65536, 2, -458748, 65536, 2, -458747, 65536, 2, -393211, 65536, 2, -327675, 65536, 2, -262139, 65536, 2, -196603, 65536, 2, -327685, 65536, 2, -327684, 65536, 2, -327683, 65536, 2, -327682, 65536, 2, -327681, 65536, 2, -393216, 65536, 2, -393215, 65536, 2, -393214, 65536, 2, -393213, 65536, 2, -327677, 65536, 2, -327676, 65536, 2, -393212, 65536, 2, -262140, 65536, 2, -196604, 65536, 2, -196605, 65536, 2, -262141, 65536, 2, -196606, 65536, 2, -262142, 65536, 2, -327678, 65536, 2, -327679, 65536, 2, -327680, 65536, 2, -262145, 65536, 2, -262146, 65536, 2, -262147, 65536, 2, -262148, 65536, 2, -196612, 65536, 2, -196613, 65536, 2, -262149, 65536, 2, -196611, 65536, 2, -196610, 65536, 2, -196609, 65536, 2, -262144, 65536, 2, -262143, 65536, 2, -196607, 65536, 2, -196608, 65536, 2, -131073, 65536, 2, -131074, 65536, 2, -131075, 65536, 2, -131076, 65536, 2, -131077, 65536, 2, -131066, 589824, 7, -196602, 589824, 7, -262138, 589824, 7, -327674, 589824, 7, -327673, 589824, 7, -327672, 589824, 7, -327671, 589824, 7, -262135, 589824, 7, -196599, 589824, 7, -131063, 589824, 7, -131064, 589824, 7, -131065, 589824, 7, -196601, 589824, 7, -196600, 589824, 7, -262136, 589824, 7, -262137, 589824, 7, -327670, 589824, 7, -262134, 589824, 7, -196598, 589824, 7, -131062, 589824, 7, -393210, 720896, 6, -393209, 720896, 8, -393208, 720896, 8, -393207, 720896, 8, -393206, 786432, 8, -458746, 196608, 2, -393205, 655360, 6, -327669, 655360, 6, -262133, 655360, 6, -196597, 655360, 6, -131061, 655360, 7, -458741, 655360, 5, -524283, 65536, 5, -524284, 65536, 5, -524285, 65536, 5, -524286, 65536, 5, -524287, 65536, 5, -524288, 65536, 5, -458753, 65536, 5, -458754, 65536, 5, -458755, 65536, 5, -458756, 65536, 5, -458757, 65536, 5, -458758, 65536, 5, -589819, 65536, 0, -589820, 65536, 0, -589821, 65536, 0, -589822, 65536, 0, -589823, 65536, 0, -589824, 65536, 0, -524289, 65536, 0, -524290, 65536, 0, -524291, 65536, 0, -524292, 65536, 0, -524293, 65536, 0, -524294, 65536, 0, -524282, 131072, 1, -589818, 131072, 0, -524295, 0, 0, -458759, 0, 1, -393223, 0, 1, -327687, 0, 1, -262151, 0, 1, -196615, 0, 1, -131079, 0, 1, -65543, 0, 1, -65535, 131072, 1, -2, 0, 1, -458745, 589824, 5, -458744, 589824, 5, -458743, 589824, 5, -458742, 589824, 5)
+layer_0/tile_data = PackedInt32Array(-1, 65536, 2, -65536, 65536, 2, -65538, 65536, 2, -65537, 65536, 2, -131072, 65536, 2, -131071, 65536, 2, -65539, 65536, 2, -65541, 65536, 2, -65540, 65536, 2, -131070, 65536, 2, -131069, 65536, 2, -131068, 65536, 2, -65542, 65536, 2, -131067, 65536, 2, -131078, 65536, 2, -196614, 65536, 2, -262150, 65536, 2, -327686, 65536, 2, -393222, 65536, 2, -393221, 65536, 2, -393220, 65536, 2, -393219, 65536, 2, -393218, 65536, 2, -393217, 65536, 2, -458752, 65536, 2, -458751, 65536, 2, -458750, 65536, 2, -458749, 65536, 2, -458748, 65536, 2, -458747, 65536, 2, -393211, 65536, 2, -327675, 65536, 2, -262139, 65536, 2, -196603, 65536, 2, -327685, 65536, 2, -327684, 65536, 2, -327683, 65536, 2, -327682, 65536, 2, -327681, 65536, 2, -393216, 65536, 2, -393215, 65536, 2, -393214, 65536, 2, -393213, 65536, 2, -327677, 65536, 2, -327676, 65536, 2, -393212, 65536, 2, -262140, 65536, 2, -196604, 65536, 2, -196605, 65536, 2, -262141, 65536, 2, -196606, 65536, 2, -262142, 65536, 2, -327678, 65536, 2, -327679, 65536, 2, -327680, 65536, 2, -262145, 65536, 2, -262146, 65536, 2, -262147, 65536, 2, -262148, 65536, 2, -196612, 65536, 2, -196613, 65536, 2, -262149, 65536, 2, -196611, 65536, 2, -196610, 65536, 2, -196609, 65536, 2, -262144, 65536, 2, -262143, 65536, 2, -196607, 65536, 2, -196608, 65536, 2, -131073, 65536, 2, -131074, 65536, 2, -131075, 65536, 2, -131076, 65536, 2, -131077, 65536, 2, -524283, 65536, 5, -524284, 65536, 5, -524285, 65536, 5, -524286, 65536, 5, -524287, 65536, 5, -524288, 65536, 5, -458753, 65536, 5, -458754, 65536, 5, -458755, 65536, 5, -458756, 65536, 5, -458757, 65536, 5, -458758, 65536, 5, -589819, 65536, 0, -589820, 65536, 0, -589821, 65536, 0, -589822, 65536, 0, -589823, 65536, 0, -589824, 65536, 0, -524289, 65536, 0, -524290, 65536, 0, -524291, 65536, 0, -524292, 65536, 0, -524293, 65536, 0, -524294, 65536, 0, -524282, 131072, 1, -589818, 131072, 0, -524295, 0, 0, -458759, 0, 1, -393223, 0, 1, -327687, 0, 1, -262151, 0, 1, -196615, 0, 1, -131079, 0, 1, -65543, 0, 1, -65535, 131072, 1, -2, 0, 1, -458746, 131072, 1, -393210, 131072, 1, -327674, 131072, 1, -262138, 131072, 1, -196602, 131072, 1, -131066, 131072, 1)
 
 [node name="bottomWalls_mainFurniture" type="TileMap" parent="." unique_id=243622433]
 tile_set = SubResource("TileSet_bux8e")
 format = 2
-layer_0/tile_data = PackedInt32Array(-458746, 589824, 5, -131062, 589824, 5, -131063, 589824, 5, -131064, 589824, 5, -131065, 589824, 5, -131066, 589824, 5, -131068, 65536, 4, -131069, 65536, 4, -131071, 65536, 4, -65538, 65536, 4, -65539, 65536, 4, -65540, 65536, 4, -65541, 65536, 4, -65542, 65536, 4, -458748, 983040, 0, -458755, 196608, 7, -327670, 393216, 7, -393206, 393216, 6, -393209, 458752, 6, -327673, 458752, 7, -196598, 458752, 8, -196599, 393216, 8, -131070, 65536, 0, -131067, 65536, 0, -393211, 720896, 1, -458747, 720896, 0, -393217, 851968, 0, -327681, 851968, 1, -458752, 917504, 0, -393216, 917504, 1, -262148, 1638400, 4, -196612, 1638400, 5, -262147, 1703936, 4, -196611, 1703936, 5, -524287, 1507328, 1, -458758, 1900544, 7, -393222, 1900544, 8, -458757, 1966080, 7, -393221, 1966080, 8, -327679, 1179648, 0, -262143, 1179648, 1)
+layer_0/tile_data = PackedInt32Array(-131068, 65536, 4, -131069, 65536, 4, -131071, 65536, 4, -65538, 65536, 4, -65539, 65536, 4, -65540, 65536, 4, -65541, 65536, 4, -65542, 65536, 4, -458748, 983040, 0, -458755, 196608, 7, -131070, 65536, 0, -131067, 65536, 0, -393211, 720896, 1, -458747, 720896, 0, -393217, 851968, 0, -327681, 851968, 1, -458752, 917504, 0, -393216, 917504, 1, -262148, 1638400, 4, -196612, 1638400, 5, -262147, 1703936, 4, -196611, 1703936, 5, -524287, 1507328, 1, -458758, 1900544, 7, -393222, 1900544, 8, -458757, 1966080, 7, -393221, 1966080, 8, -327679, 1179648, 0, -262143, 1179648, 1)
 
 [node name="door_furniture2" type="TileMap" parent="." unique_id=1801802202]
 z_index = 1
 tile_set = SubResource("TileSet_b5rd7")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262135, 1048576, 2, -262134, 1048576, 2, -196599, 1048576, 5, -196598, 1114112, 5, -262148, 65537, 3)
+layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262148, 65537, 3)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_lpotk")]
 
@@ -1330,18 +1335,6 @@ offset_top = 156.0
 offset_right = -255.0
 offset_bottom = 502.0
 
-[node name="book" type="Sprite2D" parent="." unique_id=1524524443]
-position = Vector2(-56, -71)
-texture = ExtResource("9_bo2c8")
-
-[node name="Area2D" type="Area2D" parent="book" unique_id=329324957]
-position = Vector2(0, 1)
-script = ExtResource("10_bo2c8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="book/Area2D" unique_id=1709222058]
-scale = Vector2(2.18, 2.18)
-shape = SubResource("CircleShape2D_t7ogi")
-
 [node name="laptop" type="Sprite2D" parent="." unique_id=1577483022]
 position = Vector2(63, -108)
 texture = ExtResource("10_3i3di")
@@ -1353,7 +1346,61 @@ position = Vector2(-10, 17)
 scale = Vector2(2.835, 2.835)
 shape = SubResource("CircleShape2D_wy206")
 
+[node name="Notebook" type="Node" parent="." unique_id=1560363194]
+
+[node name="Area2D" type="Area2D" parent="Notebook" unique_id=329324957]
+position = Vector2(-56, -70)
+scale = Vector2(1.0080624, 1)
+script = ExtResource("10_t7ogi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Notebook/Area2D" unique_id=670339578]
+position = Vector2(-1.9840043, 1)
+scale = Vector2(-1.879368, 1.4631293)
+shape = SubResource("CircleShape2D_kmut5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Notebook" unique_id=1524524443]
+visible = false
+position = Vector2(-56, -71)
+scale = Vector2(1.0080624, 1)
+texture = ExtResource("9_bo2c8")
+
+[node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("12_t7ogi")]
+
+[node name="Journal Manager" parent="." unique_id=2009897970 instance=ExtResource("13_wy206")]
+
+[node name="Journal" parent="." unique_id=334019793 instance=ExtResource("14_kmut5")]
+visible = false
+offset_left = -70.0
+offset_top = -138.00002
+offset_right = 167.0
+offset_bottom = 103.999985
+scale = Vector2(0.5608843, 0.5233478)
+
+[node name="MainCam" type="Camera2D" parent="." unique_id=639273933]
+position = Vector2(-1, -73)
+zoom = Vector2(-4.955, -4.955)
+
+[node name="noteCam" type="Camera2D" parent="." unique_id=827048629]
+position = Vector2(-563, -386)
+zoom = Vector2(1.635, 1.635)
+
+[node name="noteCam2" type="Camera2D" parent="." unique_id=1173260324]
+position = Vector2(906, -392)
+zoom = Vector2(1.51, 1.51)
+
+[node name="laptopCam" type="Camera2D" parent="." unique_id=339556278]
+position = Vector2(-524, 334)
+zoom = Vector2(1.83, 1.83)
+
+[node name="TextBox" type="Node2D" parent="." unique_id=622259253]
+position = Vector2(-112, 50)
+
+[node name="textbox" parent="TextBox" unique_id=1827124815 instance=ExtResource("15_wy206")]
+offset = Vector2(0, -200)
+scale = Vector2(0.54, 0.54)
+transform = Transform2D(0.54, 0, 0, 0.54, 0, -200)
+
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
-[connection signal="body_entered" from="book/Area2D" to="book/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="book/Area2D" to="book/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Notebook/Area2D" to="Notebook/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Notebook/Area2D" to="Notebook/Area2D" method="_on_body_exited"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0dt4yw3x5531"
-path="res://.godot/imported/timeMachine-idle.png-0db991421ab5d472442e59a3507099b8.ctex"
+path="res://.godot/imported/timeMachine-idle.png-8a5a7c5a20549e2702cc15622a03b3f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hotel-Labratory-Sprites/Sprite Sheets/Time Machine/timeMachine-idle.png"
-dest_files=["res://.godot/imported/timeMachine-idle.png-0db991421ab5d472442e59a3507099b8.ctex"]
+source_file="res://assets/Hotel-Labratory-Sprites/Sprite Sheets/Time Machine/timeMachine-idle.png"
+dest_files=["res://.godot/imported/timeMachine-idle.png-8a5a7c5a20549e2702cc15622a03b3f3.ctex"]
 
 [params]
 

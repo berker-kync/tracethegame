@@ -5,14 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_rgy80"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_m5tsb"]
 [ext_resource type="Script" uid="uid://civccgpwl7uu8" path="res://scenes/room102exit.gd" id="4_m5tsb"]
-[ext_resource type="Texture2D" uid="uid://oqrx7r5ei8sd" path="res://Assets/trash assets/Trashcan.png" id="5_boroa"]
-[ext_resource type="Texture2D" uid="uid://bhtydgbyad0cn" path="res://Assets/trash assets/TrashcanHighlighted.png" id="6_46i0o"]
+[ext_resource type="Texture2D" uid="uid://oqrx7r5ei8sd" path="res://assets/trash assets/Trashcan.png" id="5_boroa"]
+[ext_resource type="Texture2D" uid="uid://bhtydgbyad0cn" path="res://assets/trash assets/TrashcanHighlighted.png" id="6_46i0o"]
 [ext_resource type="Script" uid="uid://cn2ygmgox4axp" path="res://scenes/smartwatchProximity.gd" id="6_lnjf1"]
-[ext_resource type="Texture2D" uid="uid://bvt1vo3e0jg66" path="res://Assets/laptop.png" id="7_46i0o"]
-[ext_resource type="Texture2D" uid="uid://cyfl75m6kenb5" path="res://Assets/custom/smartwatch3.png" id="7_xgesw"]
-[ext_resource type="Texture2D" uid="uid://d0dxoqdnl2yjy" path="res://Assets/custom/smartwatch3_highlighted.png" id="8_bok3y"]
+[ext_resource type="Texture2D" uid="uid://bvt1vo3e0jg66" path="res://assets/laptop.png" id="7_46i0o"]
+[ext_resource type="Texture2D" uid="uid://cyfl75m6kenb5" path="res://assets/custom/smartwatch3.png" id="7_xgesw"]
+[ext_resource type="Texture2D" uid="uid://d0dxoqdnl2yjy" path="res://assets/custom/smartwatch3_highlighted.png" id="8_bok3y"]
 [ext_resource type="Script" uid="uid://daqqmqipve842" path="res://scenes/trashcanProximity.gd" id="8_rxgkc"]
-[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://Assets/custom/computerHighlighted.png" id="10_ldsjk"]
+[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://assets/custom/computerHighlighted.png" id="10_ldsjk"]
 [ext_resource type="Script" uid="uid://xpxpewnpatdw" path="res://scenes/laptop102proximity.gd" id="11_pwdxe"]
 [ext_resource type="PackedScene" uid="uid://c11hy008cw1go" path="res://scenes/Elise Room 2/journal_manager.tscn" id="15_6c62v"]
 [ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="17_acvm4"]
@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dnctnylfux18c" path="res://scenes/drag_scene.tscn" id="22_fhs0f"]
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="23_qvmc7"]
 [ext_resource type="PackedScene" uid="uid://bfwmefjuv1pqc" path="res://scenes/recieptinfo.tscn" id="23_tsyow"]
-[ext_resource type="Script" uid="uid://dtxacfnnn4ij6" path="res://Scripts/recieptinfo.gd" id="24_f76db"]
+[ext_resource type="Script" uid="uid://dtxacfnnn4ij6" path="res://scripts/recieptinfo.gd" id="24_f76db"]
 [ext_resource type="PackedScene" uid="uid://cms2dc00n1of2" path="res://scenes/smartwatch.tscn" id="26_lvk0s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m5tsb"]
@@ -1212,6 +1212,7 @@ _data = {
 }
 
 [node name="Room102" type="Node2D" unique_id=1972692697]
+position = Vector2(0, -6)
 script = ExtResource("1_ath7v")
 
 [node name="Door" type="Node2D" parent="." unique_id=966456411]
@@ -1314,7 +1315,7 @@ offset_bottom = 112.0
 scale = Vector2(0.4758116, 0.5265603)
 
 [node name="Smartwatch" type="Node2D" parent="." unique_id=1747529140]
-position = Vector2(28, -56)
+position = Vector2(31, -56)
 
 [node name="watch" type="Sprite2D" parent="Smartwatch" unique_id=471561838]
 scale = Vector2(0.657582, 0.4159378)
@@ -1332,10 +1333,10 @@ scale = Vector2(0.3406388, 0.3230623)
 script = ExtResource("6_lnjf1")
 
 [node name="PasswordCreator" parent="." unique_id=939163187 instance=ExtResource("19_bok3y")]
-position = Vector2(290, -222)
+position = Vector2(-964, -817)
 
 [node name="Camera2D2" type="Camera2D" parent="." unique_id=982450341]
-position = Vector2(378, -82)
+position = Vector2(-867, -676)
 zoom = Vector2(2.505, 2.505)
 script = ExtResource("20_uryn5")
 
@@ -1388,6 +1389,9 @@ offset_right = 80.00012
 offset_bottom = 124.0
 theme_override_font_sizes/font_size = 85
 text = "<"
+
+[node name="smartwatchUnlockCam" type="Camera2D" parent="." unique_id=2026460829]
+position = Vector2(2157, 543)
 
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]

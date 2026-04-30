@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w2ks5ta5fr1e"
-path="res://.godot/imported/playButton.png-b3066731a1061b897b8350d12c876b68.ctex"
+path="res://.godot/imported/playButton.png-45cc0056e92782047fc99ac34d3dc7c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hotel-Labratory-Sprites/playButton.png"
-dest_files=["res://.godot/imported/playButton.png-b3066731a1061b897b8350d12c876b68.ctex"]
+source_file="res://assets/Hotel-Labratory-Sprites/playButton.png"
+dest_files=["res://.godot/imported/playButton.png-45cc0056e92782047fc99ac34d3dc7c3.ctex"]
 
 [params]
 

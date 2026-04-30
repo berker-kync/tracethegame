@@ -1,6 +1,10 @@
 extends Control
 @onready var textbox: CanvasLayer = $"../textbox"
-var watchScreen = load("res://scenes/smartwatch.tscn")
+@onready var panel: Panel = $"../Panel"
+@onready var pixel_watch: Sprite2D = $"../PixelWatch"
+@onready var label: Label = $"../Label"
+@onready var control: Control = $"."
+@onready var camera_2: Camera2D = $"../camera2"
 
 var attempts = 0
 var max_attempts = 3
@@ -42,6 +46,9 @@ func check_password():
 		reset_attempts()
 		await get_tree().create_timer(1.0).timeout
 		#get_tree().change_scene_to_packed(watchScreen)
+		Global.points = 22
+		camera_2.make_current()
+		
 		textbox.queueText("It looks like they always go on the same walk in Atlanta.")
 		textbox.queueText("Allowing their device to track their location means it recognises patterns.")
 		

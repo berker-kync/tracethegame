@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qbc5j2nj8xy4"
-path="res://.godot/imported/hackedlaptop.jpg-e7d75ff64285b143cb099f52cd0e19b4.ctex"
+path="res://.godot/imported/hackedlaptop.jpg-b57c79cc1b01a10e7fda0e92aba95000.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hackedlaptop.jpg"
-dest_files=["res://.godot/imported/hackedlaptop.jpg-e7d75ff64285b143cb099f52cd0e19b4.ctex"]
+source_file="res://assets/hackedlaptop.jpg"
+dest_files=["res://.godot/imported/hackedlaptop.jpg-b57c79cc1b01a10e7fda0e92aba95000.ctex"]
 
 [params]
 
