@@ -32,7 +32,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (journalConst.person2 != true && who.selected == 3 && job.selected == 1 && purpose.selected == 3):
+	if (journalConst.person2 != true && who.selected == 6 && job.selected == 3 && purpose.selected == 1):
 		who.visible = false
 		job.visible = false
 		purpose.visible = false

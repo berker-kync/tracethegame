@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://py0bjnmoysdb"]
+
+[ext_resource type="PackedScene" uid="uid://sey423fbithb" path="res://scenes/PasswordSystem.tscn" id="1_fr05c"]
+[ext_resource type="PackedScene" uid="uid://cms2dc00n1of2" path="res://scenes/smartwatch.tscn" id="2_kvquf"]
+
+[node name="smartwatchfinal" type="Node2D" unique_id=1435453267]
+
+[node name="PasswordCreator" parent="." unique_id=939163187 instance=ExtResource("1_fr05c")]
+
+[node name="Panel" parent="." unique_id=809774779 instance=ExtResource("2_kvquf")]
+visible = false
+offset_left = -214.0
+offset_top = -46.999996
+offset_right = 695.0198
+offset_bottom = 455.74518
+scale = Vector2(0.63216484, 0.63096803)

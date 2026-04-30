@@ -26,7 +26,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (journalConst.person1 != true && who.selected == 3 && job.selected == 1 && purpose.selected == 5):
+	if (journalConst.person1 != true && who.selected == 3 && job.selected == 6 && purpose.selected == 6):
 		who.visible = false
 		job.visible = false
 		purpose.visible = false
@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 		journalConst.person1 = true
 		audio_stream_player.play()
 		
-		
+
 	if (journalConst.room1keyItem1 == true):
 		book.visible = true
 	if (journalConst.room1keyItem2 == true):

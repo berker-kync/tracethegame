@@ -76,19 +76,25 @@ offset_right = 160.0
 offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 6
+item_count = 9
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
 popup/item_1/text = "John Smithy"
 popup/item_1/id = 1
-popup/item_2/text = "Davis Johnson"
-popup/item_2/id = 3
+popup/item_2/text = "Randy White"
+popup/item_2/id = 6
 popup/item_3/text = "Jerry Hopperson"
 popup/item_3/id = 2
 popup/item_4/text = "Cody Hackins"
 popup/item_4/id = 4
 popup/item_5/text = "Jane Doe"
 popup/item_5/id = 5
+popup/item_6/text = "Davis Johnson"
+popup/item_6/id = 3
+popup/item_7/text = "Damon Gant"
+popup/item_7/id = 7
+popup/item_8/text = "Andre Fessik"
+popup/item_8/id = 8
 
 [node name="LabelJob" type="Label" parent="tab1" unique_id=1770472482]
 visible = false
@@ -108,21 +114,51 @@ offset_right = 163.26434
 offset_bottom = 76.98632
 selected = 0
 fit_to_longest_item = false
-item_count = 7
+item_count = 9
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
-popup/item_1/text = "Author"
-popup/item_1/id = 4
+popup/item_1/text = "Hacker"
+popup/item_1/id = 3
 popup/item_2/text = "Business Person"
 popup/item_2/id = 1
 popup/item_3/text = "Influencer"
 popup/item_3/id = 2
-popup/item_4/text = "Hacker"
-popup/item_4/id = 3
-popup/item_5/text = "Receptionist"
-popup/item_5/id = 5
-popup/item_6/text = "Detective"
-popup/item_6/id = 6
+popup/item_4/text = "Receptionist"
+popup/item_4/id = 5
+popup/item_5/text = "Detective"
+popup/item_5/id = 6
+popup/item_6/text = "Author"
+popup/item_6/id = 4
+popup/item_7/text = "Telemarketer"
+popup/item_7/id = 7
+popup/item_8/text = "Game Developer"
+popup/item_8/id = 8
+
+[node name="Purpose" type="OptionButton" parent="tab1" unique_id=1352869357]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 92.0
+offset_right = 182.0
+offset_bottom = 123.0
+selected = 0
+fit_to_longest_item = false
+item_count = 8
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+popup/item_1/text = "Convention"
+popup/item_1/id = 1
+popup/item_2/text = "Work Conference"
+popup/item_2/id = 2
+popup/item_3/text = "Birthday"
+popup/item_3/id = 5
+popup/item_4/text = "Malicious Intent"
+popup/item_4/id = 4
+popup/item_5/text = "School Trip"
+popup/item_5/id = 6
+popup/item_6/text = "Public Speech"
+popup/item_6/id = 3
+popup/item_7/text = "Studying Abroad"
+popup/item_7/id = 7
 
 [node name="LabelPurpose" type="Label" parent="tab1" unique_id=1157881803]
 visible = false
@@ -133,28 +169,6 @@ offset_right = 144.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Public Speech"
-
-[node name="Purpose" type="OptionButton" parent="tab1" unique_id=638739888]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 92.00001
-offset_right = 182.0
-offset_bottom = 123.00001
-selected = 0
-fit_to_longest_item = false
-item_count = 6
-popup/item_0/text = "Why are they here?"
-popup/item_0/id = 0
-popup/item_1/text = "Convention"
-popup/item_1/id = 1
-popup/item_2/text = "Conference"
-popup/item_2/id = 2
-popup/item_3/text = "Birthday"
-popup/item_3/id = 5
-popup/item_4/text = "Malicious Intent"
-popup/item_4/id = 4
-popup/item_5/text = "Public Speech"
-popup/item_5/id = 3
 
 [node name="JournalWin1" type="Node" parent="tab1" unique_id=663195433]
 script = ExtResource("1_qbr07")
@@ -228,7 +242,7 @@ offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Davis Johnson"
 
-[node name="Who" type="OptionButton" parent="tab2" unique_id=1578286435]
+[node name="Who" type="OptionButton" parent="tab2" unique_id=747900831]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 3.0
@@ -236,15 +250,25 @@ offset_right = 160.0
 offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 4
+item_count = 9
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
 popup/item_1/text = "John Smithy"
 popup/item_1/id = 1
-popup/item_2/text = "Davis Johnson"
-popup/item_2/id = 3
-popup/item_3/text = "Johnny Bravo"
+popup/item_2/text = "Randy White"
+popup/item_2/id = 6
+popup/item_3/text = "Jerry Hopperson"
 popup/item_3/id = 2
+popup/item_4/text = "Cody Hackins"
+popup/item_4/id = 4
+popup/item_5/text = "Jane Doe"
+popup/item_5/id = 5
+popup/item_6/text = "Davis Johnson"
+popup/item_6/id = 3
+popup/item_7/text = "Damon Gant"
+popup/item_7/id = 7
+popup/item_8/text = "Andre Fessik"
+popup/item_8/id = 8
 
 [node name="LabelJob" type="Label" parent="tab2" unique_id=70363868]
 visible = false
@@ -256,25 +280,59 @@ offset_bottom = 81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Influencer"
 
-[node name="Job" type="OptionButton" parent="tab2" unique_id=1656814357]
+[node name="Job" type="OptionButton" parent="tab2" unique_id=62650753]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 49.0
-offset_right = 163.0
-offset_bottom = 80.0
+offset_left = 1.2643433
+offset_top = 45.986324
+offset_right = 163.26434
+offset_bottom = 76.98633
 selected = 0
 fit_to_longest_item = false
-item_count = 5
+item_count = 9
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
-popup/item_1/text = "Author"
-popup/item_1/id = 4
+popup/item_1/text = "Hacker"
+popup/item_1/id = 3
 popup/item_2/text = "Business Person"
 popup/item_2/id = 1
 popup/item_3/text = "Influencer"
 popup/item_3/id = 2
-popup/item_4/text = "Hacker"
-popup/item_4/id = 3
+popup/item_4/text = "Receptionist"
+popup/item_4/id = 5
+popup/item_5/text = "Detective"
+popup/item_5/id = 6
+popup/item_6/text = "Author"
+popup/item_6/id = 4
+popup/item_7/text = "Telemarketer"
+popup/item_7/id = 7
+popup/item_8/text = "Game Developer"
+popup/item_8/id = 8
+
+[node name="Purpose" type="OptionButton" parent="tab2" unique_id=1584706744]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 92.00001
+offset_right = 182.0
+offset_bottom = 123.00001
+selected = 0
+fit_to_longest_item = false
+item_count = 8
+popup/item_0/text = "Why are they here?"
+popup/item_0/id = 0
+popup/item_1/text = "Convention"
+popup/item_1/id = 1
+popup/item_2/text = "Work Conference"
+popup/item_2/id = 2
+popup/item_3/text = "Birthday"
+popup/item_3/id = 5
+popup/item_4/text = "Malicious Intent"
+popup/item_4/id = 4
+popup/item_5/text = "School Trip"
+popup/item_5/id = 6
+popup/item_6/text = "Public Speech"
+popup/item_6/id = 3
+popup/item_7/text = "Studying Abroad"
+popup/item_7/id = 7
 
 [node name="LabelPurpose" type="Label" parent="tab2" unique_id=1204011585]
 visible = false
@@ -285,26 +343,6 @@ offset_right = 144.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Convention"
-
-[node name="Purpose" type="OptionButton" parent="tab2" unique_id=1395810370]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 92.0
-offset_right = 182.0
-offset_bottom = 123.0
-selected = 0
-fit_to_longest_item = false
-item_count = 5
-popup/item_0/text = "Why are they here?"
-popup/item_0/id = 0
-popup/item_1/text = "Convention"
-popup/item_1/id = 1
-popup/item_2/text = "Conference"
-popup/item_2/id = 2
-popup/item_3/text = "Public Speech"
-popup/item_3/id = 3
-popup/item_4/text = "Birthday"
-popup/item_4/id = 4
 
 [node name="JournalWin2" type="Node" parent="tab2" unique_id=926548069]
 script = ExtResource("8_ct5k2")
@@ -356,7 +394,7 @@ offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Jerry Hopperson"
 
-[node name="Who" type="OptionButton" parent="tab3" unique_id=1167885406]
+[node name="Who" type="OptionButton" parent="tab3" unique_id=1446734027]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 3.0
@@ -364,15 +402,25 @@ offset_right = 160.0
 offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 4
+item_count = 9
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
 popup/item_1/text = "John Smithy"
 popup/item_1/id = 1
-popup/item_2/text = "Davis Johnson"
-popup/item_2/id = 3
+popup/item_2/text = "Randy White"
+popup/item_2/id = 6
 popup/item_3/text = "Jerry Hopperson"
 popup/item_3/id = 2
+popup/item_4/text = "Cody Hackins"
+popup/item_4/id = 4
+popup/item_5/text = "Jane Doe"
+popup/item_5/id = 5
+popup/item_6/text = "Davis Johnson"
+popup/item_6/id = 3
+popup/item_7/text = "Damon Gant"
+popup/item_7/id = 7
+popup/item_8/text = "Andre Fessik"
+popup/item_8/id = 8
 
 [node name="LabelJob" type="Label" parent="tab3" unique_id=520665726]
 visible = false
@@ -384,25 +432,33 @@ offset_bottom = 81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Author"
 
-[node name="Job" type="OptionButton" parent="tab3" unique_id=1921965886]
+[node name="Job" type="OptionButton" parent="tab3" unique_id=2096392702]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 49.0
-offset_right = 144.0
-offset_bottom = 80.0
+offset_left = 1.2643433
+offset_top = 45.986324
+offset_right = 163.26434
+offset_bottom = 76.98633
 selected = 0
 fit_to_longest_item = false
-item_count = 5
+item_count = 9
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
-popup/item_1/text = "Author"
-popup/item_1/id = 4
+popup/item_1/text = "Hacker"
+popup/item_1/id = 3
 popup/item_2/text = "Business Person"
 popup/item_2/id = 1
 popup/item_3/text = "Influencer"
 popup/item_3/id = 2
-popup/item_4/text = "Hacker"
-popup/item_4/id = 3
+popup/item_4/text = "Receptionist"
+popup/item_4/id = 5
+popup/item_5/text = "Detective"
+popup/item_5/id = 6
+popup/item_6/text = "Author"
+popup/item_6/id = 4
+popup/item_7/text = "Telemarketer"
+popup/item_7/id = 7
+popup/item_8/text = "Game Developer"
+popup/item_8/id = 8
 
 [node name="LabelPurpose" type="Label" parent="tab3" unique_id=96889463]
 visible = false
@@ -414,23 +470,31 @@ offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Public Speech"
 
-[node name="Purpose" type="OptionButton" parent="tab3" unique_id=2032249930]
+[node name="Purpose" type="OptionButton" parent="tab3" unique_id=1922603980]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 92.0
-offset_right = 144.0
-offset_bottom = 123.0
+offset_top = 92.00001
+offset_right = 182.0
+offset_bottom = 123.00001
 selected = 0
 fit_to_longest_item = false
-item_count = 4
+item_count = 8
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
 popup/item_1/id = 1
-popup/item_2/text = "Conference"
+popup/item_2/text = "Work Conference"
 popup/item_2/id = 2
-popup/item_3/text = "Public Speech"
-popup/item_3/id = 3
+popup/item_3/text = "Birthday"
+popup/item_3/id = 5
+popup/item_4/text = "Malicious Intent"
+popup/item_4/id = 4
+popup/item_5/text = "School Trip"
+popup/item_5/id = 6
+popup/item_6/text = "Public Speech"
+popup/item_6/id = 3
+popup/item_7/text = "Studying Abroad"
+popup/item_7/id = 7
 
 [node name="KeyItemsLabel" type="Label" parent="tab3" unique_id=84640163]
 layout_mode = 0
@@ -459,7 +523,7 @@ offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Cody Hackerson"
 
-[node name="Who" type="OptionButton" parent="tab4" unique_id=2067071992]
+[node name="Who" type="OptionButton" parent="tab4" unique_id=341432358]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 3.0
@@ -467,19 +531,25 @@ offset_right = 160.0
 offset_bottom = 34.0
 selected = 0
 fit_to_longest_item = false
-item_count = 6
+item_count = 9
 popup/item_0/text = "Who are they?"
 popup/item_0/id = 0
 popup/item_1/text = "John Smithy"
 popup/item_1/id = 1
-popup/item_2/text = "Davis Johnson"
-popup/item_2/id = 3
+popup/item_2/text = "Randy White"
+popup/item_2/id = 6
 popup/item_3/text = "Jerry Hopperson"
 popup/item_3/id = 2
 popup/item_4/text = "Cody Hackins"
 popup/item_4/id = 4
 popup/item_5/text = "Jane Doe"
 popup/item_5/id = 5
+popup/item_6/text = "Davis Johnson"
+popup/item_6/id = 3
+popup/item_7/text = "Damon Gant"
+popup/item_7/id = 7
+popup/item_8/text = "Andre Fessik"
+popup/item_8/id = 8
 
 [node name="LabelJob" type="Label" parent="tab4" unique_id=1648725942]
 visible = false
@@ -491,29 +561,33 @@ offset_bottom = 81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Hacker"
 
-[node name="Job" type="OptionButton" parent="tab4" unique_id=220265071]
+[node name="Job" type="OptionButton" parent="tab4" unique_id=640933040]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 49.0
-offset_right = 144.0
-offset_bottom = 80.0
+offset_left = 1.2643433
+offset_top = 45.986324
+offset_right = 163.26434
+offset_bottom = 76.98633
 selected = 0
 fit_to_longest_item = false
-item_count = 7
+item_count = 9
 popup/item_0/text = "What's their job?"
 popup/item_0/id = 0
-popup/item_1/text = "Author"
-popup/item_1/id = 4
+popup/item_1/text = "Hacker"
+popup/item_1/id = 3
 popup/item_2/text = "Business Person"
 popup/item_2/id = 1
 popup/item_3/text = "Influencer"
 popup/item_3/id = 2
-popup/item_4/text = "Hacker"
-popup/item_4/id = 3
-popup/item_5/text = "Receptionist"
-popup/item_5/id = 5
-popup/item_6/text = "Detective"
-popup/item_6/id = 6
+popup/item_4/text = "Receptionist"
+popup/item_4/id = 5
+popup/item_5/text = "Detective"
+popup/item_5/id = 6
+popup/item_6/text = "Author"
+popup/item_6/id = 4
+popup/item_7/text = "Telemarketer"
+popup/item_7/id = 7
+popup/item_8/text = "Game Developer"
+popup/item_8/id = 8
 
 [node name="LabelPurpose" type="Label" parent="tab4" unique_id=247640139]
 visible = false
@@ -533,19 +607,23 @@ offset_right = 144.0
 offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 6
+item_count = 8
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
 popup/item_1/id = 1
-popup/item_2/text = "Conference"
+popup/item_2/text = "Work Conference"
 popup/item_2/id = 2
 popup/item_3/text = "Birthday"
 popup/item_3/id = 5
 popup/item_4/text = "Malicious Intent"
 popup/item_4/id = 4
-popup/item_5/text = "Public Speech"
-popup/item_5/id = 3
+popup/item_5/text = "School Trip"
+popup/item_5/id = 6
+popup/item_6/text = "Public Speech"
+popup/item_6/id = 3
+popup/item_7/text = "Studying Abroad"
+popup/item_7/id = 7
 
 [node name="KeyItemsLabel" type="Label" parent="tab4" unique_id=325504792]
 layout_mode = 0

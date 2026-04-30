@@ -23,6 +23,7 @@ script = ExtResource("4_7u2xn")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="tutorial text" unique_id=1509550176]
 stream = ExtResource("5_tpxys")
+volume_db = -30.333
 
 [node name="Timer" type="Timer" parent="tutorial text/AudioStreamPlayer2" unique_id=262609784]
 wait_time = 0.09
