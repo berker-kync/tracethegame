@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6kvggxqdsdk"
-path="res://.godot/imported/receiptdescription.png-c2e5333d6aaf375856e59311870f4976.ctex"
+path="res://.godot/imported/receiptdescription.png-962c3792300f1507306de60f1fed8050.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/custom/receiptdescription.png"
-dest_files=["res://.godot/imported/receiptdescription.png-c2e5333d6aaf375856e59311870f4976.ctex"]
+source_file="res://Assets/custom/receiptdescription.png"
+dest_files=["res://.godot/imported/receiptdescription.png-962c3792300f1507306de60f1fed8050.ctex"]
 
 [params]
 

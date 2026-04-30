@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1ineoneleigo"
-path="res://.godot/imported/elevator-pixelised.png-30022ff765bc2aa0a43c1e1b32a64242.ctex"
+path="res://.godot/imported/elevator-pixelised.png-7c0a46a4ba2f7612960588b37e1d47dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/elevator-pixelised.png"
-dest_files=["res://.godot/imported/elevator-pixelised.png-30022ff765bc2aa0a43c1e1b32a64242.ctex"]
+source_file="res://Assets/elevator-pixelised.png"
+dest_files=["res://.godot/imported/elevator-pixelised.png-7c0a46a4ba2f7612960588b37e1d47dd.ctex"]
 
 [params]
 

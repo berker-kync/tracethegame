@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blotb2wxepjqa"
-path="res://.godot/imported/bigmaze.png-2a92e9ebfb1a24a0caa09d8c4eb0b4bf.ctex"
+path="res://.godot/imported/bigmaze.png-8865aa6c2237f2161536c37862cebd89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/custom/bigmaze.png"
-dest_files=["res://.godot/imported/bigmaze.png-2a92e9ebfb1a24a0caa09d8c4eb0b4bf.ctex"]
+source_file="res://Assets/custom/bigmaze.png"
+dest_files=["res://.godot/imported/bigmaze.png-8865aa6c2237f2161536c37862cebd89.ctex"]
 
 [params]
 

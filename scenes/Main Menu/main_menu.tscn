@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c2slcciavn46i"]
 
 [ext_resource type="Script" uid="uid://b8sevfe7wxm6f" path="res://scenes/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="FontFile" uid="uid://cqlync0i7a3b5" path="res://assets/at01.ttf" id="2_1o70l"]
-[ext_resource type="Script" uid="uid://cwwptwetu1j4e" path="res://scripts/audio_control.gd" id="3_iscfu"]
+[ext_resource type="FontFile" uid="uid://cqlync0i7a3b5" path="res://Assets/at01.ttf" id="2_1o70l"]
+[ext_resource type="Script" uid="uid://cwwptwetu1j4e" path="res://Scripts/audio_control.gd" id="3_iscfu"]
+[ext_resource type="Texture2D" uid="uid://bab1o7dk26o5q" path="res://Assets/custom/hotel2pixel.png" id="4_iscfu"]
 
 [sub_resource type="Theme" id="Theme_ekxnf"]
 
@@ -11,6 +12,9 @@ color = Color(0, 0.2596667, 0.41, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_gc41w"]
 color = Color(0.072600015, 0.19272003, 0.33, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3e4a6"]
+texture = ExtResource("4_iscfu")
 
 [node name="MainMenu" type="Node2D" unique_id=1283482954]
 script = ExtResource("1_l6cm7")
@@ -151,6 +155,19 @@ text = "BACK"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=406879805]
 bus = &"Music"
+
+[node name="Panel" type="Panel" parent="." unique_id=1449496649]
+z_index = -2
+offset_right = 1155.0
+offset_bottom = 646.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3e4a6")
+
+[node name="Panel2" type="Panel" parent="." unique_id=616440023]
+z_index = -1
+offset_right = 1158.0
+offset_bottom = 644.0
+mouse_filter = 2
 
 [connection signal="pressed" from="CenterContainer/MainButtons/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/MainButtons/Settings" to="." method="_on_settings_pressed"]

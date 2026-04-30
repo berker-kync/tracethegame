@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byuvr181tylrf"
-path="res://.godot/imported/laptopdescription.png-a5a753f9d2561d48465f9ffa6ecd86e9.ctex"
+path="res://.godot/imported/laptopdescription.png-14602575cd4cba9e59ca209d83e9fd0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/custom/laptopdescription.png"
-dest_files=["res://.godot/imported/laptopdescription.png-a5a753f9d2561d48465f9ffa6ecd86e9.ctex"]
+source_file="res://Assets/custom/laptopdescription.png"
+dest_files=["res://.godot/imported/laptopdescription.png-14602575cd4cba9e59ca209d83e9fd0c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://44ef18hxk3o2"
-path="res://.godot/imported/pixel friends.png-102904eec993feba8f1515bab19662ec.ctex"
+path="res://.godot/imported/pixel friends.png-f52617a70b72c84f4f2555c9e0062e7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/instagram pix/pixel friends.png"
-dest_files=["res://.godot/imported/pixel friends.png-102904eec993feba8f1515bab19662ec.ctex"]
+source_file="res://Assets/instagram pix/pixel friends.png"
+dest_files=["res://.godot/imported/pixel friends.png-f52617a70b72c84f4f2555c9e0062e7b.ctex"]
 
 [params]
 

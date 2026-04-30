@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0dxoqdnl2yjy"
-path="res://.godot/imported/smartwatch3_highlighted.png-29ab328d7518c6b16cef08f8d4af9bcf.ctex"
+path="res://.godot/imported/smartwatch3_highlighted.png-22fd6ab5bd97e4da79e172c266b8e1d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/custom/smartwatch3_highlighted.png"
-dest_files=["res://.godot/imported/smartwatch3_highlighted.png-29ab328d7518c6b16cef08f8d4af9bcf.ctex"]
+source_file="res://Assets/custom/smartwatch3_highlighted.png"
+dest_files=["res://.godot/imported/smartwatch3_highlighted.png-22fd6ab5bd97e4da79e172c266b8e1d5.ctex"]
 
 [params]
 

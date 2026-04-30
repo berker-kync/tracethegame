@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dixm6yx1yb16j"
-path="res://.godot/imported/hacked.jpg-c33226b1128670cfb3d02ae1745daddf.ctex"
+path="res://.godot/imported/hacked.jpg-baf703fa513675ebaa3eb941b5648634.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hacked.jpg"
-dest_files=["res://.godot/imported/hacked.jpg-c33226b1128670cfb3d02ae1745daddf.ctex"]
+source_file="res://Assets/hacked.jpg"
+dest_files=["res://.godot/imported/hacked.jpg-baf703fa513675ebaa3eb941b5648634.ctex"]
 
 [params]
 
