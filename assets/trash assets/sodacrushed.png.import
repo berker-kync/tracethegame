@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boril5es6p1hd"
-path="res://.godot/imported/sodacrushed.png-04548fc30f85d7464c2afde674230276.ctex"
+path="res://.godot/imported/sodacrushed.png-28d128d29f7ed750088d5f1310125892.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/trash assets/sodacrushed.png"
-dest_files=["res://.godot/imported/sodacrushed.png-04548fc30f85d7464c2afde674230276.ctex"]
+source_file="res://assets/trash assets/sodacrushed.png"
+dest_files=["res://.godot/imported/sodacrushed.png-28d128d29f7ed750088d5f1310125892.ctex"]
 
 [params]
 

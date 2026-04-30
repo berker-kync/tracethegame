@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bow0lautig0bi"
-path="res://.godot/imported/helixhighlighted.png-49f8a65307b9b235f438e59ae67d05b0.ctex"
+path="res://.godot/imported/helixhighlighted.png-b4a484ea44975727859d37a0d675734b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/custom/helixhighlighted.png"
-dest_files=["res://.godot/imported/helixhighlighted.png-49f8a65307b9b235f438e59ae67d05b0.ctex"]
+source_file="res://assets/custom/helixhighlighted.png"
+dest_files=["res://.godot/imported/helixhighlighted.png-b4a484ea44975727859d37a0d675734b.ctex"]
 
 [params]
 
