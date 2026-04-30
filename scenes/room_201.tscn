@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://g3ulekgepu7"]
 
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_im4vo"]
+[ext_resource type="Texture2D" uid="uid://e36lin5f75h8" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="2_8eb02"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_lpotk"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_bux8e"]
 [ext_resource type="Script" uid="uid://lkq4j52n42uy" path="res://scenes/room201exit.gd" id="4_lpotk"]
 [ext_resource type="PackedScene" uid="uid://bkby73jte4arq" path="res://scenes/gamerNotepad.tscn" id="5_axjdi"]
 [ext_resource type="PackedScene" uid="uid://dgjwdequ8631w" path="res://scenes/gamerNotepad_2.tscn" id="6_b5rd7"]
 [ext_resource type="PackedScene" uid="uid://ywvipujyws66" path="res://scenes/hacked_laptop.tscn" id="7_b5rd7"]
+[ext_resource type="Texture2D" uid="uid://bfiajkpyw156y" path="res://assets/custom/Book_closed_highlighted.png" id="9_bo2c8"]
+[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://assets/custom/computerHighlighted.png" id="10_3i3di"]
+[ext_resource type="Script" uid="uid://bswlk5ihigkr" path="res://scripts/book.gd" id="10_bo2c8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpotk"]
 texture = ExtResource("1_im4vo")
@@ -1137,9 +1141,77 @@ texture = ExtResource("1_im4vo")
 29:15/0 = 0
 30:15/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mlc2"]
+texture = ExtResource("2_8eb02")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_b5rd7"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_axjdi")
+sources/1 = SubResource("TileSetAtlasSource_8mlc2")
 
 [sub_resource type="Animation" id="Animation_63f0u"]
 resource_name = "Fade_in"
@@ -1195,6 +1267,10 @@ _data = {
 &"RESET": SubResource("Animation_037ag")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_t7ogi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wy206"]
+
 [node name="room201" type="Node2D" unique_id=2091286415]
 
 [node name="Floor_sideWalls_backWalls" type="TileMap" parent="." unique_id=5208988]
@@ -1211,7 +1287,7 @@ layer_0/tile_data = PackedInt32Array(-458746, 589824, 5, -131062, 589824, 5, -13
 z_index = 1
 tile_set = SubResource("TileSet_b5rd7")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262135, 1048576, 2, -262134, 1048576, 2, -196599, 1048576, 5, -196598, 1114112, 5)
+layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262135, 1048576, 2, -262134, 1048576, 2, -196599, 1048576, 5, -196598, 1114112, 5, -262148, 65537, 3)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_lpotk")]
 
@@ -1254,5 +1330,30 @@ offset_top = 156.0
 offset_right = -255.0
 offset_bottom = 502.0
 
+[node name="book" type="Sprite2D" parent="." unique_id=1524524443]
+position = Vector2(-56, -71)
+texture = ExtResource("9_bo2c8")
+
+[node name="Area2D" type="Area2D" parent="book" unique_id=329324957]
+position = Vector2(0, 1)
+script = ExtResource("10_bo2c8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book/Area2D" unique_id=1709222058]
+scale = Vector2(2.18, 2.18)
+shape = SubResource("CircleShape2D_t7ogi")
+
+[node name="laptop" type="Sprite2D" parent="." unique_id=1577483022]
+position = Vector2(63, -108)
+texture = ExtResource("10_3i3di")
+
+[node name="Area2D" type="Area2D" parent="laptop" unique_id=568739121]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laptop/Area2D" unique_id=791568898]
+position = Vector2(-10, 17)
+scale = Vector2(2.835, 2.835)
+shape = SubResource("CircleShape2D_wy206")
+
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
+[connection signal="body_entered" from="book/Area2D" to="book/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="book/Area2D" to="book/Area2D" method="_on_body_exited"]
