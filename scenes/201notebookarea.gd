@@ -6,15 +6,17 @@ var proximity = false
 @onready var pickupsound: AudioStreamPlayer = $"../pickupsound"
 @onready var label: Label = $"../Label"
 @onready var note_cam: Camera2D = $"../../noteCam"
-@onready var main_cam: Camera2D = $"../../MainCam"
+@onready var main_cam: Camera2D = $"../../mainCam"
 @onready var textbox: CanvasLayer = $"../../TextBox/textbox"
+var firstinteract = false
 
 func _process(delta: float) -> void:
-	if proximity == true && Input.is_action_just_pressed("interact"):
+	if proximity == true && Input.is_action_just_pressed("interact") && firstinteract == false:
+		firstinteract = true
 		print("interacted") 
-		note_cam.makecurrent();
+		note_cam.make_current();
 		journal_animator.play("Pause")
-		pickupsound.play()
+		#pickupsound.play()
 		textbox.queueText("Looks like they have left their passwords easily accessible!")
 		textbox.queueText("This is very common.. many keep their password on the notes app in their phone!")
 		textbox.queueText("Let's solve the puzzle to discover more.")

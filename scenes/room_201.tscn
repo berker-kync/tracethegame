@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://g3ulekgepu7"]
 
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_im4vo"]
-[ext_resource type="Texture2D" uid="uid://e36lin5f75h8" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="2_8eb02"]
+[ext_resource type="Script" uid="uid://b0jdpyrnqnjek" path="res://scenes/room_201.gd" id="1_kmut5"]
+[ext_resource type="Texture2D" uid="uid://e36lin5f75h8" path="res://Assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="2_8eb02"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_lpotk"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_bux8e"]
 [ext_resource type="Script" uid="uid://lkq4j52n42uy" path="res://scenes/room201exit.gd" id="4_lpotk"]
 [ext_resource type="PackedScene" uid="uid://bkby73jte4arq" path="res://scenes/gamerNotepad.tscn" id="5_axjdi"]
 [ext_resource type="PackedScene" uid="uid://dgjwdequ8631w" path="res://scenes/gamerNotepad_2.tscn" id="6_b5rd7"]
 [ext_resource type="PackedScene" uid="uid://ywvipujyws66" path="res://scenes/hacked_laptop.tscn" id="7_b5rd7"]
-[ext_resource type="Texture2D" uid="uid://bfiajkpyw156y" path="res://assets/custom/Book_closed_highlighted.png" id="9_bo2c8"]
-[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://assets/custom/computerHighlighted.png" id="10_3i3di"]
+[ext_resource type="Texture2D" uid="uid://bfiajkpyw156y" path="res://Assets/custom/Book_closed_highlighted.png" id="9_bo2c8"]
+[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://Assets/custom/computerHighlighted.png" id="10_3i3di"]
 [ext_resource type="Script" uid="uid://bj56g6goobgie" path="res://scenes/201notebookarea.gd" id="10_t7ogi"]
+[ext_resource type="Script" uid="uid://chux76v1nqaar" path="res://scenes/computer201.gd" id="11_edmqw"]
 [ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="12_t7ogi"]
 [ext_resource type="PackedScene" uid="uid://c11hy008cw1go" path="res://scenes/Elise Room 2/journal_manager.tscn" id="13_wy206"]
 [ext_resource type="PackedScene" uid="uid://d4f24npwnmsep" path="res://scenes/Elise Room 2/Journal.tscn" id="14_kmut5"]
@@ -1277,6 +1279,7 @@ _data = {
 radius = 9.782553
 
 [node name="room201" type="Node2D" unique_id=2091286415]
+script = ExtResource("1_kmut5")
 
 [node name="Floor_sideWalls_backWalls" type="TileMap" parent="." unique_id=5208988]
 tile_set = SubResource("TileSet_mv304")
@@ -1300,7 +1303,9 @@ layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537,
 
 [node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("3_bux8e")]
 position = Vector2(0, -12)
+scale = Vector2(0.84130335, 0.84308964)
 script = ExtResource("4_lpotk")
+proximity = false
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=558461725]
 libraries/ = SubResource("AnimationLibrary_b5rd7")
@@ -1340,6 +1345,7 @@ position = Vector2(63, -108)
 texture = ExtResource("10_3i3di")
 
 [node name="Area2D" type="Area2D" parent="laptop" unique_id=568739121]
+script = ExtResource("11_edmqw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="laptop/Area2D" unique_id=791568898]
 position = Vector2(-10, 17)
@@ -1376,10 +1382,6 @@ offset_right = 167.0
 offset_bottom = 103.999985
 scale = Vector2(0.5608843, 0.5233478)
 
-[node name="MainCam" type="Camera2D" parent="." unique_id=639273933]
-position = Vector2(-1, -73)
-zoom = Vector2(-4.955, -4.955)
-
 [node name="noteCam" type="Camera2D" parent="." unique_id=827048629]
 position = Vector2(-563, -386)
 zoom = Vector2(1.635, 1.635)
@@ -1400,7 +1402,13 @@ offset = Vector2(0, -200)
 scale = Vector2(0.54, 0.54)
 transform = Transform2D(0.54, 0, 0, 0.54, 0, -200)
 
+[node name="mainCam" type="Camera2D" parent="." unique_id=357839286]
+position = Vector2(-2, -75)
+zoom = Vector2(5.14, 5.14)
+
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
+[connection signal="body_entered" from="laptop/Area2D" to="laptop/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="laptop/Area2D" to="laptop/Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="Notebook/Area2D" to="Notebook/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Notebook/Area2D" to="Notebook/Area2D" method="_on_body_exited"]

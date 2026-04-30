@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxdu7nsd3o4tb"
-path="res://.godot/imported/MazeStartArrow.png-1d754a009d418451dd6612d12d749906.ctex"
+path="res://.godot/imported/MazeStartArrow.png-fe9618c549b60f893d73139e4338aadc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/custom/MazeStartArrow.png"
-dest_files=["res://.godot/imported/MazeStartArrow.png-1d754a009d418451dd6612d12d749906.ctex"]
+source_file="res://Assets/custom/MazeStartArrow.png"
+dest_files=["res://.godot/imported/MazeStartArrow.png-fe9618c549b60f893d73139e4338aadc.ctex"]
 
 [params]
 

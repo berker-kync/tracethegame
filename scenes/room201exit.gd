@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var transition: AnimationPlayer = $"../../Transition"
-var proximity = false
+@export var proximity = false
 var hall2 = load("res://scenes/hallway_2.tscn")
 
 func _ready() -> void:
