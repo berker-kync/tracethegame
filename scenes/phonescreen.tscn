@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b4dsbwgsk6e2d"]
+
+[ext_resource type="Texture2D" uid="uid://c7xahk7ewq5vm" path="res://assets/phone.png" id="1_2uae3"]
+
+[node name="Panel" type="Panel" unique_id=636871672]
+offset_right = 666.0
+offset_bottom = 340.0
+
+[node name="Phone" type="Sprite2D" parent="." unique_id=1120635014]
+position = Vector2(296, 165)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("1_2uae3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1735702610]
+position = Vector2(328, 176)
+zoom = Vector2(1.53, 1.53)

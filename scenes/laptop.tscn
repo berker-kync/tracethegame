@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://du3o4hsvc7le2" path="res://assets/laptop assets/smiley pix.png" id="2_creid"]
 [ext_resource type="Script" uid="uid://c1x7b55k34v1j" path="res://scripts/smile.gd" id="3_2jtcb"]
 [ext_resource type="Texture2D" uid="uid://bh7yuuv67x7ld" path="res://assets/laptop assets/settings pix.png" id="3_ejyiq"]
-[ext_resource type="Script" uid="uid://di74a7ttfin07" path="res://scenes/note_hover.gd" id="3_s55a7"]
+[ext_resource type="Script" path="res://scenes/note_hover.gd" id="3_s55a7"]
 [ext_resource type="Texture2D" uid="uid://cxhvxtkb6nu0" path="res://assets/laptop assets/postit pix.png" id="4_2jtcb"]
 [ext_resource type="Script" uid="uid://dfp881v5srcs6" path="res://scripts/settings.gd" id="5_jj3px"]
 [ext_resource type="Texture2D" uid="uid://cyx0r1s80bw6m" path="res://assets/instagram frame.jpg" id="7_2jtcb"]
@@ -129,20 +129,20 @@ size = Vector2(81, 76)
 light_mask = 2
 visibility_layer = 2
 z_index = -1
-position = Vector2(425, 266)
-scale = Vector2(1.0768293, 0.95750093)
+position = Vector2(759, 497)
+scale = Vector2(1.812, 1.612)
 texture = ExtResource("1_5ijq5")
 
 [node name="Post-it" type="Sprite2D" parent="." unique_id=428326985]
 z_index = 1
-position = Vector2(672, 177)
+position = Vector2(1291, 365)
 texture = ExtResource("4_2jtcb")
 
 [node name="Label" type="Label" parent="Post-it" unique_id=1414148699]
-offset_left = -130.0
-offset_top = -76.0
-offset_right = 147.0
-offset_bottom = 110.78
+offset_left = -127.0
+offset_top = -80.0
+offset_right = 150.0
+offset_bottom = 106.78
 rotation = -0.17453292
 theme = SubResource("Theme_5t67i")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -158,11 +158,13 @@ position = Vector2(376, 180)
 script = ExtResource("3_s55a7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Post-it/Area2D" unique_id=1003140048]
-position = Vector2(-370, -165)
+position = Vector2(-388, -197)
 scale = Vector2(16.924265, 12.123255)
 shape = SubResource("RectangleShape2D_s55a7")
 
 [node name="Smile" type="Area2D" parent="." unique_id=462045203]
+position = Vector2(20, 91)
+scale = Vector2(1.75, 1.75)
 script = ExtResource("3_2jtcb")
 
 [node name="Smile Gram" type="Sprite2D" parent="Smile" unique_id=297762661]
@@ -191,6 +193,7 @@ shape = SubResource("RectangleShape2D_jj3px")
 
 [node name="Smilesgram" type="Area2D" parent="." unique_id=411268928]
 visible = false
+scale = Vector2(1.76, 1.76)
 
 [node name="post1" type="Sprite2D" parent="Smilesgram" unique_id=800281343]
 position = Vector2(108.473, 347)
@@ -365,8 +368,8 @@ texture = ExtResource("16_s55a7")
 flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2049456633]
-position = Vector2(424, 261)
-zoom = Vector2(1.1, 1.1)
+position = Vector2(757, 476)
+zoom = Vector2(0.68, 0.68)
 
 [node name="TextBox" type="Node2D" parent="." unique_id=516323826]
 position = Vector2(-421, -25)

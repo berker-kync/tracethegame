@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_lpotk"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_bux8e"]
 [ext_resource type="Script" uid="uid://lkq4j52n42uy" path="res://scenes/room201exit.gd" id="4_lpotk"]
+[ext_resource type="PackedScene" uid="uid://bkby73jte4arq" path="res://scenes/gamerNotepad.tscn" id="5_axjdi"]
+[ext_resource type="PackedScene" uid="uid://dgjwdequ8631w" path="res://scenes/gamerNotepad_2.tscn" id="6_b5rd7"]
+[ext_resource type="PackedScene" uid="uid://ywvipujyws66" path="res://scenes/hacked_laptop.tscn" id="7_b5rd7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpotk"]
 texture = ExtResource("1_im4vo")
@@ -1223,6 +1226,7 @@ libraries/ = SubResource("AnimationLibrary_b5rd7")
 autoplay = &"Fade_in"
 
 [node name="ColorRect" type="ColorRect" parent="Transition" unique_id=86676616]
+visible = false
 z_index = 15
 offset_left = -204.0
 offset_top = -168.0
@@ -1231,6 +1235,24 @@ offset_bottom = -128.0
 scale = Vector2(10.199798, 5.9961843)
 color = Color(0, 0, 0, 0)
 metadata/_edit_use_anchors_ = true
+
+[node name="Notebook1" parent="." unique_id=1478063652 instance=ExtResource("5_axjdi")]
+offset_left = -912.0
+offset_top = -596.0
+offset_right = -203.0
+offset_bottom = -181.0
+
+[node name="Notebook2" parent="." unique_id=1130772553 instance=ExtResource("6_b5rd7")]
+offset_left = 548.0
+offset_top = -605.0
+offset_right = 1257.0
+offset_bottom = -190.0
+
+[node name="HackedLaptop" parent="." unique_id=216460490 instance=ExtResource("7_b5rd7")]
+offset_left = -807.0
+offset_top = 156.0
+offset_right = -255.0
+offset_bottom = 502.0
 
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
