@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 Global="*uid://b5mvu3m1r7yb0"
 journalConst="*uid://bxng1u6uiji3v"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
