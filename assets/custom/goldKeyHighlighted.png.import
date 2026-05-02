@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcf68glm7xm5j"
-path="res://.godot/imported/goldKeyHighlighted.png-f5cf4f4e06ce228aa57554d072244959.ctex"
+path="res://.godot/imported/goldKeyHighlighted.png-a695f676f6ee3f2d783d60e968320130.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/custom/goldKeyHighlighted.png"
-dest_files=["res://.godot/imported/goldKeyHighlighted.png-f5cf4f4e06ce228aa57554d072244959.ctex"]
+source_file="res://assets/custom/goldKeyHighlighted.png"
+dest_files=["res://.godot/imported/goldKeyHighlighted.png-a695f676f6ee3f2d783d60e968320130.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csi3nrhwry607"
-path="res://.godot/imported/12 by 12 sigma maze.png-880bed0d92202b4b6a251c87be240c0a.ctex"
+path="res://.godot/imported/12 by 12 sigma maze.png-3a24ef1def795698396351ed92d7c5e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/custom/12 by 12 sigma maze.png"
-dest_files=["res://.godot/imported/12 by 12 sigma maze.png-880bed0d92202b4b6a251c87be240c0a.ctex"]
+source_file="res://assets/custom/12 by 12 sigma maze.png"
+dest_files=["res://.godot/imported/12 by 12 sigma maze.png-3a24ef1def795698396351ed92d7c5e4.ctex"]
 
 [params]
 

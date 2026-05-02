@@ -8,3 +8,4 @@ var droppable = false
 var drop_position = null
 var is_dragging = false
 var points = 0
+var current_interactable = null

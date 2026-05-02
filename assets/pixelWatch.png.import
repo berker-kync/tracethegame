@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyt11riunqfqt"
-path="res://.godot/imported/pixelWatch.png-2189a2e3e5494c7ab66610b5329f8216.ctex"
+path="res://.godot/imported/pixelWatch.png-7d15f38c68e00f86b1388e3274a013a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pixelWatch.png"
-dest_files=["res://.godot/imported/pixelWatch.png-2189a2e3e5494c7ab66610b5329f8216.ctex"]
+source_file="res://assets/pixelWatch.png"
+dest_files=["res://.godot/imported/pixelWatch.png-7d15f38c68e00f86b1388e3274a013a2.ctex"]
 
 [params]
 

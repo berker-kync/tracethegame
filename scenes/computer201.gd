@@ -1,34 +1,52 @@
 extends Area2D
-@export var proximity = false
-@onready var highlighted: Sprite2D = $"../Sprite2D"
-@onready var journal_animator: AnimationPlayer = $"../../JournalAnimator"
-@onready var panel: Panel = $"../Panel"
-@onready var pickupsound: AudioStreamPlayer = $"../pickupsound"
-@onready var label: Label = $"../Label"
+
+var proximity = false
+var active = true
+
+@onready var highlighted: Area2D = $"."
 @onready var laptop_cam: Camera2D = $"../../laptopCam"
 @onready var main_cam: Camera2D = $"../../mainCam"
-@onready var textbox: CanvasLayer = $"../../TextBox/textbox"
+
 var firstinteract = false
 
-func _process(delta: float) -> void:
-	if proximity == true && Input.is_action_just_pressed("interact"):
-		#firstinteract = true
-		print("interacted") 
-		laptop_cam.make_current();
-		journal_animator.play("Pause")
-		#pickupsound.play()
-		
 
-	if (laptop_cam.is_current() && Input.is_action_just_pressed("escape")):
+func _process(delta: float) -> void:
+
+	# HARD LOCK: laptop cannot run if disabled
+	if not active:
+		return
+
+	if not proximity:
+		return
+
+
+	# OPEN LAPTOP
+	if Global.current_interactable == self && proximity == true && Input.is_action_just_pressed("interact") and not firstinteract:
+		firstinteract = true
+		print("interacted laptop")
+
+		laptop_cam.make_current()
+
+
+	# CLOSE LAPTOP
+	if laptop_cam.is_current() and Input.is_action_just_pressed("escape"):
 		main_cam.make_current()
-		journal_animator.play("RESET")
+		firstinteract = false
+
 
 func _on_body_entered(body: Node2D) -> void:
-	#highlighted.visible = true
+	highlighted.visible = true
+	Global.current_interactable = self
 	proximity = true
-	print("entered")
+	print("entered laptop")
+
 
 func _on_body_exited(body: Node2D) -> void:
-	#highlighted.visible = false
+	highlighted.visible = false
+	Global.current_interactable = null
 	proximity = false
-	print("exited")
+	print("exited laptop")
+
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.

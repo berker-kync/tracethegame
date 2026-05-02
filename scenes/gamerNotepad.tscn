@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dn32gfn8j42n" path="res://scenes/goodpass2.tscn" id="9_rqthg"]
 [ext_resource type="PackedScene" uid="uid://c2b347afgfqud" path="res://scenes/goodpass3.tscn" id="10_u68yy"]
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="12_r7hlr"]
+[ext_resource type="AudioStream" uid="uid://c1muxgoje0ldl" path="res://scenes/sounds/Undertale Sound Effect - You Win!.mp3" id="13_7wd5w"]
+[ext_resource type="AudioStream" uid="uid://b25b8ilu8cqer" path="res://scenes/sounds/sfx general/sfx-cancel.wav" id="14_rcfnh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8ogw"]
 bg_color = Color(0.2702222, 0.7001321, 0.39128894, 1)
@@ -216,7 +218,14 @@ theme_override_font_sizes/font_size = 39
 text = "Weak 
 Passwords"
 
+[node name="winsound" type="AudioStreamPlayer" parent="." unique_id=351787614]
+stream = ExtResource("13_7wd5w")
+
+[node name="pointsound" type="AudioStreamPlayer" parent="." unique_id=1064468833]
+stream = ExtResource("14_rcfnh")
+
 [connection signal="area_entered" from="badzone" to="badzone" method="_on_area_entered"]
 [connection signal="area_exited" from="badzone" to="badzone" method="_on_area_exited"]
 [connection signal="area_entered" from="goodzone" to="goodzone" method="_on_area_entered"]
 [connection signal="area_exited" from="goodzone" to="goodzone" method="_on_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

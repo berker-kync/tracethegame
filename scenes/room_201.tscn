@@ -2,21 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://ck1mirsrdilij" path="res://HotelAssets_NEW/Tileset.png" id="1_im4vo"]
 [ext_resource type="Script" uid="uid://b0jdpyrnqnjek" path="res://scenes/room_201.gd" id="1_kmut5"]
-[ext_resource type="Texture2D" uid="uid://e36lin5f75h8" path="res://Assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="2_8eb02"]
+[ext_resource type="Texture2D" uid="uid://e36lin5f75h8" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="2_8eb02"]
 [ext_resource type="PackedScene" uid="uid://cdgjhulx821p8" path="res://scenes/player.tscn" id="2_lpotk"]
 [ext_resource type="PackedScene" uid="uid://bkvns0cof32gs" path="res://scenes/proximity_trigger.tscn" id="3_bux8e"]
 [ext_resource type="Script" uid="uid://lkq4j52n42uy" path="res://scenes/room201exit.gd" id="4_lpotk"]
 [ext_resource type="PackedScene" uid="uid://bkby73jte4arq" path="res://scenes/gamerNotepad.tscn" id="5_axjdi"]
 [ext_resource type="PackedScene" uid="uid://dgjwdequ8631w" path="res://scenes/gamerNotepad_2.tscn" id="6_b5rd7"]
 [ext_resource type="PackedScene" uid="uid://ywvipujyws66" path="res://scenes/hacked_laptop.tscn" id="7_b5rd7"]
-[ext_resource type="Texture2D" uid="uid://bfiajkpyw156y" path="res://Assets/custom/Book_closed_highlighted.png" id="9_bo2c8"]
-[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://Assets/custom/computerHighlighted.png" id="10_3i3di"]
+[ext_resource type="Texture2D" uid="uid://bfiajkpyw156y" path="res://assets/custom/Book_closed_highlighted.png" id="9_bo2c8"]
+[ext_resource type="Texture2D" uid="uid://cdkt7mqrpfl2q" path="res://assets/custom/computerHighlighted.png" id="10_3i3di"]
 [ext_resource type="Script" uid="uid://bj56g6goobgie" path="res://scenes/201notebookarea.gd" id="10_t7ogi"]
 [ext_resource type="Script" uid="uid://chux76v1nqaar" path="res://scenes/computer201.gd" id="11_edmqw"]
 [ext_resource type="PackedScene" uid="uid://cewg8n0kqkm4h" path="res://scenes/Elise Room 2/journal_animator.tscn" id="12_t7ogi"]
 [ext_resource type="PackedScene" uid="uid://c11hy008cw1go" path="res://scenes/Elise Room 2/journal_manager.tscn" id="13_wy206"]
 [ext_resource type="PackedScene" uid="uid://d4f24npwnmsep" path="res://scenes/Elise Room 2/Journal.tscn" id="14_kmut5"]
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="15_wy206"]
+[ext_resource type="Script" uid="uid://o1v2s6xss5xh" path="res://scripts/notebook_3.gd" id="18_8q8je"]
+[ext_resource type="Script" uid="uid://bnkkufk8gkpqj" path="res://scenes/phoneProxi.gd" id="19_6oluq"]
+[ext_resource type="PackedScene" uid="uid://cqmiuumptnfan" path="res://scripts/password_creator2.tscn" id="20_xi3kg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpotk"]
 texture = ExtResource("1_im4vo")
@@ -1278,6 +1281,9 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_kmut5"]
 radius = 9.782553
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8q8je"]
+radius = 27.166155
+
 [node name="room201" type="Node2D" unique_id=2091286415]
 script = ExtResource("1_kmut5")
 
@@ -1295,7 +1301,7 @@ layer_0/tile_data = PackedInt32Array(-131068, 65536, 4, -131069, 65536, 4, -1310
 z_index = 1
 tile_set = SubResource("TileSet_b5rd7")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262148, 65537, 3)
+layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262148, 65537, 3, -393217, 327681, 0)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_lpotk")]
 
@@ -1348,27 +1354,25 @@ texture = ExtResource("10_3i3di")
 script = ExtResource("11_edmqw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="laptop/Area2D" unique_id=791568898]
-position = Vector2(-10, 17)
+position = Vector2(6, 18)
 scale = Vector2(2.835, 2.835)
 shape = SubResource("CircleShape2D_wy206")
 
 [node name="Notebook" type="Node" parent="." unique_id=1560363194]
 
-[node name="Area2D" type="Area2D" parent="Notebook" unique_id=329324957]
-position = Vector2(-56, -70)
-scale = Vector2(1.0080624, 1)
-script = ExtResource("10_t7ogi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Notebook/Area2D" unique_id=670339578]
-position = Vector2(-1.9840043, 1)
-scale = Vector2(-1.879368, 1.4631293)
-shape = SubResource("CircleShape2D_kmut5")
-
 [node name="Sprite2D" type="Sprite2D" parent="Notebook" unique_id=1524524443]
-visible = false
 position = Vector2(-56, -71)
 scale = Vector2(1.0080624, 1)
 texture = ExtResource("9_bo2c8")
+
+[node name="Area2D" type="Area2D" parent="Notebook/Sprite2D" unique_id=329324957]
+position = Vector2(0, 1)
+script = ExtResource("10_t7ogi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Notebook/Sprite2D/Area2D" unique_id=670339578]
+position = Vector2(-1.9840043, 1)
+scale = Vector2(-1.879368, 1.4631293)
+shape = SubResource("CircleShape2D_kmut5")
 
 [node name="JournalAnimator" parent="." unique_id=1799699890 instance=ExtResource("12_t7ogi")]
 
@@ -1376,6 +1380,7 @@ texture = ExtResource("9_bo2c8")
 
 [node name="Journal" parent="." unique_id=334019793 instance=ExtResource("14_kmut5")]
 visible = false
+z_index = 5
 offset_left = -70.0
 offset_top = -138.00002
 offset_right = 167.0
@@ -1406,9 +1411,32 @@ transform = Transform2D(0.54, 0, 0, 0.54, 0, -200)
 position = Vector2(-2, -75)
 zoom = Vector2(5.14, 5.14)
 
+[node name="Notebook3" type="Node" parent="." unique_id=1715243324]
+script = ExtResource("18_8q8je")
+
+[node name="phone" type="Sprite2D" parent="." unique_id=984560085]
+
+[node name="Area2D" type="Area2D" parent="phone" unique_id=1641725345]
+position = Vector2(-8, -99)
+script = ExtResource("19_6oluq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="phone/Area2D" unique_id=542554824]
+position = Vector2(1, 8)
+shape = SubResource("CircleShape2D_8q8je")
+
+[node name="PasswordCreator" parent="." unique_id=939163187 instance=ExtResource("20_xi3kg")]
+position = Vector2(2276, 237)
+
+[node name="phonePasswordCamera" type="Camera2D" parent="." unique_id=2111629232]
+position = Vector2(2370, 371)
+zoom = Vector2(2.245, 2.245)
+
 [connection signal="body_entered" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_entered"]
 [connection signal="body_exited" from="Door/ProximityBox" to="Door/ProximityBox" method="_on_body_exited"]
 [connection signal="body_entered" from="laptop/Area2D" to="laptop/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="laptop/Area2D" to="laptop/Area2D" method="_on_body_exited"]
-[connection signal="body_entered" from="Notebook/Area2D" to="Notebook/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Notebook/Area2D" to="Notebook/Area2D" method="_on_body_exited"]
+[connection signal="input_event" from="laptop/Area2D" to="laptop/Area2D" method="_on_input_event"]
+[connection signal="body_entered" from="Notebook/Sprite2D/Area2D" to="Notebook/Sprite2D/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Notebook/Sprite2D/Area2D" to="Notebook/Sprite2D/Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="phone/Area2D" to="phone/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="phone/Area2D" to="phone/Area2D" method="_on_body_exited"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6s4m3cl7ffsy"
-path="res://.godot/imported/pixel outside shop.png-5e57b8734a418e5b1a55a7282133bf71.ctex"
+path="res://.godot/imported/pixel outside shop.png-20184bfd4566e3d67598ef8c7979895e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/instagram pix/pixel outside shop.png"
-dest_files=["res://.godot/imported/pixel outside shop.png-5e57b8734a418e5b1a55a7282133bf71.ctex"]
+source_file="res://assets/instagram pix/pixel outside shop.png"
+dest_files=["res://.godot/imported/pixel outside shop.png-20184bfd4566e3d67598ef8c7979895e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv13yr7ooaxk2"
-path="res://.godot/imported/crumpledpaper.png-e05fadabbe8407337b49e6aba88eedb1.ctex"
+path="res://.godot/imported/crumpledpaper.png-a09c5da6d83cc0ad94f7e2b3e0ad4357.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/custom/crumpledpaper.png"
-dest_files=["res://.godot/imported/crumpledpaper.png-e05fadabbe8407337b49e6aba88eedb1.ctex"]
+source_file="res://assets/custom/crumpledpaper.png"
+dest_files=["res://.godot/imported/crumpledpaper.png-a09c5da6d83cc0ad94f7e2b3e0ad4357.ctex"]
 
 [params]
 

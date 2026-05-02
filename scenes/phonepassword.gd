@@ -1,6 +1,8 @@
 extends Control
 @onready var textbox: CanvasLayer = $"../textbox"
-var phoneScreen = load("res://scenes/phonescreen.tscn")
+@onready var password_cam: Camera2D = $"../passwordCam"
+@onready var phone_cam: Camera2D = $"../phoneCam"
+
 
 var attempts = 0
 var max_attempts = 3
@@ -41,7 +43,8 @@ func check_password():
 		status_label.text = "✔ Correct!"
 		reset_attempts()
 		await get_tree().create_timer(1.0).timeout
-		get_tree().change_scene_to_packed(phoneScreen)
+		#get_tree().change_scene_to_packed(phoneScreen)
+		phone_cam.make_current()
 
 	else:
 		attempts += 1
