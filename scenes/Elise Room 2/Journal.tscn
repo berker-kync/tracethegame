@@ -12,9 +12,12 @@
 [ext_resource type="Script" uid="uid://bpnevk5kpp0g6" path="res://scenes/Elise Room 2/journal2win.gd" id="8_ct5k2"]
 [ext_resource type="AudioStream" uid="uid://dvv4y6kg6on2k" path="res://scenes/sounds/sfx general/sfx-maaagical3.wav" id="8_q2jlq"]
 [ext_resource type="Script" uid="uid://b8tiuu0rp00je" path="res://scenes/Elise Room 2/receiptcontainer.gd" id="9_bg7ji"]
-[ext_resource type="Texture2D" uid="uid://6kvggxqdsdk" path="res://assets/custom/receiptdescription.png" id="10_7843h"]
+[ext_resource type="Texture2D" uid="uid://cdcyvbgtymcl3" path="res://assets/journal evidence/recieptnotes.jpg" id="11_veuxe"]
 [ext_resource type="Script" uid="uid://coiyd7qiioivc" path="res://scenes/Elise Room 2/202panelcontainer1.gd" id="12_4sw32"]
 [ext_resource type="Texture2D" uid="uid://cyfl75m6kenb5" path="res://assets/custom/smartwatch3.png" id="13_sclml"]
+[ext_resource type="Script" uid="uid://bxydvy5ow775d" path="res://scripts/panel_container_2.gd" id="13_wsk5f"]
+[ext_resource type="Texture2D" uid="uid://i4wxa813i80e" path="res://assets/custom/smartwatch.png" id="14_8fvl1"]
+[ext_resource type="Texture2D" uid="uid://dyimnwkuc4a1r" path="res://assets/journal evidence/watchnotes.jpg" id="15_1jlf0"]
 [ext_resource type="Texture2D" uid="uid://dfca8l72o1c1t" path="res://assets/custom/202watchdescription.png" id="15_d88hs"]
 [ext_resource type="Texture2D" uid="uid://dw5h38ns3wcs" path="res://assets/custom/computer.png" id="15_oresk"]
 [ext_resource type="Script" uid="uid://dx1hdt8pu2ik6" path="res://scenes/Elise Room 2/laptopcontainer.gd" id="16_veuxe"]
@@ -351,7 +354,18 @@ script = ExtResource("8_ct5k2")
 visible = false
 position = Vector2(123.90674, 172.29202)
 scale = Vector2(0.75672877, 0.4523959)
-texture = ExtResource("10_7843h")
+texture = ExtResource("11_veuxe")
+
+[node name="KeyItemsLabel" type="Label" parent="tab2" unique_id=1007010362]
+layout_mode = 0
+offset_left = 7.5861206
+offset_top = 127.7843
+offset_right = 167.58612
+offset_bottom = 150.7843
+scale = Vector2(0.7419276, 0.88078636)
+theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
+theme_override_fonts/font = ExtResource("8_bg7ji")
+text = "Key Items:"
 
 [node name="PanelContainer1" type="PanelContainer" parent="tab2" unique_id=133594024]
 layout_mode = 0
@@ -367,16 +381,17 @@ position = Vector2(21, 19)
 scale = Vector2(2.125, 1.8125)
 texture = ExtResource("3_6ee85")
 
-[node name="KeyItemsLabel" type="Label" parent="tab2" unique_id=1007010362]
+[node name="PanelContainer2" type="PanelContainer" parent="tab2" unique_id=2097485458]
 layout_mode = 0
-offset_left = 7.5861197
-offset_top = 127.784294
-offset_right = 167.58612
-offset_bottom = 150.7843
-scale = Vector2(0.7419276, 0.88078636)
-theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
-theme_override_fonts/font = ExtResource("8_bg7ji")
-text = "Key Items:"
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_wsk5f")
+
+[node name="Watch" type="Sprite2D" parent="tab2/PanelContainer2" unique_id=177840490]
+texture = ExtResource("14_8fvl1")
+
+[node name="recieptDescription" type="Sprite2D" parent="tab2" unique_id=1067000141]
+texture = ExtResource("15_1jlf0")
 
 [node name="tab3" type="TabBar" parent="." unique_id=58732885]
 visible = false
@@ -506,6 +521,13 @@ scale = Vector2(0.7419276, 0.88078636)
 theme_override_colors/font_color = Color(0.0010853444, 0.0010853446, 0.0010853445, 1)
 theme_override_fonts/font = ExtResource("8_bg7ji")
 text = "Key Items:"
+
+[node name="PanelContainer1" type="PanelContainer" parent="tab3" unique_id=1784246672]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 152.0
+offset_right = 62.0
+offset_bottom = 192.0
 
 [node name="tab4" type="TabBar" parent="." unique_id=1213271918]
 visible = false
@@ -691,6 +713,8 @@ stream = ExtResource("8_q2jlq")
 [connection signal="mouse_exited" from="tab1/PanelContainer2" to="tab1/PanelContainer2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="tab3/PanelContainer1" to="tab3/PanelContainer1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tab3/PanelContainer1" to="tab3/PanelContainer1" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab4/PanelContainer" to="tab4/PanelContainer" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab4/PanelContainer" to="tab4/PanelContainer" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab4/PanelContainer2" to="tab4/PanelContainer2" method="_on_mouse_entered"]

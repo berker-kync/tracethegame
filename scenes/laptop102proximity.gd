@@ -1,18 +1,20 @@
 extends Area2D
 @onready var highlighted: Sprite2D = $"../highlighted"
 var laptopScene = load("res://scenes/laptop.tscn")
+var in_laptop_view = false
 var proximity = false
 #@onready var camera_2d_3: Camera2D = $"../../Camera2D3"
 @onready var laptopscreencam: Camera2D = $"../../laptopscreencam"
 @onready var main_cam: Camera2D = $"../../mainCam"
 
-func _process(delta: float) -> void:
-	if proximity == true && Input.is_action_just_pressed("interact"):
-		print("interacted") 
+func _process(delta):
+	if proximity and Input.is_action_just_pressed("interact") and not in_laptop_view:
 		laptopscreencam.make_current()
-		#get_tree().change_scene_to_packed(laptopScene)
-	if laptopscreencam.is_current() == true && Input.is_action_just_pressed("escape"):
+		in_laptop_view = true
+
+	elif in_laptop_view and Input.is_action_just_pressed("escape"):
 		main_cam.make_current()
+		in_laptop_view = false
 func _on_body_entered(_body: Node2D) -> void:
 	highlighted.visible = true
 	proximity = true
