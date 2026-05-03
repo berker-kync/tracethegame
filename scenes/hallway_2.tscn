@@ -878,6 +878,7 @@ position = Vector2(-1, -87)
 
 [node name="ProximityBox" parent="elevatorDoor" unique_id=1801853796 instance=ExtResource("4_hgere")]
 position = Vector2(1, 1)
+scale = Vector2(0.47999877, 0.52000123)
 script = ExtResource("5_1cbqy")
 
 [node name="room201Door" type="Node2D" parent="." unique_id=182218384]
@@ -885,6 +886,7 @@ position = Vector2(-96, -40)
 
 [node name="ProximityBox" parent="room201Door" unique_id=1121015891 instance=ExtResource("4_hgere")]
 position = Vector2(-1, 0)
+scale = Vector2(0.47999877, 0.52000105)
 script = ExtResource("6_e8v6b")
 
 [node name="room202Door" type="Node2D" parent="." unique_id=497308073]
@@ -892,6 +894,7 @@ position = Vector2(96, -40)
 
 [node name="ProximityBox" parent="room202Door" unique_id=840424317 instance=ExtResource("4_hgere")]
 position = Vector2(0, 1)
+scale = Vector2(0.47999877, 0.52000105)
 script = ExtResource("7_hgere")
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=1565425014]

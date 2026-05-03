@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dfca8l72o1c1t" path="res://assets/custom/202watchdescription.png" id="15_d88hs"]
 [ext_resource type="Texture2D" uid="uid://dw5h38ns3wcs" path="res://assets/custom/computer.png" id="15_oresk"]
 [ext_resource type="Texture2D" uid="uid://c6ir1uk5lcmxe" path="res://assets/custom/smartwatchdescription2.png" id="15_wsk5f"]
+[ext_resource type="Script" uid="uid://c33xpg1f0ldtp" path="res://scenes/Elise Room 2/journal3win.gd" id="16_8fvl1"]
 [ext_resource type="Script" uid="uid://dx1hdt8pu2ik6" path="res://scenes/Elise Room 2/laptopcontainer.gd" id="16_veuxe"]
 [ext_resource type="Texture2D" uid="uid://byuvr181tylrf" path="res://assets/custom/laptopdescription.png" id="17_im14q"]
 [ext_resource type="Script" uid="uid://7nvrbc66p2s0" path="res://scenes/Elise Room 2/journal4win.gd" id="18_im14q"]
@@ -47,7 +48,7 @@ mouse_filter = 0
 theme = SubResource("Theme_qbr07")
 theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
 theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_omu8a")
-current_tab = 1
+current_tab = 2
 tab_0/title = "101"
 tab_1/title = "102"
 tab_2/title = "201"
@@ -135,7 +136,7 @@ popup/item_6/text = "Author"
 popup/item_6/id = 4
 popup/item_7/text = "Telemarketer"
 popup/item_7/id = 7
-popup/item_8/text = "Game Developer"
+popup/item_8/text = "None"
 popup/item_8/id = 8
 
 [node name="Purpose" type="OptionButton" parent="tab1" unique_id=1352869357]
@@ -233,6 +234,7 @@ theme_override_fonts/font = ExtResource("8_bg7ji")
 text = "Key Items:"
 
 [node name="tab2" type="TabBar" parent="." unique_id=1487145056]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "102"
@@ -310,8 +312,8 @@ popup/item_6/text = "Author"
 popup/item_6/id = 4
 popup/item_7/text = "Telemarketer"
 popup/item_7/id = 7
-popup/item_8/text = "Game Developer"
-popup/item_8/id = 8
+popup/item_8/text = "None"
+popup/item_8/id = 9
 
 [node name="Purpose" type="OptionButton" parent="tab2" unique_id=1584706744]
 layout_mode = 0
@@ -407,7 +409,6 @@ scale = Vector2(0.45301923, 0.67622334)
 texture = ExtResource("15_wsk5f")
 
 [node name="tab3" type="TabBar" parent="." unique_id=58732885]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 metadata/_tab_name = "201"
@@ -420,7 +421,7 @@ offset_top = 7.0
 offset_right = 144.0
 offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Jerry Hopperson"
+text = "Jane Doe"
 
 [node name="Who" type="OptionButton" parent="tab3" unique_id=1446734027]
 layout_mode = 0
@@ -458,7 +459,7 @@ offset_top = 53.0
 offset_right = 144.0
 offset_bottom = 81.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Author"
+text = "None"
 
 [node name="Job" type="OptionButton" parent="tab3" unique_id=2096392702]
 layout_mode = 0
@@ -485,8 +486,8 @@ popup/item_6/text = "Author"
 popup/item_6/id = 4
 popup/item_7/text = "Telemarketer"
 popup/item_7/id = 7
-popup/item_8/text = "Game Developer"
-popup/item_8/id = 8
+popup/item_8/text = "None"
+popup/item_8/id = 9
 
 [node name="LabelPurpose" type="Label" parent="tab3" unique_id=96889463]
 visible = false
@@ -496,7 +497,7 @@ offset_top = 96.0
 offset_right = 144.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Public Speech"
+text = "Convention"
 
 [node name="Purpose" type="OptionButton" parent="tab3" unique_id=1922603980]
 layout_mode = 0
@@ -543,6 +544,9 @@ offset_left = 22.0
 offset_top = 152.0
 offset_right = 62.0
 offset_bottom = 192.0
+
+[node name="journal3win" type="Node" parent="tab3" unique_id=1335551419]
+script = ExtResource("16_8fvl1")
 
 [node name="tab4" type="TabBar" parent="." unique_id=1213271918]
 visible = false
@@ -623,8 +627,8 @@ popup/item_6/text = "Author"
 popup/item_6/id = 4
 popup/item_7/text = "Telemarketer"
 popup/item_7/id = 7
-popup/item_8/text = "Game Developer"
-popup/item_8/id = 8
+popup/item_8/text = "None"
+popup/item_8/id = 9
 
 [node name="LabelPurpose" type="Label" parent="tab4" unique_id=247640139]
 visible = false

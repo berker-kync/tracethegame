@@ -10,3 +10,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if journalConst.person1 == true && journalConst.person2 == true && journalConst.person3 == true && journalConst.person4 == true:
 		get_tree().change_scene_to_packed(ending)
+	

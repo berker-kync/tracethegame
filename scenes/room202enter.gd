@@ -9,6 +9,8 @@ var locked = true
 
 
 func _ready() -> void:
+	if journalConst.person1 && journalConst.person2 && journalConst.person3:
+		locked = false
 	# Ensure the animation_finished signal is connected
 	if not transition.is_connected("animation_finished", Callable(self, "_on_transition_animation_finished")):
 		transition.connect("animation_finished", Callable(self, "_on_transition_animation_finished"))
@@ -22,7 +24,7 @@ func _process(delta: float) -> void:
 			proximity = false
 			print("Interacted, locked")
 			textbox.queueText("This person has a Virtual Private Network (VPN) installed, blocking my path.")
-			textbox.queueText("I'll need to find another way in.")
+			textbox.queueText("I'll need to solve all 3 other identities before getting in.")
 
 func _on_body_entered(_body: Node2D) -> void:
 	proximity = true
