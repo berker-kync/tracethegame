@@ -3,7 +3,7 @@ extends Area2D
 var proximity = false
 var active = true
 
-#@onready var highlighted: Area2D = $"."
+@onready var highlighted: Sprite2D = $"../highlighted"
 @onready var main_cam: Camera2D = $"../../mainCam"
 @onready var phone_password_camera: Camera2D = $"../../phonePasswordCamera"
 @onready var laptop = get_node("../../Laptop")
@@ -36,14 +36,14 @@ func _process(delta: float) -> void:
 		main_cam.make_current()
 
 func _on_body_entered(body: Node2D) -> void:
-	#highlighted.visible = true
+	highlighted.visible = true
 	proximity = true
 	Global.current_interactable = self
 	print("entered phone")
 
 
 func _on_body_exited(body: Node2D) -> void:
-	#highlighted.visible = false
+	highlighted.visible = false
 	proximity = false
 	Global.current_interactable = null
 	print("exited phone")

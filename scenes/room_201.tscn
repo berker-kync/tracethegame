@@ -19,7 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://c6refs8f5tqk1" path="res://scenes/tutorialText.tscn" id="15_wy206"]
 [ext_resource type="Script" uid="uid://o1v2s6xss5xh" path="res://scripts/notebook_3.gd" id="18_8q8je"]
 [ext_resource type="Script" uid="uid://bnkkufk8gkpqj" path="res://scenes/phoneProxi.gd" id="19_6oluq"]
+[ext_resource type="Texture2D" uid="uid://dfer6r0hodcy2" path="res://assets/custom/phone.png" id="19_xi3kg"]
 [ext_resource type="PackedScene" uid="uid://cqmiuumptnfan" path="res://scripts/password_creator2.tscn" id="20_xi3kg"]
+[ext_resource type="Texture2D" uid="uid://5q6sx2r3q7jr" path="res://assets/custom/phon-highlightede.png" id="21_orc0q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lpotk"]
 texture = ExtResource("1_im4vo")
@@ -1301,7 +1303,7 @@ layer_0/tile_data = PackedInt32Array(-131068, 65536, 4, -131069, 65536, 4, -1310
 z_index = 1
 tile_set = SubResource("TileSet_b5rd7")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262148, 65537, 3, -393217, 327681, 0)
+layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537, 1048576, 6, -131072, 1114112, 6, -262148, 65537, 3)
 
 [node name="Player" parent="." unique_id=1926654213 instance=ExtResource("2_lpotk")]
 
@@ -1309,7 +1311,7 @@ layer_0/tile_data = PackedInt32Array(-1, 1048576, 7, -65536, 1114112, 7, -65537,
 
 [node name="ProximityBox" parent="Door" unique_id=1801853796 instance=ExtResource("3_bux8e")]
 position = Vector2(0, -12)
-scale = Vector2(0.84130335, 0.84308964)
+scale = Vector2(0.4625239, -0.484911)
 script = ExtResource("4_lpotk")
 proximity = false
 
@@ -1351,6 +1353,8 @@ position = Vector2(63, -108)
 texture = ExtResource("10_3i3di")
 
 [node name="Area2D" type="Area2D" parent="laptop" unique_id=568739121]
+position = Vector2(-15, -2.9999995)
+scale = Vector2(0.7229606, 0.7276782)
 script = ExtResource("11_edmqw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="laptop/Area2D" unique_id=791568898]
@@ -1380,7 +1384,7 @@ shape = SubResource("CircleShape2D_kmut5")
 
 [node name="Journal" parent="." unique_id=334019793 instance=ExtResource("14_kmut5")]
 visible = false
-z_index = 5
+z_index = 99
 offset_left = -70.0
 offset_top = -138.00002
 offset_right = 167.0
@@ -1415,14 +1419,20 @@ zoom = Vector2(5.14, 5.14)
 script = ExtResource("18_8q8je")
 
 [node name="phone" type="Sprite2D" parent="." unique_id=984560085]
+position = Vector2(-7, -99)
+texture = ExtResource("19_xi3kg")
 
 [node name="Area2D" type="Area2D" parent="phone" unique_id=1641725345]
-position = Vector2(-8, -99)
+scale = Vector2(0.61291116, 0.5613587)
 script = ExtResource("19_6oluq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="phone/Area2D" unique_id=542554824]
 position = Vector2(1, 8)
 shape = SubResource("CircleShape2D_8q8je")
+
+[node name="highlighted" type="Sprite2D" parent="phone" unique_id=1403669321]
+visible = false
+texture = ExtResource("21_orc0q")
 
 [node name="PasswordCreator" parent="." unique_id=939163187 instance=ExtResource("20_xi3kg")]
 position = Vector2(2276, 237)

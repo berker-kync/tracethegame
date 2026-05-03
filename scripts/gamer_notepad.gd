@@ -20,6 +20,8 @@ func _process(delta: float) -> void:
 		print("win")
 		Global.points = 0
 
+		journalConst.room3keyItem1 = true
+		
 		winsound.play()
 		timer.start()
 		
