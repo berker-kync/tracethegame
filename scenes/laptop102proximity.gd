@@ -8,13 +8,15 @@ var proximity = false
 @onready var main_cam: Camera2D = $"../../mainCam"
 
 func _process(delta):
-	if proximity and Input.is_action_just_pressed("interact") and not in_laptop_view:
+	if (proximity == true && Input.is_action_just_pressed("interact")):
 		laptopscreencam.make_current()
-		in_laptop_view = true
+		#in_laptop_view = true
+		
 
-	elif in_laptop_view and Input.is_action_just_pressed("escape"):
+	if (laptopscreencam.is_current() && Input.is_action_just_pressed("escape")):
 		main_cam.make_current()
-		in_laptop_view = false
+		#in_laptop_view = false
+
 func _on_body_entered(_body: Node2D) -> void:
 	highlighted.visible = true
 	proximity = true

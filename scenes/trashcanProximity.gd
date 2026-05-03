@@ -9,6 +9,7 @@ func _process(delta: float) -> void:
 		print("interacted") 
 		#get_tree().change_scene_to_packed(dragscene)
 		camera_2d_4.make_current()
+		Global.points = 0
 		
 func _on_body_entered(_body: Node2D) -> void:
 	highlighted.visible = true

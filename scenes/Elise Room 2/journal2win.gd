@@ -11,6 +11,7 @@ extends Node
 
 #key items
 @onready var note: Sprite2D = $"../PanelContainer1/Note"
+@onready var watch: Sprite2D = $"../PanelContainer2/Watch"
 
 #audio
 @onready var audio_stream_player: AudioStreamPlayer = $"../../AudioStreamPlayer"
@@ -32,7 +33,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (journalConst.person2 != true && who.selected == 6 && job.selected == 3 && purpose.selected == 1):
+	if (journalConst.person2 != true && who.selected == 6 && job.selected == 3 && purpose.selected == 8):
 		who.visible = false
 		job.visible = false
 		purpose.visible = false
@@ -48,5 +49,4 @@ func _process(delta: float) -> void:
 		note.visible = true
 		
 	if (journalConst.room2keyItem2 == true):
-		note.visible = true
-		#change this
+		watch.visible = true

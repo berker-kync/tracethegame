@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cyt11riunqfqt" path="res://assets/pixelWatch.png" id="1_hjarr"]
 [ext_resource type="Texture2D" uid="uid://bd4hfu1kbwtl3" path="res://assets/custom/journal1.png" id="2_6ae01"]
-[ext_resource type="Script" path="res://scripts/smartwatchhover.gd" id="3_vuxqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ae01"]
 size = Vector2(145.70566, 172.24146)
@@ -28,7 +27,6 @@ texture = ExtResource("2_6ae01")
 [node name="Area2D" type="Area2D" parent="Journal1" unique_id=1752393478]
 position = Vector2(-127.14896, -54.995502)
 scale = Vector2(0.3458776, 0.29159188)
-script = ExtResource("3_vuxqn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Journal1/Area2D" unique_id=1613870522]
 position = Vector2(367.2435, 187.92775)
@@ -37,14 +35,16 @@ shape = SubResource("RectangleShape2D_6ae01")
 
 [node name="Label" type="Label" parent="." unique_id=794082650]
 layout_mode = 0
-offset_left = 636.07855
-offset_top = 23.5294
-offset_right = 999.07855
-offset_bottom = 176.5294
+offset_left = 391.37265
+offset_top = 158.43137
+offset_right = 585.09814
+offset_bottom = 379.60785
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
-text = "Hi Davis! 
-Reminder of your
-Convention  @3:00!"
+text = "Reminder: 
+Coffee Shop
+Social Media 
+filming @ 2:00"
 justification_flags = 162
 
 [connection signal="mouse_entered" from="Journal1/Area2D" to="Journal1/Area2D" method="_on_mouse_entered"]

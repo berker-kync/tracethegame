@@ -1,6 +1,6 @@
 extends PanelContainer
 
-@onready var reciept_description: Sprite2D = $"../recieptDescription"
+@onready var watch_description: Sprite2D = $"../watchDescription"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	
 func _on_mouse_entered() -> void:
 	if (journalConst.room2keyItem2 == true):
-		reciept_description.visible = true
+		watch_description.visible = true
 
 func _on_mouse_exited() -> void:
-		reciept_description.visible = false
+		watch_description.visible = false

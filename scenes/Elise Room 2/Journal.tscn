@@ -16,10 +16,10 @@
 [ext_resource type="Script" uid="uid://coiyd7qiioivc" path="res://scenes/Elise Room 2/202panelcontainer1.gd" id="12_4sw32"]
 [ext_resource type="Texture2D" uid="uid://cyfl75m6kenb5" path="res://assets/custom/smartwatch3.png" id="13_sclml"]
 [ext_resource type="Script" uid="uid://bxydvy5ow775d" path="res://scripts/panel_container_2.gd" id="13_wsk5f"]
-[ext_resource type="Texture2D" uid="uid://i4wxa813i80e" path="res://assets/custom/smartwatch.png" id="14_8fvl1"]
-[ext_resource type="Texture2D" uid="uid://dyimnwkuc4a1r" path="res://assets/journal evidence/watchnotes.jpg" id="15_1jlf0"]
+[ext_resource type="Texture2D" uid="uid://d0dxoqdnl2yjy" path="res://assets/custom/smartwatch3_highlighted.png" id="14_wsk5f"]
 [ext_resource type="Texture2D" uid="uid://dfca8l72o1c1t" path="res://assets/custom/202watchdescription.png" id="15_d88hs"]
 [ext_resource type="Texture2D" uid="uid://dw5h38ns3wcs" path="res://assets/custom/computer.png" id="15_oresk"]
+[ext_resource type="Texture2D" uid="uid://c6ir1uk5lcmxe" path="res://assets/custom/smartwatchdescription2.png" id="15_wsk5f"]
 [ext_resource type="Script" uid="uid://dx1hdt8pu2ik6" path="res://scenes/Elise Room 2/laptopcontainer.gd" id="16_veuxe"]
 [ext_resource type="Texture2D" uid="uid://byuvr181tylrf" path="res://assets/custom/laptopdescription.png" id="17_im14q"]
 [ext_resource type="Script" uid="uid://7nvrbc66p2s0" path="res://scenes/Elise Room 2/journal4win.gd" id="18_im14q"]
@@ -47,7 +47,7 @@ mouse_filter = 0
 theme = SubResource("Theme_qbr07")
 theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
 theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_omu8a")
-current_tab = 0
+current_tab = 1
 tab_0/title = "101"
 tab_1/title = "102"
 tab_2/title = "201"
@@ -55,6 +55,7 @@ tab_3/title = "202"
 script = ExtResource("1_sclml")
 
 [node name="tab1" type="TabBar" parent="." unique_id=705700752]
+visible = false
 layout_mode = 2
 theme = SubResource("Theme_6ee85")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_yjvlh")
@@ -145,7 +146,7 @@ offset_right = 182.0
 offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 8
+item_count = 9
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
@@ -162,6 +163,8 @@ popup/item_6/text = "Public Speech"
 popup/item_6/id = 3
 popup/item_7/text = "Studying Abroad"
 popup/item_7/id = 7
+popup/item_8/text = "Filming"
+popup/item_8/id = 8
 
 [node name="LabelPurpose" type="Label" parent="tab1" unique_id=1157881803]
 visible = false
@@ -230,7 +233,6 @@ theme_override_fonts/font = ExtResource("8_bg7ji")
 text = "Key Items:"
 
 [node name="tab2" type="TabBar" parent="." unique_id=1487145056]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "102"
@@ -319,7 +321,7 @@ offset_right = 182.0
 offset_bottom = 123.00001
 selected = 0
 fit_to_longest_item = false
-item_count = 8
+item_count = 9
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
@@ -336,6 +338,8 @@ popup/item_6/text = "Public Speech"
 popup/item_6/id = 3
 popup/item_7/text = "Studying Abroad"
 popup/item_7/id = 7
+popup/item_8/text = "Filming"
+popup/item_8/id = 8
 
 [node name="LabelPurpose" type="Label" parent="tab2" unique_id=1204011585]
 visible = false
@@ -345,15 +349,16 @@ offset_top = 96.0
 offset_right = 144.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Convention"
+text = "Filming"
 
 [node name="JournalWin2" type="Node" parent="tab2" unique_id=926548069]
 script = ExtResource("8_ct5k2")
 
 [node name="NoteDescription" type="Sprite2D" parent="tab2" unique_id=1098141772]
 visible = false
-position = Vector2(123.90674, 172.29202)
-scale = Vector2(0.75672877, 0.4523959)
+z_index = 1
+position = Vector2(116.32062, 165.07455)
+scale = Vector2(0.75672877, 0.94010025)
 texture = ExtResource("11_veuxe")
 
 [node name="KeyItemsLabel" type="Label" parent="tab2" unique_id=1007010362]
@@ -383,15 +388,23 @@ texture = ExtResource("3_6ee85")
 
 [node name="PanelContainer2" type="PanelContainer" parent="tab2" unique_id=2097485458]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 99.88401
+offset_top = 153.04543
+offset_right = 139.884
+offset_bottom = 193.04543
 script = ExtResource("13_wsk5f")
 
 [node name="Watch" type="Sprite2D" parent="tab2/PanelContainer2" unique_id=177840490]
-texture = ExtResource("14_8fvl1")
+visible = false
+position = Vector2(18.543633, 17.983553)
+scale = Vector2(1.5277323, 1.6464875)
+texture = ExtResource("14_wsk5f")
 
-[node name="recieptDescription" type="Sprite2D" parent="tab2" unique_id=1067000141]
-texture = ExtResource("15_1jlf0")
+[node name="watchDescription" type="Sprite2D" parent="tab2" unique_id=1067000141]
+visible = false
+position = Vector2(189.6532, 165.07455)
+scale = Vector2(0.45301923, 0.67622334)
+texture = ExtResource("15_wsk5f")
 
 [node name="tab3" type="TabBar" parent="." unique_id=58732885]
 visible = false
@@ -493,7 +506,7 @@ offset_right = 182.0
 offset_bottom = 123.00001
 selected = 0
 fit_to_longest_item = false
-item_count = 8
+item_count = 9
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
@@ -510,6 +523,8 @@ popup/item_6/text = "Public Speech"
 popup/item_6/id = 3
 popup/item_7/text = "Studying Abroad"
 popup/item_7/id = 7
+popup/item_8/text = "Filming"
+popup/item_8/id = 8
 
 [node name="KeyItemsLabel" type="Label" parent="tab3" unique_id=84640163]
 layout_mode = 0
@@ -629,7 +644,7 @@ offset_right = 144.0
 offset_bottom = 123.0
 selected = 0
 fit_to_longest_item = false
-item_count = 8
+item_count = 9
 popup/item_0/text = "Why are they here?"
 popup/item_0/id = 0
 popup/item_1/text = "Convention"
@@ -646,6 +661,8 @@ popup/item_6/text = "Public Speech"
 popup/item_6/id = 3
 popup/item_7/text = "Studying Abroad"
 popup/item_7/id = 7
+popup/item_8/text = "Filming"
+popup/item_8/id = 8
 
 [node name="KeyItemsLabel" type="Label" parent="tab4" unique_id=325504792]
 layout_mode = 0
@@ -713,6 +730,8 @@ stream = ExtResource("8_q2jlq")
 [connection signal="mouse_exited" from="tab1/PanelContainer2" to="tab1/PanelContainer2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab2/PanelContainer1" to="tab2/PanelContainer1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="tab2/PanelContainer2" to="tab2/PanelContainer2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tab2/PanelContainer2" to="tab2/PanelContainer2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab3/PanelContainer1" to="tab3/PanelContainer1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab3/PanelContainer1" to="tab3/PanelContainer1" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab4/PanelContainer" to="tab4/PanelContainer" method="_on_mouse_entered"]

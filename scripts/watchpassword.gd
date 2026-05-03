@@ -48,6 +48,7 @@ func check_password():
 		#get_tree().change_scene_to_packed(watchScreen)
 		Global.points = 22
 		camera_2.make_current()
+		journalConst.room2keyItem2 = true
 		
 		textbox.queueText("It looks like they always go on the same walk in Atlanta.")
 		textbox.queueText("Allowing their device to track their location means it recognises patterns.")
