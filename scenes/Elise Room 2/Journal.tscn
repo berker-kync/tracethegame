@@ -27,8 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://byuvr181tylrf" path="res://assets/custom/laptopdescription.png" id="17_im14q"]
 [ext_resource type="Texture2D" uid="uid://5q6sx2r3q7jr" path="res://assets/custom/phon-highlightede.png" id="18_23nmj"]
 [ext_resource type="Script" uid="uid://7nvrbc66p2s0" path="res://scenes/Elise Room 2/journal4win.gd" id="18_im14q"]
-[ext_resource type="Texture2D" uid="uid://b1hhw0ebqehmr" path="res://assets/journal evidence/gamerpasswords.jpg" id="20_q0emx"]
-[ext_resource type="Texture2D" uid="uid://bq7qfkgpr1cv1" path="res://assets/journal evidence/gamerphone.jpg" id="21_1obfs"]
+[ext_resource type="Texture2D" uid="uid://ys7iympq33o1" path="res://assets/custom/NotebookDescription.png" id="20_o81a2"]
+[ext_resource type="Texture2D" uid="uid://bdxji0j8m24u5" path="res://assets/custom/phonedescription2.png" id="21_o81a2"]
 
 [sub_resource type="Theme" id="Theme_qbr07"]
 
@@ -575,10 +575,16 @@ texture = ExtResource("18_23nmj")
 script = ExtResource("16_8fvl1")
 
 [node name="NotebookDescription" type="Sprite2D" parent="tab3" unique_id=1612773301]
-texture = ExtResource("20_q0emx")
+visible = false
+position = Vector2(142.52698, 161.46582)
+scale = Vector2(0.7620636, 0.6322276)
+texture = ExtResource("20_o81a2")
 
 [node name="PhoneDescription" type="Sprite2D" parent="tab3" unique_id=1416456908]
-texture = ExtResource("21_1obfs")
+visible = false
+position = Vector2(209.8829, 161.4658)
+scale = Vector2(0.6071802, 0.5988442)
+texture = ExtResource("21_o81a2")
 
 [node name="tab4" type="TabBar" parent="." unique_id=1213271918]
 visible = false
