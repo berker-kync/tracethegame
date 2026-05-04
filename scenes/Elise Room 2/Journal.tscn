@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsxjdmkc7enph" path="res://assets/custom/highlighted/BookHighlighted.png" id="2_omu8a"]
 [ext_resource type="Texture2D" uid="uid://du603r6kpu05r" path="res://assets/custom/highlighted/page_highlighted.png" id="3_6ee85"]
 [ext_resource type="Script" uid="uid://dctxxkm5a2cr6" path="res://scenes/Elise Room 2/panel_container_2.gd" id="4_yjvlh"]
+[ext_resource type="Script" uid="uid://dgi1n4isucqrm" path="res://scenes/Elise Room 2/panel_container101_2.gd" id="5_hab1f"]
 [ext_resource type="Texture2D" uid="uid://ds7tkx1mukcpx" path="res://assets/custom/Book Description.png" id="6_tvhpk"]
 [ext_resource type="Texture2D" uid="uid://dkuehdubv7bwk" path="res://assets/custom/speech.png" id="7_yuig1"]
 [ext_resource type="FontFile" uid="uid://dj8gdkx6r1sip" path="res://Themes/fonts/PressStart2P-Regular.ttf" id="8_bg7ji"]
@@ -53,7 +54,7 @@ mouse_filter = 0
 theme = SubResource("Theme_qbr07")
 theme_override_styles/panel = SubResource("StyleBoxFlat_0lael")
 theme_override_styles/tabbar_background = SubResource("StyleBoxFlat_omu8a")
-current_tab = 2
+current_tab = 0
 tab_0/title = "101"
 tab_1/title = "102"
 tab_2/title = "201"
@@ -61,7 +62,6 @@ tab_3/title = "202"
 script = ExtResource("1_sclml")
 
 [node name="tab1" type="TabBar" parent="." unique_id=705700752]
-visible = false
 layout_mode = 2
 theme = SubResource("Theme_6ee85")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_yjvlh")
@@ -206,7 +206,7 @@ offset_left = 133.0
 offset_top = 152.0
 offset_right = 173.0
 offset_bottom = 192.0
-script = ExtResource("4_yjvlh")
+script = ExtResource("5_hab1f")
 
 [node name="Note" type="Sprite2D" parent="tab1/PanelContainer2" unique_id=161058524]
 visible = false
@@ -221,8 +221,9 @@ position = Vector2(160, 146)
 scale = Vector2(0.31150177, 0.34985277)
 texture = ExtResource("6_tvhpk")
 
-[node name="NoteDescription" type="Sprite2D" parent="tab1" unique_id=293592302]
+[node name="noteDescription" type="Sprite2D" parent="tab1" unique_id=293592302]
 visible = false
+z_index = 999
 position = Vector2(262, 141)
 scale = Vector2(0.32812497, 0.35972223)
 texture = ExtResource("7_yuig1")
@@ -414,6 +415,7 @@ scale = Vector2(0.45301923, 0.67622334)
 texture = ExtResource("15_wsk5f")
 
 [node name="tab3" type="TabBar" parent="." unique_id=58732885]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 metadata/_tab_name = "201"
@@ -600,7 +602,7 @@ offset_top = 7.0
 offset_right = 144.0
 offset_bottom = 35.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Cody Hackerson"
+text = "Cody Hackins"
 
 [node name="Who" type="OptionButton" parent="tab4" unique_id=341432358]
 layout_mode = 0

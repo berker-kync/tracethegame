@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 			_2.visible = false
 			timer.stop()
 			if first_check == true:
-				text.queueText("Looks like the hacker 'Cody Hackerson' was planning on selling the data of the other guests.")
+				text.queueText("Looks like the hacker 'Cody Hackins' was planning on selling the data of the other guests.")
 				text.queueText("These files should be more than enough evidence to solidify his identity and bag him.")
 				first_check = false
 				journalConst.room4keyItem2 = true

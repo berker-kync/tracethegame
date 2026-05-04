@@ -1,7 +1,7 @@
 extends PanelContainer
 @onready var panel_container: PanelContainer = $"."
 
-@onready var phone_description: Sprite2D = $"../../tab3/PhoneDescription"
+@onready var note_description: Sprite2D = $"../noteDescription"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +12,8 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_mouse_entered() -> void:
-	if (journalConst.room3keyItem2 == true):
-		phone_description.visible = true
+	if (journalConst.room1keyItem2 == true):
+		note_description.visible = true
 
 func _on_mouse_exited() -> void:
-		phone_description.visible = false
+		note_description.visible = false
