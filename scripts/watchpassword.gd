@@ -5,6 +5,8 @@ extends Control
 @onready var label: Label = $"../Label"
 @onready var control: Control = $"."
 @onready var camera_2: Camera2D = $"../camera2"
+@onready var timer: Timer = $Timer
+
 
 var attempts = 0
 var max_attempts = 3
@@ -67,7 +69,7 @@ func check_password():
 func lock_out():
 	locked = true
 	status_label.text = "🔒 Locked out"
-	
+	timer.start()
 	textbox.visible = true
 	textbox.queueText("It looks like you failed the password too many times.")
 	textbox.queueText("Maybe there is more evidence somewhere else in the room.")
@@ -77,7 +79,7 @@ func lock_out():
 		if child is Button:
 			child.disabled = true
 	
-	
+
 
 func full_reset():
 	attempts = 0
@@ -93,3 +95,7 @@ func full_reset():
 func reset_input():
 	input.clear()
 	status_label.text = "Enter code..."
+
+
+func _on_timer_timeout() -> void:
+	full_reset()

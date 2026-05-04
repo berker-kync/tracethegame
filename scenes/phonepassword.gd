@@ -1,7 +1,9 @@
 extends Control
 @onready var textbox: CanvasLayer = $"../textbox"
 @onready var password_cam: Camera2D = $"../passwordCam"
+@onready var timer: Timer = $Timer
 @onready var phone_cam: Camera2D = $"../phoneCam"
+
 
 
 var attempts = 0
@@ -59,6 +61,7 @@ func check_password():
 
 func lock_out():
 	locked = true
+	timer.start()
 	status_label.text = "🔒 Locked out"
 	
 	textbox.visible = true
@@ -86,3 +89,7 @@ func full_reset():
 func reset_input():
 	input.clear()
 	status_label.text = "Enter code..."
+
+
+func _on_timer_timeout() -> void:
+	full_reset()
