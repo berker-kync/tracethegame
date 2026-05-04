@@ -21,9 +21,14 @@
 [ext_resource type="Texture2D" uid="uid://dw5h38ns3wcs" path="res://assets/custom/computer.png" id="15_oresk"]
 [ext_resource type="Texture2D" uid="uid://c6ir1uk5lcmxe" path="res://assets/custom/smartwatchdescription2.png" id="15_wsk5f"]
 [ext_resource type="Script" uid="uid://c33xpg1f0ldtp" path="res://scenes/Elise Room 2/journal3win.gd" id="16_8fvl1"]
+[ext_resource type="Script" uid="uid://cdsyulmc1g84m" path="res://scripts/panel_container_1.gd" id="16_o81a2"]
 [ext_resource type="Script" uid="uid://dx1hdt8pu2ik6" path="res://scenes/Elise Room 2/laptopcontainer.gd" id="16_veuxe"]
+[ext_resource type="Texture2D" uid="uid://bfiajkpyw156y" path="res://assets/custom/Book_closed_highlighted.png" id="17_hab1f"]
 [ext_resource type="Texture2D" uid="uid://byuvr181tylrf" path="res://assets/custom/laptopdescription.png" id="17_im14q"]
+[ext_resource type="Texture2D" uid="uid://5q6sx2r3q7jr" path="res://assets/custom/phon-highlightede.png" id="18_23nmj"]
 [ext_resource type="Script" uid="uid://7nvrbc66p2s0" path="res://scenes/Elise Room 2/journal4win.gd" id="18_im14q"]
+[ext_resource type="Texture2D" uid="uid://b1hhw0ebqehmr" path="res://assets/journal evidence/gamerpasswords.jpg" id="20_q0emx"]
+[ext_resource type="Texture2D" uid="uid://bq7qfkgpr1cv1" path="res://assets/journal evidence/gamerphone.jpg" id="21_1obfs"]
 
 [sub_resource type="Theme" id="Theme_qbr07"]
 
@@ -544,9 +549,36 @@ offset_left = 22.0
 offset_top = 152.0
 offset_right = 62.0
 offset_bottom = 192.0
+script = ExtResource("16_o81a2")
+
+[node name="Notebook" type="Sprite2D" parent="tab3/PanelContainer1" unique_id=365015570]
+visible = false
+position = Vector2(19.723688, 16.82774)
+scale = Vector2(2.760019, 2.5381286)
+texture = ExtResource("17_hab1f")
+
+[node name="PanelContainer2" type="PanelContainer" parent="tab3" unique_id=1632978795]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 152.0
+offset_right = 140.0
+offset_bottom = 192.0
+script = ExtResource("4_yjvlh")
+
+[node name="Phone" type="Sprite2D" parent="tab3/PanelContainer2" unique_id=1741002394]
+visible = false
+position = Vector2(20.11369, 21.494917)
+scale = Vector2(2.784394, 2.745616)
+texture = ExtResource("18_23nmj")
 
 [node name="journal3win" type="Node" parent="tab3" unique_id=1335551419]
 script = ExtResource("16_8fvl1")
+
+[node name="NotebookDescription" type="Sprite2D" parent="tab3" unique_id=1612773301]
+texture = ExtResource("20_q0emx")
+
+[node name="PhoneDescription" type="Sprite2D" parent="tab3" unique_id=1416456908]
+texture = ExtResource("21_1obfs")
 
 [node name="tab4" type="TabBar" parent="." unique_id=1213271918]
 visible = false
@@ -738,6 +770,8 @@ stream = ExtResource("8_q2jlq")
 [connection signal="mouse_exited" from="tab2/PanelContainer2" to="tab2/PanelContainer2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab3/PanelContainer1" to="tab3/PanelContainer1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab3/PanelContainer1" to="tab3/PanelContainer1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="tab3/PanelContainer2" to="tab3/PanelContainer2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tab3/PanelContainer2" to="tab3/PanelContainer2" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab4/PanelContainer" to="tab4/PanelContainer" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="tab4/PanelContainer" to="tab4/PanelContainer" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="tab4/PanelContainer2" to="tab4/PanelContainer2" method="_on_mouse_entered"]

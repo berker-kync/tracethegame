@@ -15,3 +15,4 @@ func _process(delta: float) -> void:
 
 func _on_button_2_pressed() -> void:
 	main_cam.make_current()
+	
